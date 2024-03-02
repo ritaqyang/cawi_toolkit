@@ -1,0 +1,28 @@
+
+FROM node:16 as build
+
+WORKDIR /cawi_toolkit
+
+COPY package.json package-lock.json ./
+
+# Install any dependencies
+RUN npm install
+
+# Copy the current directory contents into the container at /epsc180
+COPY . .
+
+# Build the app for production to the build folder
+RUN npm run build
+
+# Step 2: Serve the app with Nginx
+# Use an official Nginx image
+FROM nginx:alpine
+
+# Copy the build output to replace the default nginx contents.
+COPY --from=build /cawi_toolkit/build /usr/share/nginx/html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start Nginx and keep it running foreground
+CMD ["nginx", "-g", "daemon off;"]
