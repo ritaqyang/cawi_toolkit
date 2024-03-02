@@ -7,6 +7,7 @@ import {
     NavLink,
     NavLinkOut,
     GreetingsContainer,
+    NavBar,
 } from './navigation.styles';
 
 
@@ -14,19 +15,19 @@ const Navigation = () => {
 
     return (
         <Fragment>
-            <NavLinks>
-                <NavLink className='nav-link' to='/'>
-                    Home
-                </NavLink>
-                <NavLink className='nav-link' to='/lessons-home'>
-                    Lessons
-                </NavLink>
-                <NavLink className='nav-link' to='/about'>
-                    About Us 
-                </NavLink>
-
-            </NavLinks>
-
+            <NavBar>
+                <NavLinks>
+                    <NavLink className='nav-link' to='/'>
+                        Home
+                    </NavLink>
+                    <NavLink className='nav-link' to='/lessons-home'>
+                        Lessons
+                    </NavLink>
+                    <NavLink className='nav-link' to='/about'>
+                        About Us 
+                    </NavLink>
+                </NavLinks>
+            </NavBar>
             <Outlet />
         </Fragment>
 

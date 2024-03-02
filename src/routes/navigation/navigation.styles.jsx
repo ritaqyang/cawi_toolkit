@@ -18,25 +18,25 @@ export const NavigationContainer = styled.div`
 `;
 
 export const GreetingsContainer = styled.div`
-  padding-left: 3rem;
+  padding-left: 0;
   
   font-family: 'Verdana';
 `;
 
 export const NavLinks = styled.div`
-  display: none; 
+  display: none;
   @media (min-width: 950px) {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: end;
   }
 `;
 
 export const NavLink = styled(Link)`
   padding: 10px 15px;
-  border: 1px solid black; 
+  font-size: 2rem;
   cursor: pointer;å
   color: black; 
   &:hover {
@@ -50,3 +50,12 @@ export const NavLinkOut = styled(Link)`
   &:hover {
     color: grey; 
 `;
+
+export const NavBar = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10rem;
+  background-color: white;
+`;
+

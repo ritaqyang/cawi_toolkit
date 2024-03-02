@@ -33,7 +33,5 @@ const Home = () => {
             </footer>
         </HomePageWrapper>
     );
-};
-
-export default Home;
-
+}
+export default Home; 
