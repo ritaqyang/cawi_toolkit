@@ -8,7 +8,10 @@ import {
     NavLinkOut,
     GreetingsContainer,
     NavBar,
+    Logo,
 } from './navigation.styles';
+import logo from '../../assets/logo.png';
+import './navigation.css';
 
 
 const Navigation = () => {
@@ -16,6 +19,9 @@ const Navigation = () => {
     return (
         <Fragment>
             <NavBar>
+                <Logo>
+                    <img className="logo" src={logo}/>
+                </Logo>
                 <NavLinks>
                     <NavLink className='nav-link' to='/'>
                         Home
@@ -31,7 +37,7 @@ const Navigation = () => {
             <Outlet />
         </Fragment>
 
-    )
+    );
 }
 
 

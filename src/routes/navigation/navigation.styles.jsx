@@ -31,7 +31,6 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
-  padding-right: 10rem;
   }
 `;
 
@@ -60,7 +59,13 @@ export const NavBar = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  height: 10rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-right: 2rem;
   background-color: white;
 `;
 
+export const Logo = styled.div`
+    position: fixed;
+    top: 0;
+`;
