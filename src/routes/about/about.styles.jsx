@@ -11,9 +11,10 @@ export const AboutBody = styled.div`
 `;
 
 export const AboutWrapper = styled.div`
-        overflow-x: hidden;
-        overflow-y: hidden;
-        white-space: nowrap;
+        overscroll-behavior: none;
+        width: 200%;
+        display: flex;
+        flex-wrap: nowrap;
 `;
 
 export const AboutContent = styled.div`
