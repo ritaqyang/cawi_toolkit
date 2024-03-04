@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const HomePageWrapper = styled.div`
   display: flex; 
-  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: 
 `;
 
 export const Header = styled.header`
