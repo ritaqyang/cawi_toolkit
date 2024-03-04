@@ -31,6 +31,7 @@ export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   justify-content: end;
+  padding-right: 10rem;
   }
 `;
 
@@ -39,8 +40,12 @@ export const NavLink = styled(Link)`
   font-size: 2rem;
   cursor: pointer;å
   color: black; 
+  text-decoration: none;
+  color:rgb(165, 165, 165);
   &:hover {
-    box-shadow: 0 1rem 2rem;
+    
+    color: black;
+  }
 `;
 
 export const NavLinkOut = styled(Link)`
