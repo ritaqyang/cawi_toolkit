@@ -68,4 +68,6 @@ export const NavBar = styled.div`
 export const Logo = styled.div`
     position: fixed;
     top: 0;
+    padding: 1rem;
+    margin-right: auto;
 `;
