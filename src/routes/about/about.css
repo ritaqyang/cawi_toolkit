@@ -28,3 +28,8 @@ p{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.authors{
+    padding: 7rem;
+    height: 100vh;
+}

@@ -42,6 +42,44 @@ function About(){
                     please refer to the list below containing names of volunteers from CAWI.</p>
                 </section>
                 <section className="authors">
+                    <p>Rehma Khan (she/her)
+                    Curriculum Developer
+
+                    Hani Rukh-E-Qamar (she/her)
+                    Executive Director
+
+                    Ana Maria Dumitrache (they/them)
+                    Senior Project Lead
+
+                    Isabella Kakish (she/her)
+                    Research Assistant
+
+                    Crystal Yang (she/her)
+                    Outreach Manager
+
+                    Naomi Phung (she/her)
+                    Research Assistant
+
+                    Yasemin Erdogan (she/her)
+                    Research Assistant
+
+                    Roma Ranade (she/her)
+                    Research Assistant
+
+                    Marianne Djigo (she/her)
+                    Research Assistant
+
+                    Harini Aiyer (she/her)
+                    Research Assistant
+
+                    Zara Ahmed (she/her)
+                    Research Assistant
+
+                    Cassandra De Freitas (she/her)
+                    Research Assistant
+
+                    Karishma Joshi (she/her)
+                    Graphic Designer</p>
                 </section>
             </div>
         </div>
