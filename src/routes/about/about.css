@@ -2,13 +2,13 @@ h1{
     font-size: 10rem;
 }
 
-p{
+.ab-text{
     width: 50%;
     margin: 1rem 0;
     font-size: 1.5rem;
 }
 
-.title{
+.ab-title{
     padding: 7rem;
     height: 100vh;
 }

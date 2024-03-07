@@ -13,11 +13,11 @@ function About(){
     return (
         <div className="content">
             <div className="wrapper">
-                <section className="title">
+                <section className="ab-title">
                     <h1>ABOUT US</h1>
                 </section>
                 <section className="about">
-                    <p>The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
+                    <p className="ab-text">The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
                     mission to empower immigrant women and girls across Canada. In 2021, the Sexual & Reproductive Health 
                     (SRH) Campaign team at CAWI received a small fund from the Regina Public Interest Research Group to 
                     conduct a community-based research project on the experiences of immigrant women and girls with the 
@@ -30,7 +30,7 @@ function About(){
                     www.cawicanada.com or at our social media channels.</p>
                 </section>
                 <section className="ack">
-                    <p>This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
+                    <p className="ab-text">This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
                     and the Regina Public Interest Research Group. We are grateful for their generosity and support through 
                     various stages of the current project. We would also like to thank all the organizations and community 
                     members who participated in community consultations for the toolkit, including Alisa Tukkimäki from the 
@@ -42,7 +42,7 @@ function About(){
                     please refer to the list below containing names of volunteers from CAWI.</p>
                 </section>
                 <section className="authors">
-                    <p>Rehma Khan (she/her)
+                    <p className="ab-text">Rehma Khan (she/her)
                     Curriculum Developer
 
                     Hani Rukh-E-Qamar (she/her)
