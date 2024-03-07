@@ -1,6 +1,7 @@
 .container {
-    padding: 7rem;
-    text-align: center;
+    padding-top: 7rem;
+    margin: 0;
+    text-align: left;
 }
 
 h2{
@@ -17,4 +18,47 @@ h4{
 
 h5{
     font-size: 1rem;
+}
+
+.topic{
+    padding: 2rem;
+}
+
+.m-title{
+    margin-top: 0;
+}
+
+.m-titlepage{
+    height: 100vh;
+    background-image: url('../../assets/m-heading-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+}
+
+.m-subsubtitle{
+    padding: 1rem;
+    width: 70%;
+    background-image: url('../../assets/m-title.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.land-ack{
+    padding: 15rem;
+    text-align: center;
+    background-image: url('../../assets/quote-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+}
+
+.activity{
+    padding: 20rem;
+    text-align: center;
+    background-image: url('../../assets/activity-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    background-position-x: center;
 }
