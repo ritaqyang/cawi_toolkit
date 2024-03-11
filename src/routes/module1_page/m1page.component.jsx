@@ -433,7 +433,7 @@ const Module1Page = () => {
                     if there is knowledge or suspicion that it is occurring. Professionals who work with children and youth have 
                     an added responsibility to report. This is called the duty to report.</p>
                 <div className="duty-to-report">
-                    <h4 className="m-subsubtitle">DUTY TO REPORT</h4>
+                    <h4 className="duty-subsubtitle">DUTY TO REPORT</h4>
                     <h5 className="m-subsubsubtitle"><a href="https://www.justice.gc.ca/eng/rp-pr/cj-jp/fv-vf/caw-mei/p11.html">Child Abuse is Wrong: What can I do?</a></h5>
                     <h5 className="m-subsubsubtitle"><a href="https://www.ontario.ca/page/report-child-abuse-and-neglect">Ontario’s Duty to Report</a></h5>
                     <h5 className="m-subsubsubtitle"><a href="https://www.alberta.ca/preventing-child-abuse-information-for-educators">Alberta Educators’ Duty to Report</a></h5>
@@ -679,7 +679,7 @@ const Module1Page = () => {
                 <p><a href="https://gnpplus.net/who-we-are/about-us/">Global Network of People Living with HIV (GNP+)</a>, a network 
                     for people living with HIV, run by people living with HIV.</p>
             </section>
-            <section className="page">
+            <section className="topic">
                 <h4 className="m-subsubtitle">PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</h4>
                 <h5 className="m-subsubsubtitle">What is menstruation and why menstrual care?</h5>
                 <p>Menstruation is the process in which normal vaginal bleeding occurs as part of a woman's monthly cycle. 
@@ -766,11 +766,9 @@ const Module1Page = () => {
                 <h5 className="m-subsubsubtitle">How does one get pregnant?</h5>
                 <p>Pregnancy is the result of a process that has many steps. <a href="https://www.cdc.gov/reproductivehealth/infertility/index.htm">To get pregnant</a>:</p>
                 <ul>
-                    <li><p>First, a woman’s body must release an egg from one of her 
-                        <a href="https://www.womenshealth.gov/glossary#ovaries">ovaries</a>.</p></li>
+                    <li><p>First, a woman’s body must release an egg from one of her <a href="https://www.womenshealth.gov/glossary#ovaries">ovaries</a>.</p></li>
                     <li><p>Then, a man’s sperm must join with the egg along the way (fertilize).</p></li>
-                    <li><p>Following this, the fertilized egg must go through a 
-                        <a href="https://www.womenshealth.gov/glossary#fallopian">fallopian tube</a> toward 
+                    <li><p>Following this, the fertilized egg must go through a <a href="https://www.womenshealth.gov/glossary#fallopian">fallopian tube</a> toward 
                         the <a href="https://www.womenshealth.gov/glossary#uterus">uterus</a>.</p></li>
                     <li><p>Lastly, the embryo must attach to the inside of the uterus (implantation). </p></li>
                 </ul>
