@@ -4,7 +4,8 @@ import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
 import LessonsHome from './routes/lessons/lessons.component';
 import About from './routes/about/about.component';
-import Module1Page from './routes/module1_page/m1page.component';
+import Module1Page from './routes/modules/module1_page/m1page.component';
+
 const App = () => {
 
   return (
