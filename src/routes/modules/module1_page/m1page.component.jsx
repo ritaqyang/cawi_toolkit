@@ -1,7 +1,129 @@
-import React from "react";
-import './m1.page.styles.css'; 
+import React, { useEffect, useRef } from "react";
+import './m1.page.styles.css';
+import {gsap} from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Module1Page = () => {
+    const topicOneRef = useRef(null);
+    const topicTwoRef = useRef(null);
+    const topicThreeRef = useRef(null);
+    const topicFourRef = useRef(null);
+    const topicFiveRef = useRef(null);
+    const topicSixRef = useRef(null);
+    const topicSevenRef = useRef(null);
+    const topicEightRef = useRef(null);
+    const topicNineRef = useRef(null);
+
+    useEffect(() => {
+        const topicOne = topicOneRef.current;
+        const topicTwo = topicTwoRef.current;
+        const topicThree = topicThreeRef.current;
+        const topicFour = topicFourRef.current;
+        const topicFive = topicFiveRef.current;
+        const topicSix = topicSixRef.current;
+        const topicSeven = topicSevenRef.current;
+        const topicEight = topicEightRef.current;
+        const topicNine = topicNineRef.current;
+
+        if(topicOne && topicTwo) {
+            gsap.to(topicOne, {
+                scrollTrigger: {
+                    trigger: topicOne,
+                    start: "bottom bottom",
+                    endTrigger: topicTwo,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicTwo && topicThree) {
+            gsap.to(topicTwo, {
+                scrollTrigger: {
+                    trigger: topicTwo,
+                    start: "bottom bottom",
+                    endTrigger: topicThree,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicThree && topicFour) {
+            gsap.to(topicThree, {
+                scrollTrigger: {
+                    trigger: topicThree,
+                    start: "bottom bottom",
+                    endTrigger: topicFour,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicFour && topicFive) {
+            gsap.to(topicFour, {
+                scrollTrigger: {
+                    trigger: topicFour,
+                    start: "bottom bottom",
+                    endTrigger: topicFive,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicFive && topicSix) {
+            gsap.to(topicFive, {
+                scrollTrigger: {
+                    trigger: topicFive,
+                    start: "bottom bottom",
+                    endTrigger: topicSix,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicSix && topicSeven) {
+            gsap.to(topicSix, {
+                scrollTrigger: {
+                    trigger: topicSix,
+                    start: "bottom bottom",
+                    endTrigger: topicSeven,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicSeven && topicEight) {
+            gsap.to(topicSeven, {
+                scrollTrigger: {
+                    trigger: topicSeven,
+                    start: "bottom bottom",
+                    endTrigger: topicEight,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(topicEight && topicNine) {
+            gsap.to(topicEight, {
+                scrollTrigger: {
+                    trigger: topicEight,
+                    start: "bottom bottom",
+                    endTrigger: topicNine,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+    }, []);
 
     return (
         <div className="container">
@@ -9,7 +131,7 @@ const Module1Page = () => {
                 <h2 className="m-title">LESSON PLAN #1:</h2>
                 <h3 className="m-subtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>
             </section>
-            <section className="topic">
+            <section ref={topicOneRef} className="topic-1">
                 <h4 className="m-subsubtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h4>
                 <p>Sexual and reproductive health means your physical, mental, emotional 
                     and social well-being as it relates to your sexuality (<a href="https://myhealth.alberta.ca/sexual-reproductive-health">My Health Alberta</a>). 
@@ -68,7 +190,7 @@ const Module1Page = () => {
                             when equipped with proper SRH tools.</p></li>
                 </ul>
             </section>
-            <section className="topic">
+            <section ref={topicTwoRef} className="topic-2">
                 <h4 className="m-subsubtitle">HEALTH EQUITY</h4>
                 <p>Healthy inequity within SRH recognizes systems that ensure that all persons, regardless of 
                     age, gender, sex, race, immigrant or refugee identities as well as disabilities. Government 
@@ -86,7 +208,7 @@ const Module1Page = () => {
                     <li><p>Redefine clinical practice</p></li>
                 </ul>
             </section>
-            <section className="topic">
+            <section ref={topicThreeRef} className="topic-3">
                 <h4 className="m-subsubtitle">SOCIAL DETERMINANTS OF HEALTHCARE</h4>
                 <p>Social Determinants of healthcare are non-medical factors that may influence health outcomes.</p>
                 <p><b>Poverty and unequal access to healthcare: </b>Those who struggle to afford basic needs often 
@@ -119,7 +241,7 @@ const Module1Page = () => {
                     </ol>
                 </div>
             </section>
-            <section className="topic">
+            <section ref={topicFourRef} className="topic-4">
                 <h4 className="m-subsubtitle">PUBERTY</h4>
                 <h5 className="m-subsubsubtitle">What is puberty?</h5>
                 <p>Period of human development during which an individual becomes capable of sexual reproduction. 
@@ -137,7 +259,7 @@ const Module1Page = () => {
                     In terms of physical changes, boys will get taller, muscles will grow, facial hair, grow hair on their 
                     underarms, develop pimples, and sweat more, and their voices will crack. </p>
             </section>
-            <section className="topic">
+            <section ref={topicFiveRef} className="topic-5">
                 <h4 className="m-subsubtitle">REPRODUCTIVE HEALTH SYSTEMS</h4>
                 <h5 className="m-subsubsubtitle">What function does the reproductive system have in our bodies?</h5>
                 <p>The reproductive system serves to produce the sperm and egg cells that allow us to reproduce. It is also responsible 
@@ -326,7 +448,7 @@ const Module1Page = () => {
                     <li><p><a href="https://classroom.kidshealth.org/classroom/6to8/body/systems/female_reproductive_quiz.pdf">Kidshealth.org</a> has quizzes present for students from grade 6 to 8 to learn about female anatomy.</p></li>
                 </ul>
             </section>
-            <section className="topic">
+            <section ref={topicSixRef} className="topic-6">
                 <h4 className="m-subsubtitle">FEMALE GENTIAL MUTILATION</h4>
                 <p>When teaching or facilitating conversations around anatomy and reproductive health, it is important to keep in mind 
                     factors that may impact how one perceives their own anatomy. If this lesson is for the community members it should 
@@ -445,7 +567,7 @@ const Module1Page = () => {
                     </ul>
                 </div>
             </section>
-            <section className="topic">
+            <section ref={topicSevenRef} className="topic-7">
                 <h4 className="m-subsubtitle">HIV, STI'S AND SAFE SEX</h4>
                 <h5 className="m-subsubsubtitle">What are STI’s?</h5>
                 <ul>
@@ -679,7 +801,7 @@ const Module1Page = () => {
                 <p><a href="https://gnpplus.net/who-we-are/about-us/">Global Network of People Living with HIV (GNP+)</a>, a network 
                     for people living with HIV, run by people living with HIV.</p>
             </section>
-            <section className="topic">
+            <section ref={topicEightRef} className="topic-8">
                 <h4 className="m-subsubtitle">PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</h4>
                 <h5 className="m-subsubsubtitle">What is menstruation and why menstrual care?</h5>
                 <p>Menstruation is the process in which normal vaginal bleeding occurs as part of a woman's monthly cycle. 
@@ -754,7 +876,7 @@ const Module1Page = () => {
                     <li><p><b>Are parents or community groups supportive of people going to school during their period? </b></p></li>
                 </ul>
             </section>
-            <section className="topic">
+            <section ref={topicNineRef} className="topic-9">
                 <h4 className="m-subsubtitle">PREGNANCY</h4>
                 <h5 className="m-subsubsubtitle">Unintended Pregnancies </h5>
                 <p><a href="https://www.cdc.gov/reproductivehealth/contraception/unintendedpregnancy/index.htm">Unintended 
