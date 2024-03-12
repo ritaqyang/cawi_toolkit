@@ -20,8 +20,80 @@ h5{
     font-size: 1rem;
 }
 
-.topic{
+.topic-1{
     padding: 2rem;
+    z-index: -8;
+}
+
+.topic-2{
+    height: 80vh;
+    padding: 2rem;
+    background-image: url('../../assets/pastel-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -7;
+}
+
+.topic-3{
+    padding: 2rem;
+    background-image: url('../../assets/prple-orng-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -6;
+}
+
+.topic-4{
+    height: 80vh;
+    padding: 2rem;
+    background-image: url('../../assets/turqoise-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -5;
+}
+
+.topic-5{
+    padding: 2rem;
+    background-color: white;
+    z-index: -4;
+}
+
+.topic-6{
+    padding: 2rem;
+    background-image: url('../../assets/watercolor-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -3;
+}
+
+.duty-to-report{
+    padding: 2rem;
+    background-image: url('../../assets/sunset-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topic-7{
+    padding: 2rem;
+    background-image: url('../../assets/pastel2-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+}
+
+.topic-8{
+    padding: 2rem;
+    background-image: url('../../assets/blue-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.topic-9{
+    padding: 2rem;
+    background-image: url('../../assets/blue-yellow-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
 }
 
 .m-title{
