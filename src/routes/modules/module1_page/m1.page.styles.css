@@ -30,7 +30,7 @@ h5{
 
 .m-titlepage{
     height: 100vh;
-    background-image: url('../../assets/m-heading-bg.png');
+    background-image: url('../../../assets/m-heading-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: top;
@@ -39,7 +39,7 @@ h5{
 .m-subsubtitle{
     padding: 1rem;
     width: 70%;
-    background-image: url('../../assets/m-title.png');
+    background-image: url('../../../assets/m-title.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -47,7 +47,7 @@ h5{
 .land-ack{
     padding: 15rem;
     text-align: center;
-    background-image: url('../../assets/quote-bg.png');
+    background-image: url('../../../assets/quote-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: center;
@@ -56,7 +56,7 @@ h5{
 .activity{
     padding: 20rem;
     text-align: center;
-    background-image: url('../../assets/activity-bg.png');
+    background-image: url('../../../assets/activity-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: center;

@@ -16,10 +16,12 @@ const modules = [
  
 ];
 const Square = ({ module }) => (
+
+    
     <div className="square">
         
         
-        <Link className="nav-link" to={`/modules/1`}>
+        <Link className="nav-link" to={`/modules/${module.id}`}>
             <img src={module.image} alt={module.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }} />
             <h3>{module.name}</h3>
             <p>{module.description}</p>

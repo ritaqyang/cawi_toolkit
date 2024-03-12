@@ -7,6 +7,7 @@ const M2Page = () => {
         <div>
             <h1>Module 2 Page</h1>
             <LessonOverview />
+            <RelationshipNavigator />
         </div>
     );
 }
