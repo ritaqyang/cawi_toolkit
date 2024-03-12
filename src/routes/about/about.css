@@ -9,27 +9,35 @@ h1{
 }
 
 .ab-title{
-    padding: 7rem;
     height: 100vh;
+    background-image: url('../../assets/m-heading-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    z-index: -3;
 }
 
 .about{
     padding: 7rem;
     height: 100vh;
-    background-image: url('../../assets/pastel-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: white;
+    z-index: -2;
 }
 
 .ack{
     padding: 7rem;
     height: 100vh;
-    background-image: url('../../assets/prple-orng-bg.png');
+    background-image: url('../../assets/pastel-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -1;
 }
 
 .authors{
     padding: 7rem;
     height: 100vh;
+    background-image: url('../../assets/pastel2-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
 }
