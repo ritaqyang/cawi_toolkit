@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
+import ListItem from '../checkbox/checkbox.component';
+import StyledCards from '../styledcards/styledcard.component';
+import { Honesty } from './content';
+import img from '../../../../assets/homepage.png';
+import styled from 'styled-components';
 
 
-const RelationshipElement = ({ title, content }) => {
+const PageContainer = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+`;
+//todo: fix expanding content
+export const RelationshipElement = ({ title, content }) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleToggle = () => {
@@ -9,16 +21,20 @@ const RelationshipElement = ({ title, content }) => {
     };
 
     return (
-        <li onClick={handleToggle}>
-            <strong>{title}</strong>
+        <div onClick={handleToggle}>
+            <strong>expand </strong>
             {expanded && <p>{content}</p>}
-        </li>
+        </div>
     );
 };
 
 const RelationshipNavigator = () => {
+
+    const honesty = "Honesty and open communication are key to building trust and maintaining a healthy relationship.In the context of sexual health, it is especially important to be open and honest with your partner about STIs and any other related topics, such as sexual expectations and boundaries.This can help prevent the spread of STIs and ensure that both partners are on the same page regarding their sexual health and well - being."
+
     return (
         <div>
+            
             <h2>Navigating Relationships and Dating Culture as an Immigrant Woman</h2>
             <p>
                 How does one navigate relationships and dating culture? This question
@@ -28,22 +44,22 @@ const RelationshipNavigator = () => {
                 To begin, let’s consider what it means to be in a safe and healthy
                 relationship.
             </p>
-            <ul>
-                <RelationshipElement
-                    title="Honesty"
-                    content="Honesty is the foundation of any healthy relationship. It involves being truthful and transparent with your partner, and being able to communicate openly without fear of judgment or reprisal."
-                />
-                <RelationshipElement
-                    title="Trust"
-                    content="Trust is essential for building a strong connection with your partner. It means relying on each other and believing that your partner has your best interests at heart."
-                />
-                <RelationshipElement
-                    title="Respect"
-                    content="Respect is treating your partner with kindness, empathy, and consideration. It involves valuing their opinions, boundaries, and autonomy."
-                />
-            </ul>
+           
+            <h2>Consider the following 6 elements</h2>
+            <StyledCards />
+
+
+
+           
+            
         </div>
     );
 };
 
 export default RelationshipNavigator;
+
+
+
+
+
+

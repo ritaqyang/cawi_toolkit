@@ -1,5 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import ListWithCheckboxes from '../checkbox/checkbox.component';
+import ListItem from '../checkbox/checkbox.component';
+const content = [
+    "Aspects of a healthy relationship",
+    "Repeating Cycles of Trauma",
+    "Understanding what works best for you in relationships",
+    "Religious and Cultural Differences in Relationships",
+    "Strains that Immigration has on Relationships",
+    "Activities and Discussion Prompts"
+];
+
+const objectives = [
+    "Understanding the importance of effective communication in relationships.",
+    "Learning how one sets and maintains healthy boundaries.",
+    "Examine the impact of cultural, societal, and personal beliefs and values on relationships.",
+    "Understanding power and consent in relationships.",
+    "Examining what self-awareness and empathy in relationships look like.",
+    "Understanding the importance of maintaining self-care in healthy relationships."
+];
+
 
 const LessonOverviewWrapper = styled.div`
   background-color: #f9f9f9;
@@ -17,30 +37,20 @@ const LessonObjectives = styled.div`
 `;
 
 const LessonOverview = () => {
+
+    const formattedContent = content.map(item => <ListItem item={item} />);
+    const formattedObjectives = objectives.map(item => <ListItem item={item}/>); 
     return (
         <LessonOverviewWrapper>
-            <h2>Lesson Overview</h2>
+            <h4>Lesson Overview</h4>
             <TopicsCovered>
-                <h3>Topics Covered:</h3>
-                <ul>
-                    <li>Aspects of a healthy relationship</li>
-                    <li>Repeating Cycles of Trauma</li>
-                    <li>Understanding what works best for you in relationships</li>
-                    <li>Religious and Cultural Differences in Relationships</li>
-                    <li>Strains that Immigration has on Relationships</li>
-                    <li>Activities and Discussion Prompts</li>
-                </ul>
+                <h4>Topics Covered:</h4>
+                {formattedContent}
+               
             </TopicsCovered>
             <LessonObjectives>
-                <h3>Lesson Objectives:</h3>
-                <ol>
-                    <li>Understanding the importance of effective communication in relationships.</li>
-                    <li>Learning how one sets and maintains healthy boundaries.</li>
-                    <li>Examine the impact of cultural, societal, and personal beliefs and values on relationships.</li>
-                    <li>Understanding power and consent in relationships.</li>
-                    <li>Examining what self-awareness and empathy in relationships look like.</li>
-                    <li>Understanding the importance of maintaining self-care in healthy relationships.</li>
-                </ol>
+                <h4>Lesson Objectives:</h4>
+                {formattedObjectives}
             </LessonObjectives>
         </LessonOverviewWrapper>
     );
