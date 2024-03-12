@@ -5,6 +5,7 @@ import Navigation from './routes/navigation/navigation.component';
 import LessonsHome from './routes/lessons/lessons.component';
 import About from './routes/about/about.component';
 import Module1Page from './routes/modules/module1_page/m1page.component';
+import M2Page from './routes/modules/module2_page/m2.page.component';
 
 const App = () => {
 
@@ -15,6 +16,7 @@ const App = () => {
         <Route path='lessons-home' element={<LessonsHome />} />
         <Route path='about' element={<About />} />
         <Route path='modules/1' element={<Module1Page />} />
+        <Route path='modules/2' element={<M2Page />} />
     
       </Route>
     </Routes>
