@@ -1,7 +1,54 @@
-.container {
-    padding-top: 7rem;
-    margin: 0;
-    text-align: left;
+
+.m-page{
+    padding-top:7rem;
+    height: 100vh;
+    width:100vw;
+    /*display: flex;
+    align-items: flex-start;
+    justify-content: center;*/
+}
+
+.m-nav{
+    padding: 2rem;
+    position: fixed;
+    left:0;
+    width: 20%;
+}
+
+.m-nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+
+.m-nav ul li{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.m-nav ul li .topic-link{
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.m-nav ul li .topic-link.active{
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+}
+
+.m-content{
+    height:100vh;
+    width: 70%;
+    position: fixed;
+    right: 0;
+    overflow-y:scroll;
+}
+
+.m-page-0{
+
 }
 
 h2{

@@ -1,14 +1,52 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 import { Outlet, Link } from 'react-router-dom';
 import { Fragment } from 'react';
 import backgroundImage from '../../assets/about-bg.png';
 import gsap from 'gsap';
 import './about.css';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect } from "react";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function About(){ 
+    const pageOneRef = useRef(null);
+    const pageTwoRef = useRef(null);
+    const pageThreeRef = useRef(null);
+    const pageFourRef = useRef(null);
+
+    useEffect(() => {
+        const pageOne = pageOneRef.current;
+        const pageTwo = pageTwoRef.current;
+        const pageThree = pageThreeRef.current;
+        const pageFour = pageFourRef.current;
+
+        if(pageTwo && pageThree) {
+            gsap.to(pageTwo, {
+                scrollTrigger: {
+                    trigger: pageTwo,
+                    start: "bottom bottom",
+                    endTrigger: pageThree,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+        if(pageThree && pageFour) {
+            gsap.to(pageThree, {
+                scrollTrigger: {
+                    trigger: pageThree,
+                    start: "bottom bottom",
+                    endTrigger: pageFour,
+                    end: "top top",
+                    pin: true,
+                    pinSpacing: false,
+                }
+            });
+        }
+
+    }, []);
 
     return (
         <div className="content">
@@ -16,7 +54,7 @@ function About(){
                 <section className="ab-title">
                     <h1>ABOUT US</h1>
                 </section>
-                <section className="about">
+                <section ref={pageTwoRef} className="about">
                     <p className="ab-text">The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
                     mission to empower immigrant women and girls across Canada. In 2021, the Sexual & Reproductive Health 
                     (SRH) Campaign team at CAWI received a small fund from the Regina Public Interest Research Group to 
@@ -29,7 +67,7 @@ function About(){
                     To learn more about the work CAWI does and the work of the SRH team at CAWI, please visit us at 
                     www.cawicanada.com or at our social media channels.</p>
                 </section>
-                <section className="ack">
+                <section ref={pageThreeRef} className="ack">
                     <p className="ab-text">This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
                     and the Regina Public Interest Research Group. We are grateful for their generosity and support through 
                     various stages of the current project. We would also like to thank all the organizations and community 
@@ -41,7 +79,7 @@ function About(){
                     who have dedicated their time and energy to this toolkit and curriculum. To learn who has contributed, 
                     please refer to the list below containing names of volunteers from CAWI.</p>
                 </section>
-                <section className="authors">
+                <section ref={pageFourRef} className="authors">
                     <p className="ab-text">Rehma Khan (she/her)
                     Curriculum Developer
 
