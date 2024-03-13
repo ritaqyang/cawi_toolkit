@@ -1,13 +1,8 @@
-.container {
-    padding-top: 7rem;
-    margin: 0;
-    text-align: left;
-}
 
 .m-page{
     padding-top:7rem;
     height: 100vh;
-    width:100%;
+    width:100vw;
     /*display: flex;
     align-items: flex-start;
     justify-content: center;*/
@@ -50,6 +45,10 @@
     position: fixed;
     right: 0;
     overflow-y:scroll;
+}
+
+.m-page-0{
+
 }
 
 h2{
