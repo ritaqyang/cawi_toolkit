@@ -1,27 +1,9 @@
 import react from 'react';
 import LessonOverview from '../../../components/modules/m2/LessonOverview/LessonOverview.component';
 import RelationshipNavigator from '../../../components/modules/m2/elements/elements.component';
-import styled from 'styled-components';
+import {Wrapper, Sidebar, MainContentContainer, MainContent} from './m2.page.styles';
 
-const Wrapper = styled.div`
-  display: flex;
-  height: 100%; 
-  padding-top:7rem; 
-  background-color: #F9E29C; 
-`;
 
-const Sidebar = styled.div`
-  flex: 0 0 250px; /* Sidebar width */
-  background-color: #E3B778; /* Sidebar background color */
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
-
-const MainContent = styled.div`
-  flex: 1; /* Take remaining space */
-  padding: 20px;
-`;
 const M2Page = () => {
     return (
         <div>
@@ -34,10 +16,18 @@ const M2Page = () => {
                         <li>Link 3</li>
                     </ul>
                 </Sidebar>
-                <MainContent>
-                    <LessonOverview />
-                    <RelationshipNavigator />
-                </MainContent>
+                <MainContentContainer>
+                    <MainContent>
+                        helo
+
+                    </MainContent>
+
+                    <MainContent>
+                        heklo
+                    </MainContent>
+
+                   
+                </MainContentContainer>
             </Wrapper>
             
            
