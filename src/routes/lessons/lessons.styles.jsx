@@ -5,6 +5,7 @@ import styled from "styled-components";
 export const LessonPageContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row; 
   padding-top: 7rem; 
   justify-content: space-around;
 `;

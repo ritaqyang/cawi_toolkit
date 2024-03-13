@@ -10,14 +10,15 @@ const ModuleContainer = styled.div`
     background-color: yellow;
 `
 const Module = styled.div`
-  width: 15rem;
-  height: 15rem; 
+  width: 10rem;
+  height: 14rem; 
   display: flex;
   margin: 2rem;
   padding: 2rem;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+  background-color: #FFE5B4;
+  border: 2px solid #CEB180;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
 
 `;

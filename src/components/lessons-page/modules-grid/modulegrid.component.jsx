@@ -5,11 +5,14 @@ import React from "react";
 import { Square }  from "./modulesquare.component";
 
 export const LessonPlanContainer = styled.div`
-    padding: 5rem;   
+    padding: 1rem;   
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
+    border-radius: 8px;
     background-color:  #F9E29C;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
 `;
 
