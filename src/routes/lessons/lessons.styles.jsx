@@ -18,3 +18,23 @@ export const Module = styled.div`
   border: 1px solid #ccc;
   text-align: center;
 `;
+
+export const SidebarContainer = styled.div`
+  flex: 0 0 250px;
+  background-color: #E3B778; 
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+export const SidebarContent = styled.div`
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+`
+
+export const MainContent = styled.div`
+  flex: 1; /* Take remaining space */
+  padding: 20px;
+`;

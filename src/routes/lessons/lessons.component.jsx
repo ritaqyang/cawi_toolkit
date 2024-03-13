@@ -1,9 +1,8 @@
 import React from "react";
 import img from '../../assets/homepage.png';
-import { Outlet, Link } from "react-router-dom";
-import {  LessonPageContainer } from "./lessons.styles"
+import {  LessonPageContainer, SidebarContainer,SidebarContent, MainContent } from "./lessons.styles"
 import LessonGrid from "../../components/lessons-page/modules-grid/modulegrid.component";
-import styled from "styled-components";
+import { PdfDisplay } from "../../components/lessons-page/pdf-download/pdfdisplay.component";
 
 
 const modules = [
@@ -18,25 +17,12 @@ const modules = [
 ];
 
 
-const SidebarContainer = styled.div`
-  flex: 0 0 250px;
-  background-color: #E3B778; 
-  padding: 1rem;
-  margin-top: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-`;
+//TODO: make the sidebar dissapper when the window gets small / make a hamburger menu??
+//todo: figure out how to make pdf load faster
+//todo: add a fun load css when pdf is loading 
+//todo: implement a download option for the pdf 
+//todo: change the style for the pdfview buttons
 
-const SidebarContent = styled.div`
-    padding: 20px;
-    display: flex;
-    flex-direction: column; 
-`
-
-const MainContent = styled.div`
-  flex: 1; /* Take remaining space */
-  padding: 20px;
-`;
 const LessonsHome = ()  => {
 
    
@@ -57,6 +43,7 @@ const LessonsHome = ()  => {
                 </SidebarContainer>
                 <MainContent>
                     <LessonGrid modules={modules} />
+                    <PdfDisplay />
 
                 </MainContent>
                
