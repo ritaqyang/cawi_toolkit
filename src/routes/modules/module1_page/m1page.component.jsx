@@ -44,12 +44,6 @@ const Module1Page = () => {
                 </ul>
             </section>
             <section className="m-content">
-                <section className="m-page-0">
-                    <section ref={topicZeroRef} className="m-titlepage">
-                        <h2 className="m-title">LESSON PLAN #1:</h2>
-                        <h3 className="m-subtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>
-                    </section>
-                </section>
                 <section ref={topicZeroRef} className="m-titlepage">
                     <h2 className="m-title">LESSON PLAN #1:</h2>
                     <h3 className="m-subtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>

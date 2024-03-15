@@ -25,7 +25,7 @@ function About(){
             gsap.to(pageTwo, {
                 scrollTrigger: {
                     trigger: pageTwo,
-                    start: "bottom bottom",
+                    start: "top top",
                     endTrigger: pageThree,
                     end: "top top",
                     pin: true,
@@ -37,7 +37,7 @@ function About(){
             gsap.to(pageThree, {
                 scrollTrigger: {
                     trigger: pageThree,
-                    start: "bottom bottom",
+                    start: "top top",
                     endTrigger: pageFour,
                     end: "top top",
                     pin: true,
@@ -80,44 +80,58 @@ function About(){
                     please refer to the list below containing names of volunteers from CAWI.</p>
                 </section>
                 <section ref={pageFourRef} className="authors">
-                    <p className="ab-text">Rehma Khan (she/her)
-                    Curriculum Developer
-
-                    Hani Rukh-E-Qamar (she/her)
-                    Executive Director
-
-                    Ana Maria Dumitrache (they/them)
-                    Senior Project Lead
-
-                    Isabella Kakish (she/her)
-                    Research Assistant
-
-                    Crystal Yang (she/her)
-                    Outreach Manager
-
-                    Naomi Phung (she/her)
-                    Research Assistant
-
-                    Yasemin Erdogan (she/her)
-                    Research Assistant
-
-                    Roma Ranade (she/her)
-                    Research Assistant
-
-                    Marianne Djigo (she/her)
-                    Research Assistant
-
-                    Harini Aiyer (she/her)
-                    Research Assistant
-
-                    Zara Ahmed (she/her)
-                    Research Assistant
-
-                    Cassandra De Freitas (she/her)
-                    Research Assistant
-
-                    Karishma Joshi (she/her)
-                    Graphic Designer</p>
+                    <p className="ab-text">
+                        Rehma Khan (she/her)
+                        Curriculum Developer
+                    </p>
+                    <p className="ab-text">
+                        Hani Rukh-E-Qamar (she/her)
+                        Executive Director
+                    </p>
+                    <p className="ab-text">
+                        Ana Maria Dumitrache (they/them)
+                        Senior Project Lead
+                    </p>
+                    <p className="ab-text">
+                        Isabella Kakish (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Crystal Yang (she/her)
+                        Outreach Manager
+                    </p>
+                    <p className="ab-text">
+                        Naomi Phung (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Yasemin Erdogan (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Roma Ranade (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Marianne Djigo (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Harini Aiyer (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Zara Ahmed (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Cassandra De Freitas (she/her)
+                        Research Assistant
+                    </p>
+                    <p className="ab-text">
+                        Karishma Joshi (she/her)
+                        Graphic Designer
+                    </p>
                 </section>
             </div>
         </div>
