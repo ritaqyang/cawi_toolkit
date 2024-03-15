@@ -10,11 +10,7 @@ h1{
 
 .ab-title{
     height: 100vh;
-    background-image: url('../../assets/m-heading-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: top;
-    z-index: -3;
+    
 }
 
 .about{
@@ -35,7 +31,7 @@ h1{
 
 .authors{
     padding: 7rem;
-    height: 100vh;
+    height: 70vh;
     background-image: url('../../assets/pastel2-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
