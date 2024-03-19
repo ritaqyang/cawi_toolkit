@@ -13,7 +13,7 @@ const ModuleContainer = styled.div`
 `
 const Module = styled.div`
   width: 20rem;
-  height: 18rem;
+  height: 17rem;
   border-radius: 25px; 
   display: flex;
   flex-direction: column;
@@ -31,13 +31,13 @@ export const Square = ({ module }) => {
 
     const handleHover = () => {
         gsap.to(moduleRef.current, {
-            height: '21rem'
+            height: '20rem'
         })
     }
 
     const handleHoverOut = () => {
         gsap.to(moduleRef.current, {
-            height: '18rem'
+            height: '17rem'
         })
     }
 
