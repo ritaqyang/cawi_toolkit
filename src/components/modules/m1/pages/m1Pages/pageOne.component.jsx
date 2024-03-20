@@ -7,7 +7,7 @@ export const PageOne = () => {
         <Fragment>
             <TitlePage>
                 <h2 className="m-title">LESSON PLAN #1:</h2>
-                <h3 className="m-subtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>
+                <h3 className="m-title">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>
             </TitlePage>
             <Content>
                     <h4 className="m-subsubtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h4>

@@ -27,7 +27,7 @@ const Module1Page = () => {
         setActiveOption(option);
     };
 
-    const topicRefs = [
+    /*const topicRefs = [
         useRef(null),
         useRef(null),
         useRef(null),
@@ -38,7 +38,7 @@ const Module1Page = () => {
         useRef(null),
         useRef(null),
         useRef(null)
-    ];
+    ];*/
 
     const contentRef = useRef(null);
     const navRef = useRef(null);
@@ -48,12 +48,12 @@ const Module1Page = () => {
 
     //const [activeOption, setActiveOption] = useState(topicRefs[0]);
 
-    const handlePageChange = (ref) => {
+    /*const handlePageChange = (ref) => {
         setActiveOption(ref);
         if (ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-    }
+    }*/
 
 
     const handleNavHide = () => {
@@ -941,9 +941,9 @@ const Module1Page = () => {
             </section>
         </div>*/
         
-    )
+    );
 
-}
+};
 export default Module1Page; 
 
 

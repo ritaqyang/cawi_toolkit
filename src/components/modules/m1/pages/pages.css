@@ -28,6 +28,12 @@ h5{
     padding: 5rem;
 }
 
+.m-titlepage{
+    height: 100vh;
+    margin: 2rem;
+    border-radius: 25px;
+}
+
 .m-subsubtitle{
     padding: 1rem;
     width: 70%;
