@@ -2,6 +2,7 @@
     padding: 1rem;
     text-decoration: none;
     color: black;
+    border-radius: 25px;
 }
 
 .topic-link.active{
@@ -9,4 +10,5 @@
     text-decoration: none;
     color: black;
     border: 1px solid black;
+    border-radius: 25px;
 }

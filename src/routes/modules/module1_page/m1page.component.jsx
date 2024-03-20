@@ -5,10 +5,28 @@ import ModuleNav from '../../../components/modules/m1/moduleNav/moduleNav.compon
 import ModuleNavElement from '../../../components/modules/m1/moduleNav/mNavElement.component';
 import {gsap} from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import {PageOne} from '../../../components/modules/m1/pages/m1Pages/pageOne.component';
+import {PageTwo} from '../../../components/modules/m1/pages/m1Pages/pageTwo.component';
+import {PageThree} from '../../../components/modules/m1/pages/m1Pages/pageThree.component';
+import {PageFour} from '../../../components/modules/m1/pages/m1Pages/pageFour.component';
+import {PageFive} from '../../../components/modules/m1/pages/m1Pages/pageFive.component';
+import {PageSix} from '../../../components/modules/m1/pages/m1Pages/pageSix.component';
+import {PageSeven} from '../../../components/modules/m1/pages/m1Pages/pageSeven.component';
+import {PageEight} from '../../../components/modules/m1/pages/m1Pages/pageEight.component';
+import {PageNine} from '../../../components/modules/m1/pages/m1Pages/pageNine.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Module1Page = () => {
+
+    const [displayOption, setDisplayOption] = useState("1");
+    const [activeOption, setActiveOption] = useState("1");
+
+    const handleDisplayOptionChange = (option) => {
+        setDisplayOption(option);
+        setActiveOption(option);
+    };
+
     const topicRefs = [
         useRef(null),
         useRef(null),
@@ -26,8 +44,9 @@ const Module1Page = () => {
     const navRef = useRef(null);
     const hideRef = useRef(null);
     const showRef = useRef(null);
+    const navElRef = useRef(null);
 
-    const [activeOption, setActiveOption] = useState(topicRefs[0]);
+    //const [activeOption, setActiveOption] = useState(topicRefs[0]);
 
     const handlePageChange = (ref) => {
         setActiveOption(ref);
@@ -36,12 +55,18 @@ const Module1Page = () => {
         }
     }
 
+
     const handleNavHide = () => {
-        gsap.to(contentRef.current, {
-            width: '100%'
+        gsap.to(navElRef.current, {
+            height: '0px',
         })
         gsap.to(navRef.current, {
-            width: '0%'
+            width: '5%',
+            delay: 0.5
+        })
+        gsap.to(contentRef.current, {
+            width: '100%',
+            delay: 0.5
         })
         gsap.to(showRef.current, {
             display: 'inline'
@@ -58,8 +83,12 @@ const Module1Page = () => {
         gsap.to(navRef.current, {
             width: '20%'
         })
+        gsap.to(navElRef.current, {
+            height: 'auto',
+            delay: 0.5
+        })
         gsap.to(showRef.current, {
-            display: 'none'
+            display: 'none',
         })
         gsap.to(hideRef.current, {
             display: 'inline'
@@ -69,10 +98,41 @@ const Module1Page = () => {
     return (
         <div className="m-page">
             <section className="m-nav" ref={navRef}>
-                <ul>
-                    <li className="hide-and-show">
-                        <Link className="hide-link" ref={hideRef} onClick={handleNavHide} to="#">HIDE</Link>
-                    </li>
+                <div className="hide-and-show">
+                    <Link className="hide-link" ref={hideRef} onClick={handleNavHide} to="#">HIDE</Link>
+                    <Link className="show-link" ref={showRef} onClick={handleNavShow} to="#">SHOW</Link>
+                </div>
+                <ul className="nav-elements" ref={navElRef}>
+                    <ModuleNavElement isActive={activeOption === "1"} to="#" onClick={() => handleDisplayOptionChange("1")}>1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "2"} to="#" onClick={() => handleDisplayOptionChange("2")}>2. HEALTH EQUITY</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "3"} to="#" onClick={() => handleDisplayOptionChange("3")}>3. SOCIAL DETERMINANTS OF HEALTHCARE</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "4"} to="#" onClick={() => handleDisplayOptionChange("4")}>4. PUBERTY</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "5"} to="#" onClick={() => handleDisplayOptionChange("5")}>5. REPRODUCTIVE HEALTH SYSTEMS</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "6"} to="#" onClick={() => handleDisplayOptionChange("6")}>6. FEMALE GENTIAL MUTILATION</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "7"} to="#" onClick={() => handleDisplayOptionChange("7")}>7. HIV, STI'S AND SAFE SEX</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "8"} to="#" onClick={() => handleDisplayOptionChange("8")}>8. PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "9"} to="#" onClick={() => handleDisplayOptionChange("9")}>9. PREGNANCY</ModuleNavElement>
+                </ul>
+            </section>
+            <section className="m-content" ref={contentRef}>
+                {displayOption === "1" && <PageOne />}
+                {displayOption === "2" && <PageTwo />}
+                {displayOption === "3" && <PageThree />}
+                {displayOption === "4" && <PageFour />}
+                {displayOption === "5" && <PageFive />}
+                {displayOption === "6" && <PageSix />}
+                {displayOption === "7" && <PageSeven />}
+                {displayOption === "8" && <PageEight />}
+                {displayOption === "9" && <PageNine />}
+            </section>
+        </div>
+        /*<div className="m-page">
+            <section className="m-nav" ref={navRef}>
+                <div className="hide-and-show">
+                    <Link className="hide-link" ref={hideRef} onClick={handleNavHide} to="#">HIDE</Link>
+                    <Link className="show-link" ref={showRef} onClick={handleNavShow} to="#">SHOW</Link>
+                </div>
+                <ul className="nav-elements" ref={navElRef}>
                     <ModuleNavElement isActive={activeOption === topicRefs[1]} onClick={() => handlePageChange(topicRefs[1])} to="#">1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</ModuleNavElement>
                     <ModuleNavElement isActive={activeOption === topicRefs[2]} onClick={() => handlePageChange(topicRefs[2])} to="#">2. HEALTH EQUITY</ModuleNavElement>
                     <ModuleNavElement isActive={activeOption === topicRefs[3]} onClick={() => handlePageChange(topicRefs[3])} to="#">3. SOCIAL DETERMINANTS OF HEALTHCARE</ModuleNavElement>
@@ -86,7 +146,6 @@ const Module1Page = () => {
             </section>
             <section className="m-content" ref={contentRef}>
                 <section ref={topicRefs[0]} className="m-titlepage">
-                    <Link className="show-link" ref={showRef} onClick={handleNavShow} to="#">SHOW</Link>
                     <h2 className="m-title">LESSON PLAN #1:</h2>
                     <h3 className="m-subtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>
                 </section>
@@ -640,7 +699,6 @@ const Module1Page = () => {
                         <li><p><b>What happens if left untreated? </b>Initial damage goes unnoticed, however, untreated gonorrhea may lead 
                             to pelvic inflammatory disease. </p></li>
                     </ul>
-                    /** test your knwoledge */
                     <h5 className="m-subsubsubtitle">What do HIV and AIDS stand for?</h5>
                     <ul>
                         <li><p>HIV: Human Immunodeficiency Virus</p></li>
@@ -735,7 +793,6 @@ const Module1Page = () => {
                         smears, which involve collecting cells from the cervix and examining them under a microscope, can help detect 
                         changes in cervical cells caused by HPV infection and allow for early treatment to prevent the development of 
                         cancer.</p>
-                    /** test your knowledge */
                     <h5 className="m-subsubsubtitle">HIV/AIDS networks, resources, and information links</h5>
                     <p>Action Canada for Sexual Health and Rights has comprised an extensive list of types of 
                         <a href="https://www.actioncanadashr.org/sexual-health-hub/types-sexually-transmitted-infections">STI’s and information on how one should get tested</a>.</p>
@@ -882,7 +939,7 @@ const Module1Page = () => {
                     </div>
                 </section>
             </section>
-        </div>
+        </div>*/
         
     )
 
