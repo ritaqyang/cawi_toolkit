@@ -31,7 +31,7 @@ export const Square = ({ module }) => {
 
     const handleHover = () => {
         gsap.to(moduleRef.current, {
-            height: '21rem'
+            height: '20rem'
         })
     }
 

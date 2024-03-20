@@ -1,54 +1,155 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, Link } from 'react-router-dom';
 import './m1.page.styles.css';
+import ModuleNav from '../../../components/modules/m1/moduleNav/moduleNav.component';
+import ModuleNavElement from '../../../components/modules/m1/moduleNav/mNavElement.component';
 import {gsap} from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import {PageOne} from '../../../components/modules/m1/pages/m1Pages/pageOne.component';
+import {PageTwo} from '../../../components/modules/m1/pages/m1Pages/pageTwo.component';
+import {PageThree} from '../../../components/modules/m1/pages/m1Pages/pageThree.component';
+import {PageFour} from '../../../components/modules/m1/pages/m1Pages/pageFour.component';
+import {PageFive} from '../../../components/modules/m1/pages/m1Pages/pageFive.component';
+import {PageSix} from '../../../components/modules/m1/pages/m1Pages/pageSix.component';
+import {PageSeven} from '../../../components/modules/m1/pages/m1Pages/pageSeven.component';
+import {PageEight} from '../../../components/modules/m1/pages/m1Pages/pageEight.component';
+import {PageNine} from '../../../components/modules/m1/pages/m1Pages/pageNine.component';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Module1Page = () => {
-    const topicZeroRef = useRef(null);
-    const topicOneRef = useRef(null);
-    const topicTwoRef = useRef(null);
-    const topicThreeRef = useRef(null);
-    const topicFourRef = useRef(null);
-    const topicFiveRef = useRef(null);
-    const topicSixRef = useRef(null);
-    const topicSevenRef = useRef(null);
-    const topicEightRef = useRef(null);
-    const topicNineRef = useRef(null); 
-    
-    const [activeOption, setActiveOption] = useState(topicZeroRef);
 
-    const handlePageChange = (ref) => {
+    const [displayOption, setDisplayOption] = useState("1");
+    const [activeOption, setActiveOption] = useState("1");
+
+    const handleDisplayOptionChange = (option) => {
+        setDisplayOption(option);
+        setActiveOption(option);
+    };
+
+    /*const topicRefs = [
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null),
+        useRef(null)
+    ];*/
+
+    const contentRef = useRef(null);
+    const navRef = useRef(null);
+    const hideRef = useRef(null);
+    const showRef = useRef(null);
+    const navElRef = useRef(null);
+
+    //const [activeOption, setActiveOption] = useState(topicRefs[0]);
+
+    /*const handlePageChange = (ref) => {
         setActiveOption(ref);
         if (ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-    };
-    
+        }
+    }*/
+
+
+    const handleNavHide = () => {
+        gsap.to(navElRef.current, {
+            height: '0px',
+        })
+        gsap.to(navRef.current, {
+            width: '5%',
+            delay: 0.5
+        })
+        gsap.to(contentRef.current, {
+            width: '100%',
+            delay: 0.5
+        })
+        gsap.to(showRef.current, {
+            display: 'inline'
+        })
+        gsap.to(hideRef.current, {
+            display: 'none'
+        })
+    }
+
+    const handleNavShow = () => {
+        gsap.to(contentRef.current, {
+            width: '80%'
+        })
+        gsap.to(navRef.current, {
+            width: '20%'
+        })
+        gsap.to(navElRef.current, {
+            height: 'auto',
+            delay: 0.5
+        })
+        gsap.to(showRef.current, {
+            display: 'none',
+        })
+        gsap.to(hideRef.current, {
+            display: 'inline'
+        })
+    }
 
     return (
         <div className="m-page">
-            <section className="m-nav">
-                <ul>
-                    <li><Link className={activeOption === topicOneRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicOneRef)}>1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</Link></li>
-                    <li><Link className={activeOption === topicTwoRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicTwoRef)}>2. HEALTH EQUITY</Link></li>
-                    <li><Link className={activeOption === topicThreeRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicThreeRef)}>3. SOCIAL DETERMINANTS OF HEALTHCARE</Link></li>
-                    <li><Link className={activeOption === topicFourRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicFourRef)}>4. PUBERTY</Link></li>
-                    <li><Link className={activeOption === topicFiveRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicFiveRef)}>5. REPRODUCTIVE HEALTH SYSTEMS</Link></li>
-                    <li><Link className={activeOption === topicSixRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicSixRef)}>6. FEMALE GENTIAL MUTILATION</Link></li>
-                    <li><Link className={activeOption === topicSevenRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicSevenRef)}> 7. HIV, STI'S AND SAFE SEX</Link></li>
-                    <li><Link className={activeOption === topicEightRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicEightRef)}>8. PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</Link></li>
-                    <li><Link className={activeOption === topicNineRef ? "topic-link active" : "topic-link"} to="#" onClick={() => handlePageChange(topicNineRef)}>9. PREGNANCY</Link></li>
+            <section className="m-nav" ref={navRef}>
+                <div className="hide-and-show">
+                    <Link className="hide-link" ref={hideRef} onClick={handleNavHide} to="#">HIDE</Link>
+                    <Link className="show-link" ref={showRef} onClick={handleNavShow} to="#">SHOW</Link>
+                </div>
+                <ul className="nav-elements" ref={navElRef}>
+                    <ModuleNavElement isActive={activeOption === "1"} to="#" onClick={() => handleDisplayOptionChange("1")}>1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "2"} to="#" onClick={() => handleDisplayOptionChange("2")}>2. HEALTH EQUITY</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "3"} to="#" onClick={() => handleDisplayOptionChange("3")}>3. SOCIAL DETERMINANTS OF HEALTHCARE</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "4"} to="#" onClick={() => handleDisplayOptionChange("4")}>4. PUBERTY</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "5"} to="#" onClick={() => handleDisplayOptionChange("5")}>5. REPRODUCTIVE HEALTH SYSTEMS</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "6"} to="#" onClick={() => handleDisplayOptionChange("6")}>6. FEMALE GENTIAL MUTILATION</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "7"} to="#" onClick={() => handleDisplayOptionChange("7")}>7. HIV, STI'S AND SAFE SEX</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "8"} to="#" onClick={() => handleDisplayOptionChange("8")}>8. PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === "9"} to="#" onClick={() => handleDisplayOptionChange("9")}>9. PREGNANCY</ModuleNavElement>
                 </ul>
             </section>
-            <section className="m-content">
-                <section ref={topicZeroRef} className="m-titlepage">
+            <section className="m-content" ref={contentRef}>
+                {displayOption === "1" && <PageOne />}
+                {displayOption === "2" && <PageTwo />}
+                {displayOption === "3" && <PageThree />}
+                {displayOption === "4" && <PageFour />}
+                {displayOption === "5" && <PageFive />}
+                {displayOption === "6" && <PageSix />}
+                {displayOption === "7" && <PageSeven />}
+                {displayOption === "8" && <PageEight />}
+                {displayOption === "9" && <PageNine />}
+            </section>
+        </div>
+        /*<div className="m-page">
+            <section className="m-nav" ref={navRef}>
+                <div className="hide-and-show">
+                    <Link className="hide-link" ref={hideRef} onClick={handleNavHide} to="#">HIDE</Link>
+                    <Link className="show-link" ref={showRef} onClick={handleNavShow} to="#">SHOW</Link>
+                </div>
+                <ul className="nav-elements" ref={navElRef}>
+                    <ModuleNavElement isActive={activeOption === topicRefs[1]} onClick={() => handlePageChange(topicRefs[1])} to="#">1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[2]} onClick={() => handlePageChange(topicRefs[2])} to="#">2. HEALTH EQUITY</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[3]} onClick={() => handlePageChange(topicRefs[3])} to="#">3. SOCIAL DETERMINANTS OF HEALTHCARE</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[4]} onClick={() => handlePageChange(topicRefs[4])} to="#">4. PUBERTY</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[5]} onClick={() => handlePageChange(topicRefs[5])} to="#">5. REPRODUCTIVE HEALTH SYSTEMS</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[6]} onClick={() => handlePageChange(topicRefs[6])} to="#">6. FEMALE GENTIAL MUTILATION</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[7]} onClick={() => handlePageChange(topicRefs[7])} to="#">7. HIV, STI'S AND SAFE SEX</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[8]} onClick={() => handlePageChange(topicRefs[8])} to="#">8. PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</ModuleNavElement>
+                    <ModuleNavElement isActive={activeOption === topicRefs[9]} onClick={() => handlePageChange(topicRefs[9])} to="#">9. PREGNANCY</ModuleNavElement>
+                </ul>
+            </section>
+            <section className="m-content" ref={contentRef}>
+                <section ref={topicRefs[0]} className="m-titlepage">
                     <h2 className="m-title">LESSON PLAN #1:</h2>
                     <h3 className="m-subtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h3>
                 </section>
-                <section ref={topicOneRef} className="topic-1">
+                <section ref={topicRefs[1]} className="topic-1">
                     <h4 className="m-subsubtitle">WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</h4>
                     <p>Sexual and reproductive health means your physical, mental, emotional 
                         and social well-being as it relates to your sexuality (<a href="https://myhealth.alberta.ca/sexual-reproductive-health">My Health Alberta</a>). 
@@ -107,7 +208,7 @@ const Module1Page = () => {
                                 when equipped with proper SRH tools.</p></li>
                     </ul>
                 </section>
-                <section ref={topicTwoRef} className="topic-2">
+                <section ref={topicRefs[2]} className="topic-2">
                     <h4 className="m-subsubtitle">HEALTH EQUITY</h4>
                     <p>Healthy inequity within SRH recognizes systems that ensure that all persons, regardless of 
                         age, gender, sex, race, immigrant or refugee identities as well as disabilities. Government 
@@ -125,7 +226,7 @@ const Module1Page = () => {
                         <li><p>Redefine clinical practice</p></li>
                     </ul>
                 </section>
-                <section ref={topicThreeRef} className="topic-3">
+                <section ref={topicRefs[3]} className="topic-3">
                     <h4 className="m-subsubtitle">SOCIAL DETERMINANTS OF HEALTHCARE</h4>
                     <p>Social Determinants of healthcare are non-medical factors that may influence health outcomes.</p>
                     <p><b>Poverty and unequal access to healthcare: </b>Those who struggle to afford basic needs often 
@@ -158,7 +259,7 @@ const Module1Page = () => {
                         </ol>
                     </div>
                 </section>
-                <section ref={topicFourRef} className="topic-4">
+                <section ref={topicRefs[4]} className="topic-4">
                     <h4 className="m-subsubtitle">PUBERTY</h4>
                     <h5 className="m-subsubsubtitle">What is puberty?</h5>
                     <p>Period of human development during which an individual becomes capable of sexual reproduction. 
@@ -176,7 +277,7 @@ const Module1Page = () => {
                         In terms of physical changes, boys will get taller, muscles will grow, facial hair, grow hair on their 
                         underarms, develop pimples, and sweat more, and their voices will crack. </p>
                 </section>
-                <section ref={topicFiveRef} className="topic-5">
+                <section ref={topicRefs[5]} className="topic-5">
                     <h4 className="m-subsubtitle">REPRODUCTIVE HEALTH SYSTEMS</h4>
                     <h5 className="m-subsubsubtitle">What function does the reproductive system have in our bodies?</h5>
                     <p>The reproductive system serves to produce the sperm and egg cells that allow us to reproduce. It is also responsible 
@@ -365,7 +466,7 @@ const Module1Page = () => {
                         <li><p><a href="https://classroom.kidshealth.org/classroom/6to8/body/systems/female_reproductive_quiz.pdf">Kidshealth.org</a> has quizzes present for students from grade 6 to 8 to learn about female anatomy.</p></li>
                     </ul>
                 </section>
-                <section ref={topicSixRef} className="topic-6">
+                <section ref={topicRefs[6]} className="topic-6">
                     <h4 className="m-subsubtitle">FEMALE GENTIAL MUTILATION</h4>
                     <p>When teaching or facilitating conversations around anatomy and reproductive health, it is important to keep in mind 
                         factors that may impact how one perceives their own anatomy. If this lesson is for the community members it should 
@@ -484,7 +585,7 @@ const Module1Page = () => {
                         </ul>
                     </div>
                 </section>
-                <section ref={topicSevenRef} className="topic-7">
+                <section ref={topicRefs[7]} className="topic-7">
                     <h4 className="m-subsubtitle">HIV, STI'S AND SAFE SEX</h4>
                     <h5 className="m-subsubsubtitle">What are STI’s?</h5>
                     <ul>
@@ -598,7 +699,6 @@ const Module1Page = () => {
                         <li><p><b>What happens if left untreated? </b>Initial damage goes unnoticed, however, untreated gonorrhea may lead 
                             to pelvic inflammatory disease. </p></li>
                     </ul>
-                    /** test your knwoledge */
                     <h5 className="m-subsubsubtitle">What do HIV and AIDS stand for?</h5>
                     <ul>
                         <li><p>HIV: Human Immunodeficiency Virus</p></li>
@@ -693,7 +793,6 @@ const Module1Page = () => {
                         smears, which involve collecting cells from the cervix and examining them under a microscope, can help detect 
                         changes in cervical cells caused by HPV infection and allow for early treatment to prevent the development of 
                         cancer.</p>
-                    /** test your knowledge */
                     <h5 className="m-subsubsubtitle">HIV/AIDS networks, resources, and information links</h5>
                     <p>Action Canada for Sexual Health and Rights has comprised an extensive list of types of 
                         <a href="https://www.actioncanadashr.org/sexual-health-hub/types-sexually-transmitted-infections">STI’s and information on how one should get tested</a>.</p>
@@ -718,7 +817,7 @@ const Module1Page = () => {
                     <p><a href="https://gnpplus.net/who-we-are/about-us/">Global Network of People Living with HIV (GNP+)</a>, a network 
                         for people living with HIV, run by people living with HIV.</p>
                 </section>
-                <section ref={topicEightRef} className="topic-8">
+                <section ref={topicRefs[8]} className="topic-8">
                     <h4 className="m-subsubtitle">PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</h4>
                     <h5 className="m-subsubsubtitle">What is menstruation and why menstrual care?</h5>
                     <p>Menstruation is the process in which normal vaginal bleeding occurs as part of a woman's monthly cycle. 
@@ -793,7 +892,7 @@ const Module1Page = () => {
                         <li><p><b>Are parents or community groups supportive of people going to school during their period? </b></p></li>
                     </ul>
                 </section>
-                <section ref={topicNineRef} className="topic-9">
+                <section ref={topicRefs[9]} className="topic-9">
                     <h4 className="m-subsubtitle">PREGNANCY</h4>
                     <h5 className="m-subsubsubtitle">Unintended Pregnancies </h5>
                     <p><a href="https://www.cdc.gov/reproductivehealth/contraception/unintendedpregnancy/index.htm">Unintended 
@@ -840,90 +939,11 @@ const Module1Page = () => {
                     </div>
                 </section>
             </section>
-        </div>
-        /*<div className="container">
-
-            <form action="">
-                <p>What advice would you give someone who thinks that they might have an STI?</p>
-                <input type="checkbox" name="q1a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q1a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q1a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q1a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-                <p>What are some of the symptoms and stages of syphilis, chlamydia, and gonorrhea?</p>
-                <input type="checkbox" name="q2a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q2a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q2a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q2a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-                <p>Is there a cure for chlamydia and gonorrhea?</p>
-                <input type="checkbox" name="q3a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q3a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q3a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q3a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-                <p>How many stages are there in syphilis? Name them.</p>
-                <input type="checkbox" name="q4a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q4a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q4a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q4a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-                <p>What happens if gonorrhea or chlamydia are left untreated?</p>
-                <input type="checkbox" name="q5a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q5a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q5a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q5a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-                <p>How can syphilis be transmitted?</p>
-                <input type="checkbox" name="q1a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q1a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q1a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q1a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-                <p>How can syphilis be transmitted?</p>
-                <input type="checkbox" name="q1a1" value="Correct"/>
-                <label for="q1a1"> Go to an STI clinic or physician’s office to get tested.</label><br/>
-                <input type="checkbox" name="q1a2" value="Incorrect"/>
-                <label for="q1a2"> Ignore it.</label><br/>
-                <input type="checkbox" name="q1a3" value="Incorrect"/>
-                <label for="q1a3"> Search up symptoms on online forums.</label><br/>
-                <input type="checkbox" name="q1a4" value="Incorrect"/>
-                <label for="q1a4"> Become celibate.</label><br/>
-
-
-
-                
-            </form>
-
         </div>*/
-     
-    )
+        
+    );
 
-}
+};
 export default Module1Page; 
 
 
