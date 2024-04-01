@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, Link } from 'react-router-dom';
-import './mNavElement.css';
+import './moduleNav.styles.css';
 
 const ModuleNavElement = ({isActive, onClick, to, children}) => {
 
