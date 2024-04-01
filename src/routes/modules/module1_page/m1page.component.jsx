@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, Link } from 'react-router-dom';
-import './m1.page.styles.css';
+import {ModulePage, ModuleContent} from '../../../components/modules/modules.styles';
 import ModuleNav from '../../../components/modules/m1/moduleNav/moduleNav.component';
-import ModuleNavElement from '../../../components/modules/m1/moduleNav/mNavElement.component';
-import {gsap} from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
 import {PageOne} from '../../../components/modules/m1/pages/m1Pages/pageOne.component';
 import {PageTwo} from '../../../components/modules/m1/pages/m1Pages/pageTwo.component';
 import {PageThree} from '../../../components/modules/m1/pages/m1Pages/pageThree.component';
@@ -14,8 +11,6 @@ import {PageSix} from '../../../components/modules/m1/pages/m1Pages/pageSix.comp
 import {PageSeven} from '../../../components/modules/m1/pages/m1Pages/pageSeven.component';
 import {PageEight} from '../../../components/modules/m1/pages/m1Pages/pageEight.component';
 import {PageNine} from '../../../components/modules/m1/pages/m1Pages/pageNine.component';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const navElements = [
     { label: "1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?", option: "1" },
@@ -61,14 +56,14 @@ const Module1Page = () => {
     const contentRef = useRef(null);
 
     return (
-        <div className="m-page">
+        <ModulePage>
             <ModuleNav
                 navElements={navElements} 
                 activeOption={activeOption} 
                 handleDisplayOptionChange={handleDisplayOptionChange} 
                 contentRef={contentRef}
             />
-            <section className="m-content" ref={contentRef}>
+            <ModuleContent ref={contentRef}>
                 {displayOption === "1" && <PageOne />}
                 {displayOption === "2" && <PageTwo />}
                 {displayOption === "3" && <PageThree />}
@@ -78,8 +73,8 @@ const Module1Page = () => {
                 {displayOption === "7" && <PageSeven />}
                 {displayOption === "8" && <PageEight />}
                 {displayOption === "9" && <PageNine />}
-            </section>
-        </div>        
+            </ModuleContent>
+        </ModulePage>        
     );
 
 };
