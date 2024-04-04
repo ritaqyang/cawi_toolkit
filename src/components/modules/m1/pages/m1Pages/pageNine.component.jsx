@@ -1,7 +1,9 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
 import {Content,  
     SubSubTitle,
-    SubSubSubTitle} from '../pages.styles';
+    SubSubSubTitle,
+    BlueBox,
+    TextBox} from '../pages.styles';
 import '../pages.css';
 
 export const PageNine = () => {
@@ -16,9 +18,10 @@ export const PageNine = () => {
                         Most unintended pregnancies occur due to lack of or inconsistent use of birth control. In order to effectively 
                         prevent or plan for pregnancy, it is important to understand an individual's reproductive goals, and this may 
                         include contraceptive services, pregnancy testing, and counselling.</p>
+                    <TextBox>
                     <SubSubSubTitle>How does one get pregnant?</SubSubSubTitle>
                     <p>Pregnancy is the result of a process that has many steps. <a href="https://www.cdc.gov/reproductivehealth/infertility/index.htm">To get pregnant</a>:</p>
-                    <ul>
+                    <ul className="m-list">
                         <li><p>First, a woman’s body must release an egg from one of her <a href="https://www.womenshealth.gov/glossary#ovaries">ovaries</a>.</p></li>
                         <li><p>Then, a man’s sperm must join with the egg along the way (fertilize).</p></li>
                         <li><p>Following this, the fertilized egg must go through a <a href="https://www.womenshealth.gov/glossary#fallopian">fallopian tube</a> toward 
@@ -31,6 +34,7 @@ export const PageNine = () => {
                         counselling</a> to help clients choose a method of contraception.</p>
                     <p><a href="https://www.cdc.gov/reproductivehealth/contraception/contraception_guidance.htm">CDC Contraceptive 
                         Guidance</a> for Healthcare providers.</p>
+                    </TextBox>
                     <SubSubSubTitle>Miscarriages and the emotional impacts</SubSubSubTitle>
                     <p>Miscarriage is an event where everyone is impacted differently. Many women experience an emotional roller coaster 
                         as their bodies go through hormonal shifts and re-adjust. They may experience many different emotions such as 
@@ -41,7 +45,7 @@ export const PageNine = () => {
                         also induces an intense period of emotional distress which may worsen over months. 
                         <a href="https://www.tommys.org/baby-loss-support/miscarriage-information-and-support/support-after-miscarriage/your-feelings-and-emotions-after-miscarriage">Tommy’s</a> 
                         also shares a resource on support after miscarriages as well as the feelings and emotions one faces after miscarriages. </p>
-                    <div className="follow-up">
+                    <BlueBox>
                         <SubSubSubTitle>Following each lesson place, it is a good idea to measure students' baseline 
                             knowledge and what they learned during the lesson. Here are a few questions you can ask students:</SubSubSubTitle>
                         <ul>
@@ -51,7 +55,7 @@ export const PageNine = () => {
                             <li><p>What is something new that you have learned?</p></li>
                             <li><p>What is something you wish you could learn about more that was not mentioned in the seminar?</p></li>
                         </ul>
-                    </div>
+                    </BlueBox>
             </Content>
         </Fragment>
     );

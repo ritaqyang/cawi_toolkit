@@ -68,3 +68,10 @@ export const BlueBox = styled.section`
     border: 2px solid #d8edf2;
     border-radius: 25px 25px 25px 25px;
 `;
+
+export const TextBox = styled.section`
+    padding: 2rem;
+    margin-bottom: 5rem;
+    border: 2px solid #ede2ce;
+    border-radius: 25px 25px 25px 25px;
+`;

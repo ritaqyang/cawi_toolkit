@@ -1,7 +1,8 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
 import {Content,  
     SubSubTitle,
-    SubSubSubTitle} from '../pages.styles';
+    SubSubSubTitle,
+    TextBox} from '../pages.styles';
 import '../pages.css';
 import styled from "styled-components";
 
@@ -55,8 +56,9 @@ export const PageSix = () => {
                         type of FGM as it involves the removal of everything. </p>
                     <p><b>Type IV: </b>Includes other harmful procedures to the female genitalia. These may include pricking, piercing, incising, 
                     scraping, and cauterization. </p>
+                    <TextBox>
                     <SubSubSubTitle>Immediate health risks associated with FGM/C (<a href="https://rise.articulate.com/share/AMYujlqu_z7bwaRijeq6JNIgDfTQKrQ-#/lessons/99oH6a79XcHhYPCEm76FDmauD9PyKY3A">Understanding Female Genital Mutilation / Cutting: A Canadian Issue - Overview | Rise 360 (articulate.com)</a>)</SubSubSubTitle>
-                    <ul>
+                    <ul className="m-list"> 
                         <li><p>Severe pain</p></li>
                         <li><p>Urinary retention</p></li>
                         <li><p>Damage to the urethra and/or anus</p></li>
@@ -65,6 +67,7 @@ export const PageSix = () => {
                     </ul>
                     <p>Immediate complications may also lead to long-term impacts, including psychological trauma. Children are often 
                         restrained during the procedure, which contributes to further trauma experienced.</p>
+                    </TextBox>
                     <SubSubSubTitle>Long Term health risks associated with FGM/C (<a href="https://rise.articulate.com/share/AMYujlqu_z7bwaRijeq6JNIgDfTQKrQ-#/lessons/99oH6a79XcHhYPCEm76FDmauD9PyKY3A">Understanding Female Genital Mutilation / Cutting: A Canadian Issue - Overview | Rise 360 (articulate.com)</a>)</SubSubSubTitle>
                     <ul>
                         <li><p>Psychological: People who have experienced FGM/C may suffer from psychological trauma, such as anxiety, 
@@ -75,6 +78,7 @@ export const PageSix = () => {
                         <li><p>Reproductive: As a result of FGM/C, some of the effects may be chronic pain, infections, development of cysts, 
                             painful urination, decreased sexual pleasure, infertility and also difficulty with menstruation. </p></li>
                     </ul>
+                    <TextBox>
                     <SubSubSubTitle>Why is FGM/C performed (<a href="https://rise.articulate.com/share/AMYujlqu_z7bwaRijeq6JNIgDfTQKrQ-#/">Understanding Female Genital Mutilation / Cutting: A Canadian Issue - Overview | Rise 360 (articulate.com)?</a>)</SubSubSubTitle>
                     <p>FGM/C is still widely performed across the world. There are many reasons why it is still performed. From a 
                         psychosexual perspective, some communities believe that FGM reduces sexual desire, decreases temptations for 
@@ -93,6 +97,7 @@ export const PageSix = () => {
                     <p>Where women are largely dependent on men, economic necessity can be a major driver of FGM/C. For example, 
                         in certain patriarchal societies where women are seen as the property of men, girls who have undergone FGM/C 
                         get a higher bride price. (<a href="https://rise.articulate.com/share/AMYujlqu_z7bwaRijeq6JNIgDfTQKrQ-#/">Understanding Female Genital Mutilation / Cutting: A Canadian Issue - Overview</a>)</p>
+                    </TextBox>
                     <SubSubSubTitle>When and how is FGM/C performed (<a href="https://rise.articulate.com/share/AMYujlqu_z7bwaRijeq6JNIgDfTQKrQ-#/">Understanding Female Genital Mutilation / Cutting: A Canadian Issue - Overview | Rise 360 (articulate.com)?</a>)</SubSubSubTitle>
                     <p>FGM/C is typically performed between birth and 15 years of age. It is also performed at significant milestones 
                         such as infancy, at the onset of puberty, prior to marriage, and during a first pregnancy. It is often not 

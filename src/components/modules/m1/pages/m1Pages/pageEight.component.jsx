@@ -1,7 +1,8 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
 import {Content,  
     SubSubTitle,
-    SubSubSubTitle} from '../pages.styles';
+    SubSubSubTitle,
+    BlueBox} from '../pages.styles';
 import '../pages.css';
 
 export const PageEight = () => {
@@ -54,7 +55,7 @@ export const PageEight = () => {
                             affordable menstrual products. However, this term also refers to having access to menstrual hygiene education, toilets, 
                             hand washing facilities, or waste management. </p></li>
                         <li><p>Important facts about period poverty:</p></li>
-                        <ul>
+                        <ul className="m-list">
                             <li><p>Poor menstrual hygiene can cause physical health risks and has been linked to reproductive and urinary tract 
                                 infections.</p></li>
                             <li><p>Globally, 1.7 billion people live without basic sanitation services.</p></li>
@@ -64,6 +65,7 @@ export const PageEight = () => {
                         <li><p>Barriers involved in period poverty are social, economic, and political (ex: taxes on menstruation products, and 
                             social stigma surrounding the time of a period). </p></li>
                     </ul>
+                    <BlueBox>
                     <SubSubSubTitle>Here a few ways you can offer support to students who may be struggling (<a href="https://www.unicef.org/rosa/stories/period-lesson-plan-guide-menstruation-teachers">Period lesson plan: guide - Unicef</a>):</SubSubSubTitle>
                     <ul>
                         <li><p><b>Are there people in class who need extra support? Consider the following: </b>Have some students been trying 
@@ -81,6 +83,7 @@ export const PageEight = () => {
                         plan that is culturally appropriate for the community/school?</p></li>
                         <li><p><b>Are parents or community groups supportive of people going to school during their period? </b></p></li>
                     </ul>
+                    </BlueBox>
             </Content>
         </Fragment>
     );

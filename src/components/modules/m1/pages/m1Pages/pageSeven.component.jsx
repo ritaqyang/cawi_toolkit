@@ -1,7 +1,9 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
 import {Content,  
     SubSubTitle,
-    SubSubSubTitle} from '../pages.styles';
+    SubSubSubTitle,
+    BlueBox,
+    TextBox} from '../pages.styles';
 import '../pages.css';
 
 export const PageSeven = () => {
@@ -25,6 +27,7 @@ export const PageSeven = () => {
                             or equipment to inject drugs. Additionally, individuals using body piercing equipment or tattooing 
                             needles may also be exposed to STIs. </p></li>
                     </ul>
+                    <TextBox>
                     <SubSubSubTitle>Syphilis (<a href="https://www.cdc.gov/std/syphilis/stdfact-syphilis-detailed.htm#:~:text=How%20do%20people%20get%20syphilis,%2C%20anal%2C%20or%20oral%20sex.">Syphilis - Center for Disease Control and Prevention</a>)</SubSubSubTitle>
                     <ul>
                         <li><p><b>How is syphilis transmitted: </b>Spreads from person to person with direct contact with a 
@@ -34,7 +37,7 @@ export const PageSeven = () => {
                             and the start of the first symptom is 21 days. It can range between 10 to 90 days. </p></li>
                         <li><p><b>Stages and symptoms of syphilis: </b>Sometimes no symptoms (3 stages: (1) Chancre (2) Rash 
                         (3) Nervous system). </p></li>
-                        <ul>
+                        <ul className="m-list">
                             <li><p>There are 4 stages of syphilis which are known as primary, secondary, latent and tertiary. </p></li>
                             <ul>
                                 <li><p><b>Primary Stage: </b>During the first stage, there is often a single sore or multiple 
@@ -64,7 +67,7 @@ export const PageSeven = () => {
                         in your vision or even blindness. </p>
                     <p><b>Otosyphilis: </b>When syphilis spreads to the ear. Symptoms may include hearing loss, ringing, buzzing, roaring, 
                         or hissing in the ears (“tinnitus”), as well as dizziness or vertigo. </p>
-                    <ul>
+                    <ul className="m-list">
                         <li><p><b>Testing: </b>A blood test</p></li>
                         <li><p><b>Treatment: </b>Syphilis is curable by antibiotics, however, it may not cure the damage that has already 
                             been done by the infection. </p></li>
@@ -75,6 +78,8 @@ export const PageSeven = () => {
                             syphilis. Follow-up testing by your healthcare provider may be necessary to make sure the treatment 
                             administered was successful.</p></li>
                     </ul>
+                    </TextBox>
+                    <TextBox>
                     <SubSubSubTitle>Chlamydia (<a href="https://www.cdc.gov/std/chlamydia/default.htm">Chlamydia - Center for Disease Control and Prevention</a>)</SubSubSubTitle>
                     <ul>
                         <li><p><b>What is Chlamydia? </b><a href="https://www.cdc.gov/std/chlamydia/default.htm">Chlamydia</a> is a 
@@ -100,6 +105,8 @@ export const PageSeven = () => {
                         <li><p><b>What happens if left untreated? </b>Initial damage goes unnoticed, however, untreated chlamydia may 
                             lead to pelvic inflammatory disease. </p></li>
                     </ul>
+                    </TextBox>
+                    <TextBox>
                     <SubSubSubTitle>Gonorrhea (<a href="https://www.cdc.gov/std/gonorrhea/stdfact-gonorrhea.htm">Gonorrhea - Center for Disease Control and Prevention</a>)</SubSubSubTitle>
                     <ul>
                         <li><p><b>What is Gonorrhea? </b>An STI that can cause infection in the genitals, rectum, and throat. It is very 
@@ -121,6 +128,8 @@ export const PageSeven = () => {
                         <li><p><b>What happens if left untreated? </b>Initial damage goes unnoticed, however, untreated gonorrhea may lead 
                             to pelvic inflammatory disease. </p></li>
                     </ul>
+                    </TextBox>
+                    <TextBox>
                     <SubSubSubTitle>What do HIV and AIDS stand for?</SubSubSubTitle>
                     <ul>
                         <li><p>HIV: Human Immunodeficiency Virus</p></li>
@@ -143,6 +152,7 @@ export const PageSeven = () => {
                         <li><p>Anyone who is sexually active.</p></li>
                         <li><p>During pregnancy: once during the first trimester and once during the third trimester.</p></li>
                     </ul>
+                    <TextBox>
                     <SubSubSubTitle>People with certain risk factors should get tested more than once. These risk 
                         factors may include: </SubSubSubTitle>
                     <ul>
@@ -154,9 +164,10 @@ export const PageSeven = () => {
                         <li><p>You’ve had sex with someone who has done anything listed above or with someone whose sexual history 
                             you don’t know. </p></li>
                     </ul>
+                    </TextBox>
                     <SubSubSubTitle className="m-subsubsubtitle">What kinds of tests can someone take?</SubSubSubTitle>
                     <p>There are 3 tests available for someone to take who has HIV. </p>
-                    <ol>
+                    <ol className="m-list">
                         <li><p>Antibody test: looks for antibodies in your blood or fluids.</p></li>
                         <li><p>Antigen/Antibody test: looks for both HIV antibodies and antigens. </p></li>
                         <li><p>Nucleic Acid test: With a NAT, the health care provider will draw 
@@ -215,7 +226,7 @@ export const PageSeven = () => {
                         smears, which involve collecting cells from the cervix and examining them under a microscope, can help detect 
                         changes in cervical cells caused by HPV infection and allow for early treatment to prevent the development of 
                         cancer.</p>
-                    /** test your knowledge */
+                    <BlueBox>
                     <SubSubSubTitle>HIV/AIDS networks, resources, and information links</SubSubSubTitle>
                     <p>Action Canada for Sexual Health and Rights has comprised an extensive list of types of 
                         <a href="https://www.actioncanadashr.org/sexual-health-hub/types-sexually-transmitted-infections">STI’s and information on how one should get tested</a>.</p>
@@ -239,6 +250,8 @@ export const PageSeven = () => {
                         sector to improve the lives of all Ontarians living with and at risk of HIV.</p>
                     <p><a href="https://gnpplus.net/who-we-are/about-us/">Global Network of People Living with HIV (GNP+)</a>, a network 
                         for people living with HIV, run by people living with HIV.</p>
+                    </BlueBox>
+                    </TextBox>
             </Content>
         </Fragment>
     );

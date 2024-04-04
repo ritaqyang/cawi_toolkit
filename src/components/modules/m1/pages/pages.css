@@ -43,3 +43,20 @@ p{
     border: 2px solid #ede2ce;
     border-radius: 25px 25px 25px 25px;
 }
+
+table{
+    padding: 2rem;
+    /*background-color: #d8edf2;*/
+    border-collapse: collapse;
+    border-radius: 25px 25px 25px 25px;
+}
+
+table tr th{
+    padding: 1rem;
+    border: 1px solid #018fb2;
+}
+
+table tr td{
+    padding: 2rem;
+    border: 1px solid #018fb2;
+}
