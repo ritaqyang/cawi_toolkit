@@ -1,52 +1,54 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
-import {Content} from '../pages.styles';
+import {Content,  
+    SubSubTitle,
+    SubSubSubTitle} from '../pages.styles';
 import '../pages.css';
 
 export const PageEight = () => {
     return (
         <Fragment>
             <Content>
-            <h4 className="m-subsubtitle">PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</h4>
-                    <h5 className="m-subsubsubtitle">What is menstruation and why menstrual care?</h5>
+            <SubSubTitle>PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</SubSubTitle>
+                    <SubSubSubTitle>What is menstruation and why menstrual care?</SubSubSubTitle>
                     <p>Menstruation is the process in which normal vaginal bleeding occurs as part of a woman's monthly cycle. 
                         Every month, your body prepares for pregnancy. If no pregnancy occurs, the uterus, or womb, sheds its lining. </p>
-                    <h5 className="m-subsubsubtitle">What is a menstrual cycle?</h5>
+                    <SubSubSubTitle>What is a menstrual cycle?</SubSubSubTitle>
                     <p>A menstrual cycle is the monthly series of changes a woman's body goes through in preparation for the 
                         possibility of pregnancy. Each month, one of the ovaries releases an egg — a process called ovulation. 
                         At the same time, hormonal changes prepare the uterus for pregnancy. If ovulation takes place and the egg 
                         isn't fertilized, the lining of the uterus sheds through the vagina. (<a href="https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/menstrual-cycle/art-20047186">Mayo Clinic -- Women's Health</a>)</p>
-                    <h5 className="m-subsubsubtitle">Is there anything that people can not do when they are menstruating?</h5>
+                    <SubSubSubTitle>Is there anything that people can not do when they are menstruating?</SubSubSubTitle>
                     <p>Nope! Everyone can live their normal lives when menstruating.</p>
-                    <h5 className="m-subsubsubtitle">What if my cycle is irregular?</h5>
+                    <SubSubSubTitle>What if my cycle is irregular?</SubSubSubTitle>
                     <p>Many people actually have irregular cycles in their first few years of menstruation. Everyone's bodies are 
                         different. Everyone can learn about their cycles better by observing the minor changes that may take place 
                         during their periods and it may take a few years to settle into a regular monthly pattern. Everyone's bodies 
                         are different. </p>
-                    <h5 className="m-subsubsubtitle">What are some changes that may take place when someone gets their period for the first time?</h5>
+                    <SubSubSubTitle>What are some changes that may take place when someone gets their period for the first time?</SubSubSubTitle>
                     <p>Breasts grow, hair grows on the body, and hips widen. Sometimes hormones make both girls and boys a bit more 
                         emotional. There is no reason to be scared or ashamed of any of these changes. They are completely normal! </p>
-                    <h5 className="m-subsubsubtitle">Period Pain </h5>
+                    <SubSubSubTitle>Period Pain </SubSubSubTitle>
                     <p>Sometimes menstruation can be painful! The amount of pain can differ from month to month and from person to person.</p>
-                    <h5 className="m-subsubsubtitle">Why do periods hurt?</h5>
+                    <SubSubSubTitle>Why do periods hurt?</SubSubSubTitle>
                     <p>During your menstrual period, your uterus contracts to help expel its lining. Hormone-like substances 
                         (prostaglandins) involved in pain and inflammation trigger uterine muscle contractions. Higher levels of 
                         prostaglandins are associated with more-severe menstrual cramps.</p>
-                    <h5 className="m-subsubsubtitle">Period Pain Control</h5>
+                    <SubSubSubTitle>Period Pain Control</SubSubSubTitle>
                     <p>Pain can often be eased by going on short walks, getting eight hours of sleep every night, drinking lots of 
                         water, gentle pain medicine, placing a warm water bottle, a warm heating pad or a warm compress on the belly, 
                         and taking a warm bath. Exercise is also a great way to reduce period pains. Take your vitamins and minerals.</p>
-                    <h5 className="m-subsubsubtitle">How do I know if I need medical attention?</h5>
+                    <SubSubSubTitle>How do I know if I need medical attention?</SubSubSubTitle>
                     <p>If a period is so painful, that you can’t stand or walk; if you bleed much more than you usually do; or if you 
                         stop bleeding for a long time, or bleed between periods, you need to get medical help from a community health 
                         worker, midwife or doctor.</p>
-                    <h5 className="m-subsubsubtitle">Practicing good hygiene during your period will lead to people feeling more healthy. How can you practice good hygiene during your period?</h5>
+                    <SubSubSubTitle>Practicing good hygiene during your period will lead to people feeling more healthy. How can you practice good hygiene during your period?</SubSubSubTitle>
                     <p>Continue to wash normally during menses. Wash the outside genital area at least once a day. If you do not have 
                         access to a shower or bath, use a small amount of plain water, soap and a soft cloth. Always wash her hands with 
                         soap after using the toilet or changing a pad or cloth.</p>
-                    <h5 className="m-subsubsubtitle">What can teachers do to help students who may be facing issues communicating or talking about their periods?</h5>
+                    <SubSubSubTitle>What can teachers do to help students who may be facing issues communicating or talking about their periods?</SubSubSubTitle>
                     <p>As a teacher, one of the best ways you can help people in your class deal with menstruation is to notice when they 
                         need help and let them know they can talk to you. </p>
-                    <h5 className="m-subsubsubtitle">Period Poverty</h5>
+                    <SubSubSubTitle>Period Poverty</SubSubSubTitle>
                     <ul>
                         <li><p>Period poverty is a term used to describe the struggle girls, women, and non-binary individuals face in accessing 
                             affordable menstrual products. However, this term also refers to having access to menstrual hygiene education, toilets, 
@@ -62,7 +64,7 @@ export const PageEight = () => {
                         <li><p>Barriers involved in period poverty are social, economic, and political (ex: taxes on menstruation products, and 
                             social stigma surrounding the time of a period). </p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">Here a few ways you can offer support to students who may be struggling (<a href="https://www.unicef.org/rosa/stories/period-lesson-plan-guide-menstruation-teachers">Period lesson plan: guide - Unicef</a>):</h5>
+                    <SubSubSubTitle>Here a few ways you can offer support to students who may be struggling (<a href="https://www.unicef.org/rosa/stories/period-lesson-plan-guide-menstruation-teachers">Period lesson plan: guide - Unicef</a>):</SubSubSubTitle>
                     <ul>
                         <li><p><b>Are there people in class who need extra support? Consider the following: </b>Have some students been trying 
                         to hide their breasts, including by hunching their shoulders? Do students seem embarrassed about growing more hair on 

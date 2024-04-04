@@ -1,12 +1,14 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
-import {Content} from '../pages.styles';
+import {Content,
+    SubSubTitle,
+    BlueBox} from '../pages.styles';
 import '../pages.css';
 
 export const PageThree = () => {
     return (
         <Fragment>
             <Content>
-                <h4 className="m-subsubtitle">SOCIAL DETERMINANTS OF HEALTHCARE</h4>
+                <SubSubTitle>SOCIAL DETERMINANTS OF HEALTHCARE</SubSubTitle>
                 <p>Social Determinants of healthcare are non-medical factors that may influence health outcomes.</p>
                 <p><b>Poverty and unequal access to healthcare: </b>Those who struggle to afford basic needs often 
                         are unable to access quality sexual health services. Oftentimes sexual health services and resources 
@@ -26,7 +28,7 @@ export const PageThree = () => {
                         health and even one’s quality of life. </p>
                     <p>Prior to starting sessions, try to begin with an icebreaker to understand where students are with 
                         knowledge levels around sexual and reproductive health education prior to the session. </p>
-                    <div className="icebreaker">
+                    <BlueBox>
                         <p><b>Icebreaker: </b>How would you rate what you were taught about sexual and reproductive health as a 
                             young person? </p>
                         <ol>
@@ -36,7 +38,7 @@ export const PageThree = () => {
                             <li><p>Really bad: I received misinformation about the topics or received incomplete information.</p></li>
                             <li><p>Non-existent: I wasn’t told anything & I was discouraged from asking any question.</p></li>
                         </ol>
-                    </div>
+                    </BlueBox>
             </Content>
         </Fragment>
     );

@@ -1,20 +1,22 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
-import {Content} from '../pages.styles';
+import {Content,  
+    SubSubTitle,
+    SubSubSubTitle} from '../pages.styles';
 import '../pages.css';
 
 export const PageSeven = () => {
     return (
         <Fragment>
             <Content>
-            <h4 className="m-subsubtitle">HIV, STI'S AND SAFE SEX</h4>
-                    <h5 className="m-subsubsubtitle">What are STI’s?</h5>
+            <SubSubTitle>HIV, STI'S AND SAFE SEX</SubSubTitle>
+                    <SubSubSubTitle>What are STI’s?</SubSubSubTitle>
                     <ul>
                         <li><p>Sexually transmitted infections (STIs) are infections that are induced by bacterial, viral, and 
                             parasitic infections that may be contracted during sex or intimacy. </p></li>
                         <li><p>Most STIs are transmitted through unprotected oral, vaginal, or anal sex, some STIs are 
                             transmitted by skin-to-skin contact. </p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">What factors increase STI transmission rates?</h5>
+                    <SubSubSubTitle>What factors increase STI transmission rates?</SubSubSubTitle>
                     <ul>
                         <li><p>Economic disparities such as poverty, unstable housing, lack of medical insurance or regular 
                             medical provider are associated with higher rates of STI spread 
@@ -23,7 +25,7 @@ export const PageSeven = () => {
                             or equipment to inject drugs. Additionally, individuals using body piercing equipment or tattooing 
                             needles may also be exposed to STIs. </p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">Syphilis (<a href="https://www.cdc.gov/std/syphilis/stdfact-syphilis-detailed.htm#:~:text=How%20do%20people%20get%20syphilis,%2C%20anal%2C%20or%20oral%20sex.">Syphilis - Center for Disease Control and Prevention</a>)</h5>
+                    <SubSubSubTitle>Syphilis (<a href="https://www.cdc.gov/std/syphilis/stdfact-syphilis-detailed.htm#:~:text=How%20do%20people%20get%20syphilis,%2C%20anal%2C%20or%20oral%20sex.">Syphilis - Center for Disease Control and Prevention</a>)</SubSubSubTitle>
                     <ul>
                         <li><p><b>How is syphilis transmitted: </b>Spreads from person to person with direct contact with a 
                             syphilitic sore known as a chancre. It may be hidden inside the mouth, vagina, or anus, during 
@@ -73,7 +75,7 @@ export const PageSeven = () => {
                             syphilis. Follow-up testing by your healthcare provider may be necessary to make sure the treatment 
                             administered was successful.</p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">Chlamydia (<a href="https://www.cdc.gov/std/chlamydia/default.htm">Chlamydia - Center for Disease Control and Prevention</a>)</h5>
+                    <SubSubSubTitle>Chlamydia (<a href="https://www.cdc.gov/std/chlamydia/default.htm">Chlamydia - Center for Disease Control and Prevention</a>)</SubSubSubTitle>
                     <ul>
                         <li><p><b>What is Chlamydia? </b><a href="https://www.cdc.gov/std/chlamydia/default.htm">Chlamydia</a> is a 
                             common STI that can cause infection among both men and women. It can cause permanent damage to a woman’s 
@@ -98,7 +100,7 @@ export const PageSeven = () => {
                         <li><p><b>What happens if left untreated? </b>Initial damage goes unnoticed, however, untreated chlamydia may 
                             lead to pelvic inflammatory disease. </p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">Gonorrhea (<a href="https://www.cdc.gov/std/gonorrhea/stdfact-gonorrhea.htm">Gonorrhea - Center for Disease Control and Prevention</a>)</h5>
+                    <SubSubSubTitle>Gonorrhea (<a href="https://www.cdc.gov/std/gonorrhea/stdfact-gonorrhea.htm">Gonorrhea - Center for Disease Control and Prevention</a>)</SubSubSubTitle>
                     <ul>
                         <li><p><b>What is Gonorrhea? </b>An STI that can cause infection in the genitals, rectum, and throat. It is very 
                             common, especially among young people ages 15-24 years.</p></li>
@@ -119,13 +121,12 @@ export const PageSeven = () => {
                         <li><p><b>What happens if left untreated? </b>Initial damage goes unnoticed, however, untreated gonorrhea may lead 
                             to pelvic inflammatory disease. </p></li>
                     </ul>
-                    /** test your knwoledge */
-                    <h5 className="m-subsubsubtitle">What do HIV and AIDS stand for?</h5>
+                    <SubSubSubTitle>What do HIV and AIDS stand for?</SubSubSubTitle>
                     <ul>
                         <li><p>HIV: Human Immunodeficiency Virus</p></li>
                         <li><p>AIDS: Acquired Immunodeficiency Virus</p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">Information on HIV (<a href="https://www.cdc.gov/hiv/basics/hiv-transmission/ways-people-get-hiv.html">HIV Basics - CDC</a>)</h5>
+                    <SubSubSubTitle>Information on HIV (<a href="https://www.cdc.gov/hiv/basics/hiv-transmission/ways-people-get-hiv.html">HIV Basics - CDC</a>)</SubSubSubTitle>
                     <p><b>Fluids that contain HIV: </b>Semen, vaginal fluid, anal secretions, blood, breast milk.</p>
                     <p><b>Low Risk activities for HIV: </b>Kissing, sex toys, manual sex (washing your hands so low risk).</p>
                     <ul>
@@ -137,13 +138,13 @@ export const PageSeven = () => {
                         or other drug injection equipment.</p>
                     <p><b>Getting Tested: </b>The only way to keep yourself and your partner safe is by getting tested. CDC recommends 
                         that people between ages of 13 and 64 should get tested at least once as part of routine health care.</p>
-                    <h5 className="m-subsubsubtitle">Who should get tested?</h5>
+                    <SubSubSubTitle>Who should get tested?</SubSubSubTitle>
                     <ul>
                         <li><p>Anyone who is sexually active.</p></li>
                         <li><p>During pregnancy: once during the first trimester and once during the third trimester.</p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">People with certain risk factors should get tested more than once. These risk 
-                        factors may include: </h5>
+                    <SubSubSubTitle>People with certain risk factors should get tested more than once. These risk 
+                        factors may include: </SubSubSubTitle>
                     <ul>
                         <li><p>You’ve had anal or vaginal sex with someone who has HIV.</p></li>
                         <li><p>You’ve had more than one sex partner since your last HIV test.</p></li>
@@ -153,7 +154,7 @@ export const PageSeven = () => {
                         <li><p>You’ve had sex with someone who has done anything listed above or with someone whose sexual history 
                             you don’t know. </p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">What kinds of tests can someone take?</h5>
+                    <SubSubSubTitle className="m-subsubsubtitle">What kinds of tests can someone take?</SubSubSubTitle>
                     <p>There are 3 tests available for someone to take who has HIV. </p>
                     <ol>
                         <li><p>Antibody test: looks for antibodies in your blood or fluids.</p></li>
@@ -163,26 +164,26 @@ export const PageSeven = () => {
                             can tell if a person has HIV or how much virus is present in the blood 
                             (HIV viral load test). </p></li>
                     </ol>
-                    <h5 className="m-subsubsubtitle">What do I do if I have a positive HIV test?</h5>
+                    <SubSubSubTitle>What do I do if I have a positive HIV test?</SubSubSubTitle>
                     <ul>
                         <li><p>Try not to panic</p></li>
                         <li><p>Do not blame or assume </p></li>
                         <li><p>Do your research through smartsexresource.com, scarleteen.com, call local HIV/AIDs networks. </p></li>
                     </ul>
-                    <h5 className="m-subsubsubtitle">What does it mean if I have a negative test?</h5>
+                    <SubSubSubTitle>What does it mean if I have a negative test?</SubSubSubTitle>
                     <p>Having a negative HIV test does not necessarily mean that you are HIV negative. The time between HIV exposure 
                         and when an HIV test can accurately detect the virus in the body is called the window period. If you take an 
                         HIV test soon after a potential HIV exposure and the result is negative, it is important to get tested again 
                         after the window period for the specific test you took. If you test negative for HIV after the window period 
                         and have not had any potential HIV exposures during that time, it is then likely that you do not have HIV. 
                         However, remember not to assume that a negative test does not mean that you do not have HIV.</p>
-                    <h5 className="m-subsubsubtitle">Self-Test Kits</h5>
+                    <SubSubSubTitle>Self-Test Kits</SubSubSubTitle>
                     <p>There are two types of HIV self-tests available: <b>rapid self-tests</b> and <b>mail-in self-tests</b>. Rapid 
                         self-tests can be done entirely at home or in a private location and provide results within 20 minutes. These 
                         kits can be purchased at a pharmacy or online. Mail-in self-tests include a specimen collection kit for 
                         collecting dried blood from a fingerstick at home. The sample is then sent to a lab for testing and the results 
                         are provided by a healthcare provider. These self-tests can be ordered online or through a healthcare provider.</p>
-                    <h5 className="m-subsubsubtitle">HIV Prevention</h5>
+                    <SubSubSubTitle>HIV Prevention</SubSubSubTitle>
                     <p>Condoms are an effective option to prevent HIV and other sexually transmitted diseases. They are effective in 
                         preventing the transmission of HIV and other sexually transmitted infections (STIs) that are transmitted through 
                         body fluid.. When used consistently and correctly, condoms can help reduce the risk of HIV and STI transmission. 
@@ -192,7 +193,7 @@ export const PageSeven = () => {
                         store them, how to open and put them on, and how to dispose of them properly after use. It is also important to use 
                         a new condom every time you have sex, making sure the condom is stored in a cool, dry place, and using water-based 
                         lubricant to help reduce the risk of breakage. Condoms are also only effective if used properly.</p>
-                    <h5 className="m-subsubsubtitle">HIV Treatment</h5>
+                    <SubSubSubTitle>HIV Treatment</SubSubSubTitle>
                     <p>HIV treatment involves taking prescribed medications, known as antiretroviral therapy (ART), and should be taken 
                         after consulting with a healthcare provider. ART helps lower the amount of HIV in the body and can help individuals 
                         with HIV maintain their health.  There is currently no known cure in place for HIV, effective HIV treatment can 
@@ -202,7 +203,7 @@ export const PageSeven = () => {
                         Pre-exposure prophylaxis (PrEP), which is a drug that prevents HIV from spreading in the body after having sex 
                         with someone who may be HIV positive. ART is recommended for anyone who may have HIV. Although there is no present 
                         cure for HIV, people who take medicine can live long, healthier lives as well. </p>
-                    <h5 className="m-subsubsubtitle">HPV and Pap Smears</h5>
+                    <SubSubSubTitle>HPV and Pap Smears</SubSubSubTitle>
                     <p><a href="https://www.cdc.gov/std/hpv/stdfact-hpv.htm">Human papillomavirus</a> (HPV) is a common sexually 
                         transmitted infection (STI) that is spread through skin-to-skin contact during sexual activity. There are many 
                         different types of HPV, and although most infections are harmless, some types can cause genital warts or cancer. 
@@ -215,7 +216,7 @@ export const PageSeven = () => {
                         changes in cervical cells caused by HPV infection and allow for early treatment to prevent the development of 
                         cancer.</p>
                     /** test your knowledge */
-                    <h5 className="m-subsubsubtitle">HIV/AIDS networks, resources, and information links</h5>
+                    <SubSubSubTitle>HIV/AIDS networks, resources, and information links</SubSubSubTitle>
                     <p>Action Canada for Sexual Health and Rights has comprised an extensive list of types of 
                         <a href="https://www.actioncanadashr.org/sexual-health-hub/types-sexually-transmitted-infections">STI’s and information on how one should get tested</a>.</p>
                     <p>Resource by Action Canada for Sexual Health and Rights on 

@@ -1,23 +1,36 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
-import {Content} from '../pages.styles';
+import {Content,  
+    SubSubTitle,
+    SubSubSubTitle} from '../pages.styles';
 import '../pages.css';
+import styled from "styled-components";
+
+export const Activity = styled.section`
+    margin: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding: 2rem;
+    background-color:#d8edf2;
+    border: 2px solid #d8edf2;
+    border-radius: 25px 25px 25px 25px;
+`;
 
 export const PageFive = () => {
     return (
         <Fragment>
             <Content>
-            <h4 className="m-subsubtitle">REPRODUCTIVE HEALTH SYSTEMS</h4>
-                    <h5 className="m-subsubsubtitle">What function does the reproductive system have in our bodies?</h5>
+            <SubSubTitle>REPRODUCTIVE HEALTH SYSTEMS</SubSubTitle>
+                    <SubSubSubTitle>What function does the reproductive system have in our bodies?</SubSubSubTitle>
                     <p>The reproductive system serves to produce the sperm and egg cells that allow us to reproduce. It is also responsible 
                         for transporting and sustaining these cells, nurturing the developing offspring, and producing hormones.</p>
                     <p><a href="https://kidshealth.org/en/kids/puberty.html">Kids Health</a> is a great resource to learn about puberty and some of the changes that the body goes through. </p>
-                    <div className="activity">
+                    <Activity>
                         <p><b>ACTIVITY: </b>Create 3 lists (male, female, everyone) and get students to determine if it’s a male part, 
                             female part, or body part everyone has. Let’s also keep in mind that some people’s bodies don’t fit neatly into 
                             one category or another and they might be born with ambiguous genitalia. Additionally, it is also important to 
                             keep in mind that body parts are not limited to one gender as many people do not identify as male or female.</p>
-                    </div>
-                    <h5 className="m-subsubsubtitle">Male Reproductive Systems (Those who are biologically male)</h5>
+                    </Activity>
+                    <SubSubSubTitle>Male Reproductive Systems (Those who are biologically male)</SubSubSubTitle>
                     <table>
                         <tr>
                             <th>Name of body part</th>
@@ -76,7 +89,7 @@ export const PageFive = () => {
                                 sperm. Some pre–ejaculatory fluid may contain sperm. </td>
                         </tr>
                     </table>
-                    <h5 className="m-subsubsubtitle">Female Reproductive systems (Those who are biologically female)</h5>
+                    <SubSubSubTitle>Female Reproductive systems (Those who are biologically female)</SubSubSubTitle>
                     <table>
                         <tr>
                             <th>Name of body part</th>
@@ -142,7 +155,7 @@ export const PageFive = () => {
                                 when it is not erect. </td>
                         </tr>
                     </table>
-                    <h5 className="m-subsubsubtitle">Both Male and Female Reproductive Systems (those who are both biologically male and female)</h5>
+                    <SubSubSubTitle>Both Male and Female Reproductive Systems (those who are both biologically male and female)</SubSubSubTitle>
                     <table>
                         <tr>
                             <th>Name of body part</th>
@@ -188,7 +201,7 @@ export const PageFive = () => {
                         </tr>
                     </table>
                     <p>Source: <a href="https://www.advocatesforyouth.org/wp-content/uploads/storage/advfy/lesson-plans/lesson-plan-anatomy-and-physiology-part-i-and-ii.pdf">Lesson Plan - Sexual and Reproductive Anatomy and Physiology</a></p>
-                    <h5 className="m-subsubsubtitle">Fun activities/quizzes that you can share with your students:</h5>
+                    <SubSubSubTitle>Fun activities/quizzes that you can share with your students:</SubSubSubTitle>
                     <ul>
                         <li><p><a href="https://www.sciencequiz.net/newjcscience/jcbiology/Reproduction/mcq/female_reprod_mcq.htm">Sciencequiz.net</a> contains fun quizzes to learn about female anatomy and reproductive health. </p></li>
                         <li><p><a href="https://classroom.kidshealth.org/classroom/6to8/body/systems/female_reproductive_quiz.pdf">Kidshealth.org</a> has quizzes present for students from grade 6 to 8 to learn about female anatomy.</p></li>
