@@ -22,7 +22,7 @@ a{
     color:rgb(178, 116, 0);
 }
 
-a:hover{
+p a:hover{
     color: #018fb2;
 }
 
