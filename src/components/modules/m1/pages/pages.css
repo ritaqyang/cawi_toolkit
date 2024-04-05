@@ -7,16 +7,6 @@
     font-family: 'creato';
 }
 
-.activity{
-    padding: 20rem;
-    text-align: center;
-    /*background-image: url('../../../assets/activity-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: center;*/
-}
-
 a{
     text-decoration: none;
     color:rgb(178, 116, 0);
@@ -59,4 +49,12 @@ table tr th{
 table tr td{
     padding: 2rem;
     border: 1px solid #018fb2;
+}
+
+.duty-link{
+    color: #ff5757;
+}
+
+.duty-link:hover{
+    color: rgb(178, 116, 0);
 }

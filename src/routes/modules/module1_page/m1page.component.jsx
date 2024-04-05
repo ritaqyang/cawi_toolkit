@@ -55,6 +55,12 @@ const Module1Page = () => {
 
     const contentRef = useRef(null);
 
+    useEffect(() => {
+        if (contentRef.current) {
+            contentRef.current.scrollTop = 0;
+        }
+    }, [displayOption]);
+
     return (
         <ModulePage>
             <ModuleNav

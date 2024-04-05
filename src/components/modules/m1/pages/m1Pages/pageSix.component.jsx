@@ -143,9 +143,9 @@ export const PageSix = () => {
                         an added responsibility to report. This is called the duty to report.</p>
                     <DutyToReport>
                         <DutyTitle>DUTY TO REPORT</DutyTitle>
-                        <DutySubTitle><a href="https://www.justice.gc.ca/eng/rp-pr/cj-jp/fv-vf/caw-mei/p11.html">Child Abuse is Wrong: What can I do?</a></DutySubTitle>
-                        <DutySubTitle><a href="https://www.ontario.ca/page/report-child-abuse-and-neglect">Ontario’s Duty to Report</a></DutySubTitle>
-                        <DutySubTitle><a href="https://www.alberta.ca/preventing-child-abuse-information-for-educators">Alberta Educators’ Duty to Report</a></DutySubTitle>
+                        <DutySubTitle><a className="duty-link" href="https://www.justice.gc.ca/eng/rp-pr/cj-jp/fv-vf/caw-mei/p11.html">Child Abuse is Wrong: What can I do?</a></DutySubTitle>
+                        <DutySubTitle><a className="duty-link" href="https://www.ontario.ca/page/report-child-abuse-and-neglect">Ontario’s Duty to Report</a></DutySubTitle>
+                        <DutySubTitle><a className="duty-link" href="https://www.alberta.ca/preventing-child-abuse-information-for-educators">Alberta Educators’ Duty to Report</a></DutySubTitle>
                         <DutySubTitle>Canadian Resources to learn more about FGM/C and where to find supports for survivors: </DutySubTitle>
                         <ul>
                             <li><p>End FGM/C Canada Network : <a href="https://www.endfgm.ca/resources">Resources</a> / FGM/C Foundation 
