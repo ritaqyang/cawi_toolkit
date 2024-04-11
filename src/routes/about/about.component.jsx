@@ -1,61 +1,155 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, Fragment, useLayoutEffect } from "react";
 import { Outlet, Link } from 'react-router-dom';
-import { Fragment } from 'react';
 import backgroundImage from '../../assets/about-bg.png';
-import gsap from 'gsap';
 import './about.css';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import { useLayoutEffect } from "react";
+import {SubTitle} from '../../components/modules/m1/pages/pages.styles';
+import styled from "styled-components";
+import '../../components/modules/m1/pages/pages.css';
+import {gsap} from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger)
 
-function About(){ 
-    const pageOneRef = useRef(null);
-    const pageTwoRef = useRef(null);
-    const pageThreeRef = useRef(null);
-    const pageFourRef = useRef(null);
+export const AboutHero = styled.section`
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    transition: opacity 0.5s ease;
+`;
+
+export const AboutHeroText = styled.section`
+    font-size: 3rem;
+`;
+
+export const AboutPage = styled.section`
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   /*justify-content: space-evenly;*/
+   flex-wrap: wrap;
+`;
+
+export const AboutContent = styled.section`
+    height: fit-content;
+    margin-top: 4rem;
+    margin-right: 45vw;
+    margin-left: 5vw;
+    padding: 2rem;
+    width: 50vw;
+    z-index: 3;
+    /*opacity: 0;
+    transition: opacity 0.5s ease;*/
+`;
+
+export const AckContent = styled.section`
+    height: fit-content;
+    margin-top: 4rem;
+    margin-right: 5vw;
+    margin-left: 45vw;
+    padding: 2rem;
+    width: 50vw;
+    opacity: 0;
+`;
+
+export const AuthorsContent = styled.section`
+    height: fit-content;
+    margin-top: 4rem;
+    margin-right: 45vw;
+    margin-left: 5vw;
+    padding: 2rem;
+    width: 50vw;
+    opacity: 0;
+`;
+
+export const PageContainer = styled.section`
+    opacity: 0;
+    transition: opacity 0.5s ease;
+`;
+
+export const AboutText = styled.section`
+    padding: 2rem;
+    border: 2px solid #ede2ce;
+    border-radius: 25px 25px 25px 25px;
+    
+`;
+
+export const AckText = styled.section`
+    padding: 2rem;
+    border: 2px solid #ede2ce;
+    border-radius: 25px 25px 25px 25px;
+   
+`;
+
+export const AuthorText = styled.section`
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #ede2ce;
+    border-radius: 25px 25px 25px 25px;
+   
+`;
+
+export const AuthorTextLeft = styled.section`
+    padding-right: 1rem;
+`;
+
+export const AuthorTextRight = styled.section`
+    padding-left: 2rem;
+`;
+
+const About = () => {
+
+    const pageRef = useRef([]);
+    const heroRef = useRef(null);
 
     useEffect(() => {
-        const pageOne = pageOneRef.current;
-        const pageTwo = pageTwoRef.current;
-        const pageThree = pageThreeRef.current;
-        const pageFour = pageFourRef.current;
-
-        if(pageTwo && pageThree) {
-            gsap.to(pageTwo, {
-                scrollTrigger: {
-                    trigger: pageTwo,
-                    start: "top top",
-                    endTrigger: pageThree,
-                    end: "top top",
-                    pin: true,
-                    pinSpacing: false,
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                //entry.target.style.opacity = entry.intersectionRatio;
+                /*gsap.to(entry.target, {
+                    opacity: entry.intersectionRatio,
+                    duration: 0.5,
+                })*/
+                console.log(entry.intersectionRatio)
+                if (entry.intersectionRatio > 0) {
+                    gsap.to(entry.target, {
+                        opacity: 1,
+                        duration: 0.5,
+                    })
+                    //entry.target.style.opacity = "1"; // When entering viewport, set opacity to 1 (fade in)
+                } else {
+                    gsap.to(entry.target, {
+                        opacity: 0,
+                        duration: 0.5,
+                    })
+                    //entry.target.style.opacity = "0"; // When leaving viewport, set opacity to 0 (fade out)
                 }
             });
-        }
-        if(pageThree && pageFour) {
-            gsap.to(pageThree, {
-                scrollTrigger: {
-                    trigger: pageThree,
-                    start: "top top",
-                    endTrigger: pageFour,
-                    end: "top top",
-                    pin: true,
-                    pinSpacing: false,
-                }
-            });
-        }
+        });
 
+        pageRef.current.forEach(page => {
+            observer.observe(page);
+        });
+
+        return () => {
+            pageRef.current.forEach(page => {
+                observer.unobserve(page);
+            });
+        };
     }, []);
-
+    
     return (
-        <div className="content">
-            <div className="wrapper">
-                <section className="ab-title">
-                    <h1>ABOUT US</h1>
-                </section>
-                <section ref={pageTwoRef} className="about">
-                    <p className="ab-text">The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
+        <Fragment>
+       
+        <AboutPage className="container">
+            <AboutContent>
+            <PageContainer className="page" ref={el => (pageRef.current[0] = el)}>
+            <SubTitle>ABOUT US</SubTitle>
+                <AboutText>
+                <p>The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
                     mission to empower immigrant women and girls across Canada. In 2021, the Sexual & Reproductive Health 
                     (SRH) Campaign team at CAWI received a small fund from the Regina Public Interest Research Group to 
                     conduct a community-based research project on the experiences of immigrant women and girls with the 
@@ -66,9 +160,15 @@ function About(){
 
                     To learn more about the work CAWI does and the work of the SRH team at CAWI, please visit us at 
                     www.cawicanada.com or at our social media channels.</p>
-                </section>
-                <section ref={pageThreeRef} className="ack">
-                    <p className="ab-text">This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
+                </AboutText>
+            </PageContainer>
+            </AboutContent>
+
+            <AboutContent>
+            <PageContainer className="page" ref={el => (pageRef.current[1] = el)}>
+            <SubTitle>ACKNOWLEDGEMENTS</SubTitle>
+                <AckText>
+                <p>This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
                     and the Regina Public Interest Research Group. We are grateful for their generosity and support through 
                     various stages of the current project. We would also like to thank all the organizations and community 
                     members who participated in community consultations for the toolkit, including Alisa Tukkimäki from the 
@@ -78,64 +178,37 @@ function About(){
                     We would like to acknowledge and thank the volunteers at the Canadian Advisory of Women Immigrants (CAWI), 
                     who have dedicated their time and energy to this toolkit and curriculum. To learn who has contributed, 
                     please refer to the list below containing names of volunteers from CAWI.</p>
-                </section>
-                <section ref={pageFourRef} className="authors">
-                    <p className="ab-text">
-                        Rehma Khan (she/her)
-                        Curriculum Developer
-                    </p>
-                    <p className="ab-text">
-                        Hani Rukh-E-Qamar (she/her)
-                        Executive Director
-                    </p>
-                    <p className="ab-text">
-                        Ana Maria Dumitrache (they/them)
-                        Senior Project Lead
-                    </p>
-                    <p className="ab-text">
-                        Isabella Kakish (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Crystal Yang (she/her)
-                        Outreach Manager
-                    </p>
-                    <p className="ab-text">
-                        Naomi Phung (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Yasemin Erdogan (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Roma Ranade (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Marianne Djigo (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Harini Aiyer (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Zara Ahmed (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Cassandra De Freitas (she/her)
-                        Research Assistant
-                    </p>
-                    <p className="ab-text">
-                        Karishma Joshi (she/her)
-                        Graphic Designer
-                    </p>
-                </section>
-            </div>
-        </div>
-        
+                </AckText>
+            </PageContainer>
+            </AboutContent>
+
+            <AboutContent>
+            <PageContainer className="page" ref={el => (pageRef.current[2] = el)}>
+            <SubTitle>AUTHORS</SubTitle>
+            <AuthorText>
+                <AuthorTextLeft>
+                    <p>Rehma Khan (she/her)<br></br><b>Curriculum Developer</b></p>
+                    <p> Hani Rukh-E-Qamar (she/her)<br></br><b>Executive Director</b></p>
+                    <p>Ana Maria Dumitrache (they/them)<br></br><b>Senior Project Lead</b></p>
+                    <p>Isabella Kakish (she/her)<br></br><b>Research Assistant</b></p>
+                    <p> Crystal Yang (she/her)<br></br><b>Outreach Manager</b></p>
+                    <p>Naomi Phung (she/her)<br></br><b>Research Assistant</b></p>
+                    <p>Yasemin Erdogan (she/her)<br></br><b>Research Assistant</b> </p>
+                </AuthorTextLeft>
+                <AuthorTextRight>
+                    <p>Roma Ranade (she/her)<br></br><b>Research Assistant</b></p>
+                    <p>Marianne Djigo (she/her)<br></br><b>Research Assistant</b></p>
+                    <p>Harini Aiyer (she/her)<br></br><b>Research Assistant</b></p>
+                    <p>Zara Ahmed (she/her)<br></br><b>Research Assistant</b></p>
+                    <p>Cassandra De Freitas (she/her)<br></br><b>Research Assistant</b></p>
+                    <p>Karishma Joshi (she/her)<br></br><b>Graphic Designer</b></p>
+                </AuthorTextRight>
+                </AuthorText>
+            </PageContainer>
+            </AboutContent>
+
+        </AboutPage>
+        </Fragment>
     ); 
 }
 

@@ -1,4 +1,4 @@
-import React, {useLayoutEffect} from "react";
+import React, {useLayoutEffect, useEffect} from "react";
 import img from '../../assets/homepage.png';
 import {  LessonPageContainer, SidebarContainer,SidebarContent, MainContent } from "./lessons.styles"
 import LessonGrid from "../../components/lessons-page/modules-grid/modulegrid.component";
