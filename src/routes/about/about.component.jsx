@@ -119,7 +119,6 @@ export const AuthorTextRight = styled.section`
 const About = () => {
 
     const pageRef = useRef([]);
-    const heroRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
@@ -160,9 +159,9 @@ const About = () => {
     return (
         <Fragment>
        
-        <AboutPage className="container">
+        <AboutPage>
             <AboutContent>
-            <PageContainer className="page" ref={el => (pageRef.current[0] = el)}>
+            <PageContainer ref={el => (pageRef.current[0] = el)}>
             <SubTitle>ABOUT US</SubTitle>
                 <AboutText>
                 <p>The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
@@ -172,10 +171,12 @@ const About = () => {
                     Canadian SRH curriculums. The team hoped to use the findings of the study to develop a curriculum and 
                     creative community-based solutions for SRH education. In 2022, the team received another grant from Oxfam 
                     Canada in partnership with Government of Canada to further continue their work on the campaign and create 
-                    a toolkit, develop workshops, and host an event on the work of the SRH team. 
-
+                    a toolkit, develop workshops, and host an event on the work of the SRH team.</p> 
+                <p>    
                     To learn more about the work CAWI does and the work of the SRH team at CAWI, please visit us at 
                     www.cawicanada.com or at our social media channels.</p>
+                <p>
+                    For more information and questions, please contact our general email admin@cawicanada.com </p>
                 </AboutText>
             </PageContainer>
             </AboutContent>
@@ -198,7 +199,7 @@ const About = () => {
             </AboutContentMobile>
 
             <AboutContent>
-            <PageContainer className="page" ref={el => (pageRef.current[1] = el)}>
+            <PageContainer ref={el => (pageRef.current[1] = el)}>
             <SubTitle>ACKNOWLEDGEMENTS</SubTitle>
                 <AckText>
                 <p>This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
@@ -206,8 +207,8 @@ const About = () => {
                     various stages of the current project. We would also like to thank all the organizations and community 
                     members who participated in community consultations for the toolkit, including Alisa Tukkimäki from the 
                     End FGM Canada Network. We would also like to acknowledge that all of the graphics used in this toolkit/curriculum 
-                    are from www.canva.com.
-
+                    are from www.canva.com.</p>
+                <p>
                     We would like to acknowledge and thank the volunteers at the Canadian Advisory of Women Immigrants (CAWI), 
                     who have dedicated their time and energy to this toolkit and curriculum. To learn who has contributed, 
                     please refer to the list below containing names of volunteers from CAWI.</p>
@@ -232,7 +233,7 @@ const About = () => {
             </AboutContentMobile>
 
             <AboutContent>
-            <PageContainer className="page" ref={el => (pageRef.current[2] = el)}>
+            <PageContainer ref={el => (pageRef.current[2] = el)}>
             <SubTitle>AUTHORS</SubTitle>
             <AuthorText>
                 <AuthorTextLeft>
