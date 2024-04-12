@@ -10,6 +10,7 @@ const Navigation = () => {
     return (
         <Fragment>
             <header className="navbar">
+                <img className="logo" src={logo} alt="logo" />
                 <ul>
                     <li><a href='/'>HOME</a></li>
                     <li><a href='/lessons-home'>LESSONS</a></li>
