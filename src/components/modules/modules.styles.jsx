@@ -12,4 +12,7 @@ export const ModuleContent = styled.section`
     position: fixed;
     right: 0;
     overflow-y:scroll;
+    @media (max-width: 950px) {
+        width: 90%;
+    }
 `;

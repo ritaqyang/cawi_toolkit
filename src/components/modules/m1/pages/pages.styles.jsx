@@ -24,6 +24,9 @@ export const Title = styled.section`
     margin-left: 0;
     margin-right: 0;
     font-size: 5rem;
+    @media (max-width: 950px) {
+        font-size: 3rem;
+    }
 `;
 
 /*h2*/
@@ -33,6 +36,9 @@ export const SubTitle = styled.section`
     margin-left: 0;
     margin-right: 0;
     font-size: 3rem;
+    @media (max-width: 950px) {
+        font-size: 1rem;
+    }
 `;
 
 /*h4*/
@@ -48,6 +54,9 @@ export const SubSubTitle = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 25px;
+    @media (max-width: 950px) {
+        font-size: 2rem;
+    }
 `;
 
 /*h5*/
@@ -60,6 +69,9 @@ export const SubSubSubTitle = styled.section`
     padding: 1rem;
     border: 2px solid #ede2ce;
     border-radius: 25px 25px 25px 25px;
+    @media (max-width: 950px) {
+        font-size: 1rem;
+    }
 `;
 
 export const BlueBox = styled.section`

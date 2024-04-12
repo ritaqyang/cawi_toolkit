@@ -67,6 +67,17 @@ const ModuleNav = ({ navElements, activeOption, handleDisplayOptionChange, conte
                 </ModuleNavElement>
             ))}
         </ul>
+        <ul className="nav-elements-mobile">
+            {navElements.map((navElement, index) => (
+                <ModuleNavElement 
+                    key={index} 
+                    isActive={activeOption === navElement.option} 
+                    onClick={() => handleDisplayOptionChange(navElement.option)}
+                >
+                    {navElement.option}
+                </ModuleNavElement>
+            ))}
+        </ul>
         </section>
     );
 };

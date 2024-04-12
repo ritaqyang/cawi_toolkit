@@ -82,3 +82,23 @@
     border-radius: 0 25px 25px 0;
     /*border: 2px solid #CEB180;*/
 }
+
+.nav-elements-mobile{
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .nav-elements{
+        display: none;
+    }
+    .nav-elements-mobile{
+        overflow-y: hidden;
+        display: inline;
+    }
+    .hide-and-show{
+        display: none;
+    }
+    .m-nav{
+        width: fit-content;
+    }
+}

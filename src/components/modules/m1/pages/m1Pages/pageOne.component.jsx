@@ -15,6 +15,9 @@ export const LandAck = styled.section`
         padding-top: 3rem;
         padding-bottom: 3rem;
         text-align: center;
+        @media (max-width: 950px) {
+                padding: 1rem;
+        }
 `;
 
 export const LandAckContent = styled.section`
@@ -24,6 +27,10 @@ export const LandAckContent = styled.section`
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: center;
+        @media (max-width: 950px) {
+                padding: 0;
+                background-image: none;
+        }
 `;
 
 export const PageOne = () => {
