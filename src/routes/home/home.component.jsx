@@ -1,10 +1,12 @@
 
-import React, {useRef, useLayoutEffect, Fragment} from 'react';
+import React, {useRef, useLayoutEffect, useEffect, Fragment} from 'react';
 import styled from 'styled-components';
 import img from '../../assets/homepage.png';
 import {gsap} from "gsap";
 import { TextPlugin } from 'gsap/all';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin);
 
 
@@ -17,12 +19,15 @@ const PageContainer = styled.div`
 
 const Hero = styled.div`
   width: 100%;
-  height: 100vh;
-  background-color: white;
+  height: 80vh;
+  bottom: 0;
+  //background-color: white;
   display: flex;
+  position: fixed;
   /*align-items: center;*/
   flex-direction: column;
   justify-content: center;
+  z-index: -3;
 `;
 
 const HeroText =styled.div`
@@ -47,6 +52,20 @@ const HeroSubText = styled.div`
     font-size: 1em;
   }
 `;
+
+const HomeContent = styled.div`
+  width: 90%;
+  margin: 5%;
+  height: 70vh;
+  background-color: white;
+  border: 2px solid #CEB180;
+  border-radius: 25px 25px 25px 25px;
+`
+
+const Filler = styled.div`
+  width: 100%;
+  height: 80vh;
+`
 
 const Understanding = styled.div`
 `;
@@ -75,10 +94,13 @@ const Text = styled.p`
 
 const Home = () => {
 
+    const heroRef = useRef(null);
+    const heroContentRef = useRef(null);
     const heroTitleRef = useRef(null);
     const heroSubTitleRef = useRef(null);
 
-    useLayoutEffect(() => {
+
+    /*useLayoutEffect(() => {
         const heroTitleAnimIn = () => {
             gsap.to(heroTitleRef.current, {
                 duration: 4,
@@ -104,25 +126,19 @@ const Home = () => {
         heroTitleAnimIn();
         heroSubTitleAnimIn();
 
-    }, []);
+    }, []);*/
 
     return (
 
         <Fragment>
-          <Hero>
-            <HeroText ref={heroTitleRef}></HeroText>
-            <HeroSubText ref={heroSubTitleRef}></HeroSubText>
+          <Hero ref={heroRef}>
+            <HeroText ref={heroTitleRef}>WELCOME TO THE SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT</HeroText>
+            <HeroSubText ref={heroSubTitleRef}>FROM THE CANADIAN ADVISORY OF WOMEN IMMIGRANTS (CAWI)</HeroSubText>
           </Hero>
-          
-          <Understanding></Understanding>
 
-          <Curriculum></Curriculum>
+          <Filler />
 
-          <ForFacil></ForFacil>
-
-          <CulturalAdaptations></CulturalAdaptations>
-
-          <Language></Language>
+          <HomeContent></HomeContent>
 
         </Fragment>
 

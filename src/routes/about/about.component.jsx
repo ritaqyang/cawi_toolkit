@@ -39,7 +39,6 @@ export const AboutContent = styled.section`
     margin-left: 5vw;
     padding: 2rem;
     width: 50vw;
-    z-index: 3;
     @media (max-width: 950px) {
         display: none;
     }
@@ -79,7 +78,6 @@ export const AuthorsContent = styled.section`
 `;
 
 export const PageContainer = styled.section`
-    opacity: 0;
     transition: opacity 0.5s ease;
 `;
 
@@ -118,50 +116,14 @@ export const AuthorTextRight = styled.section`
 
 const About = () => {
 
-    const pageRef = useRef([]);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                //entry.target.style.opacity = entry.intersectionRatio;
-                /*gsap.to(entry.target, {
-                    opacity: entry.intersectionRatio,
-                    duration: 0.5,
-                })*/
-                console.log(entry.intersectionRatio)
-                if (entry.intersectionRatio > 0) {
-                    gsap.to(entry.target, {
-                        opacity: 1,
-                        duration: 0.5,
-                    })
-                    //entry.target.style.opacity = "1"; // When entering viewport, set opacity to 1 (fade in)
-                } else {
-                    gsap.to(entry.target, {
-                        opacity: 0,
-                        duration: 0.5,
-                    })
-                    //entry.target.style.opacity = "0"; // When leaving viewport, set opacity to 0 (fade out)
-                }
-            });
-        });
-
-        pageRef.current.forEach(page => {
-            observer.observe(page);
-        });
-
-        return () => {
-            pageRef.current.forEach(page => {
-                observer.unobserve(page);
-            });
-        };
-    }, []);
+    
     
     return (
         <Fragment>
        
         <AboutPage>
             <AboutContent>
-            <PageContainer ref={el => (pageRef.current[0] = el)}>
+            <PageContainer>
             <SubTitle>ABOUT US</SubTitle>
                 <AboutText>
                 <p>The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
@@ -199,7 +161,7 @@ const About = () => {
             </AboutContentMobile>
 
             <AboutContent>
-            <PageContainer ref={el => (pageRef.current[1] = el)}>
+            <PageContainer>
             <SubTitle>ACKNOWLEDGEMENTS</SubTitle>
                 <AckText>
                 <p>This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
@@ -233,7 +195,7 @@ const About = () => {
             </AboutContentMobile>
 
             <AboutContent>
-            <PageContainer ref={el => (pageRef.current[2] = el)}>
+            <PageContainer>
             <SubTitle>AUTHORS</SubTitle>
             <AuthorText>
                 <AuthorTextLeft>
