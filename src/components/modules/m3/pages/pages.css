@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'creato';
+    src: url(../../../../assets/CreatoDisplay-Bold.woff2) format('woff2');
+  }
+
+* {
+    font-family: 'creato';
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(178, 116, 0);
+}
+
+p a:hover{
+    color: #018fb2;
+}
+
+p b{
+    color: #018fb2;
+    font-size: 1rem;
+}
+
+p{
+    text-align: justify;
+    font-size: 1rem;
+}
+
+
+.m-list{
+    padding: 2rem;
+    border: 2px solid #ede2ce;
+    border-radius: 25px 25px 25px 25px;
+
+}
+.m-list p {
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+
+.m-list strong {
+    font-size: 1.5rem;
+    color: #b40a0a;
+    font-weight: 500;
+    line-height: 1;
+}
+table{
+    padding: 1rem;
+    /*background-color: #d8edf2;*/
+    border-collapse: collapse;
+    border-radius: 25px 25px 25px 25px;
+}
+
+table tr th{
+    padding: 1rem;
+    border: 1px solid #018fb2;
+}
+
+table tr td{
+    padding: 2rem;
+    border: 1px solid #018fb2;
+}
+
+.duty-link{
+    color: #ff5757;
+}
+
+.duty-link:hover{
+    color: rgb(178, 116, 0);
+}
