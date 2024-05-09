@@ -28,7 +28,7 @@ const Hero = styled.div`
   position: fixed;
   /*align-items: center;*/
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   z-index: -3;
 `;
 
@@ -59,12 +59,15 @@ const HomeContent = styled.div`
   width: 90%;
   margin: 5%;
   margin-top: 10%;
-  height: fit-content;
+  height: 10%;
   opacity: 0;
   display: none;
   align-items: center;
   justify-content: space-evenly;
   overflow-y: hidden;
+  background-color: white;
+  border: 2px solid #CEB180;
+  border-radius: 25px 25px 25px 25px;
 `
 
 const HomeNav = styled.div`
@@ -82,7 +85,11 @@ const HomeNav = styled.div`
 
 const Filler = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow-y: hidden;
 `
 
 const Understanding = styled.div`
@@ -159,6 +166,16 @@ const Home = () => {
           });
         }
 
+        const homeContentAnimIn = () => {
+          gsap.to(homeContentRef.current, {
+            duration: 1,
+            display: 'flex',
+            opacity: 1,
+            delay: 8.5
+          })
+        }
+
+        homeContentAnimIn();
         heroTitleAnimIn();
         heroSubTitleAnimIn();
 
@@ -172,11 +189,11 @@ const Home = () => {
             <HeroText ref={heroTitleRef}></HeroText>
             <HeroSubText ref={heroSubTitleRef}></HeroSubText>
           </Hero>
-
+          <Filler>
           <HomeContent ref={homeContentRef}>
             
           </HomeContent>
-
+          </Filler>
         </Fragment>
 
         
