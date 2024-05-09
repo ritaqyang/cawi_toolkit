@@ -2,6 +2,7 @@ import React, {useLayoutEffect, useEffect} from "react";
 import img from '../../assets/homepage.png';
 import {  LessonPageContainer, SidebarContainer,SidebarContent, MainContent } from "./lessons.styles"
 import LessonGrid from "../../components/lessons-page/modules-grid/modulegrid.component";
+import { PdfDisplay } from "../../components/lessons-page/pdf-download/pdfdisplay.component";
 import { gsap } from "gsap";
 
 

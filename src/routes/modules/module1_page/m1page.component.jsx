@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import styled from "styled-components";
 import { Outlet, Link } from 'react-router-dom';
+import {ModulePage, ModuleContent} from '../../../components/modules/modules.styles';
 import ModuleNav from '../../../components/modules/m1/moduleNav/moduleNav.component';
 import {PageOne} from '../../../components/modules/m1/pages/m1Pages/pageOne.component';
 import {PageTwo} from '../../../components/modules/m1/pages/m1Pages/pageTwo.component';
@@ -23,24 +23,6 @@ const navElements = [
     { label: "8. PERIODS AND PERIOD PAIN (MENSTRUAL CARE)", option: "8" },
     { label: "9. PREGNANCY", option: "9" },
 ];
-
-const ModulePage = styled.section`
-    padding-top:7rem;
-    height: 100%;
-    width:100%;
-`;
-
-const ModuleContent = styled.section`
-    height:100vh;
-    width: 80%;
-    position: fixed;
-    right: 0;
-    overflow-y:scroll;
-    @media (max-width: 950px) {
-        width: 90%;
-    }
-`; 
-
 
 /*
 <section className="m-nav" ref={navRef}>
