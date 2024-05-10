@@ -66,7 +66,7 @@ const HomeContent = styled.div`
   justify-content: space-evenly;
   overflow-y: hidden;
   background-color: white;
-  border: 2px solid #CEB180;
+  /*border: 2px solid #CEB180;*/
   border-radius: 25px 25px 25px 25px;
 `
 
