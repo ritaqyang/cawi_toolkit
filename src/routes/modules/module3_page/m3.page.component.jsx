@@ -2,17 +2,13 @@ import LessonOverview from '../../../components/modules/m2/LessonOverview/Lesson
 import { PageWrapper } from './m3.page.styles';
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, Link } from 'react-router-dom';
-import { ModulePage, ModuleContent } from '../../../components/modules/modules.styles';
+import { ModulePage, ModuleContent } from './m3.page.styles';
 import ModuleNav from '../../../components/modules/m1/moduleNav/moduleNav.component';
 import { M3PageOne } from '../../../components/modules/m3/pages/pageOne.component';
 import { M3PageTwo } from '../../../components/modules/m3/pages/pageTwo.component';
 import { M3PageThree } from '../../../components/modules/m3/pages/pageThree.component';
-import { PageFour } from '../../../components/modules/m1/pages/m1Pages/pageFour.component';
-import { PageFive } from '../../../components/modules/m1/pages/m1Pages/pageFive.component';
-import { PageSix } from '../../../components/modules/m1/pages/m1Pages/pageSix.component';
-import { PageSeven } from '../../../components/modules/m1/pages/m1Pages/pageSeven.component';
-import { PageEight } from '../../../components/modules/m1/pages/m1Pages/pageEight.component';
-import { PageNine } from '../../../components/modules/m1/pages/m1Pages/pageNine.component';
+import ProgressBar from '../../../components/modules/m3/components/progress-bar/progressbar.component';
+
 
 const navElements = [
   { label: "1. WHAT IS CONSENT?", option: "1" },
@@ -49,6 +45,7 @@ export const Module3Page = () => {
         handleDisplayOptionChange={handleDisplayOptionChange}
         contentRef={contentRef}
       />
+      <ProgressBar /> 
       <ModuleContent ref={contentRef}>
         {displayOption === "1" && <M3PageOne />}
         {displayOption === "2" && <M3PageTwo />}
