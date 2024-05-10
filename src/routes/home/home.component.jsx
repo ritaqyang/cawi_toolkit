@@ -148,7 +148,7 @@ const Home = () => {
             gsap.to(heroTitleRef.current, {
                 duration: 4,
                 text: {
-                    value: "WELCOME TO THE SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT",
+                    value: "WELCOME TO THE SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT FOR IMMIGRANT COMMUNITIES",
                     delimiter: ""
                 },
                 delay: 0.5,
@@ -159,7 +159,7 @@ const Home = () => {
           gsap.to(heroSubTitleRef.current, {
               duration: 4,
               text: {
-                  value: "FROM THE CANADIAN ADVISORY OF WOMEN IMMIGRANTS (CAWI)",
+                  value: "CANADIAN ADVISORY OF WOMEN IMMIGRANTS (CAWI)",
                   delimiter: ""
               },
               delay: 4.5,

@@ -77,10 +77,6 @@ export const AuthorsContent = styled.section`
     opacity: 0;
 `;
 
-export const PageContainer = styled.section`
-    transition: opacity 0.5s ease;
-`;
-
 export const AboutText = styled.section`
     padding: 2rem;
     border: 2px solid #ede2ce;
@@ -123,7 +119,6 @@ const About = () => {
        
         <AboutPage>
             <AboutContent>
-            <PageContainer>
             <SubTitle>ABOUT US</SubTitle>
                 <AboutText>
                 <p>The Canadian Advisory of Women Immigrants (CAWI) is a community organization with the 
@@ -140,7 +135,6 @@ const About = () => {
                 <p>
                     For more information and questions, please contact our general email admin@cawicanada.com </p>
                 </AboutText>
-            </PageContainer>
             </AboutContent>
 
             <AboutContentMobile>
@@ -161,7 +155,6 @@ const About = () => {
             </AboutContentMobile>
 
             <AboutContent>
-            <PageContainer>
             <SubTitle>ACKNOWLEDGEMENTS</SubTitle>
                 <AckText>
                 <p>This toolkit and curriculum has been funded by Oxfam Canada (in partnership with the Government of Canada) 
@@ -175,7 +168,6 @@ const About = () => {
                     who have dedicated their time and energy to this toolkit and curriculum. To learn who has contributed, 
                     please refer to the list below containing names of volunteers from CAWI.</p>
                 </AckText>
-            </PageContainer>
             </AboutContent>
 
             <AboutContentMobile>
@@ -195,7 +187,6 @@ const About = () => {
             </AboutContentMobile>
 
             <AboutContent>
-            <PageContainer>
             <SubTitle>AUTHORS</SubTitle>
             <AuthorText>
                 <AuthorTextLeft>
@@ -216,7 +207,6 @@ const About = () => {
                     <p>Karishma Joshi (she/her)<br></br><b>Graphic Designer</b></p>
                 </AuthorTextRight>
                 </AuthorText>
-            </PageContainer>
             </AboutContent>
 
             <AboutContentMobile>
