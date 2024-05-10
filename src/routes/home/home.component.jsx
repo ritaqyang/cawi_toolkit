@@ -189,22 +189,22 @@ const Home = () => {
         },
       } )
       gsap.to(homeNavElRef2.current, {
-        display: "none",
+        //display: "none",
         opacity: 0,
         duration: 0.5,
       } )
       gsap.to(homeNavElRef3.current, {
-        display: "none",
+        //display: "none",
         opacity: 0,
         duration: 0.5,
       } )
       gsap.to(homeNavElRef4.current, {
-        display: "none",
+        //display: "none",
         opacity: 0,
         duration: 0.5,
       } )
       gsap.to(homeNavElRef5.current, {
-        display: "none",
+        //display: "none",
         opacity: 0,
         duration: 0.5,
       } )
@@ -218,43 +218,292 @@ const Home = () => {
         }
       } )
       gsap.to(homeNavElRef2.current, {
-        display: "inline",
+        //display: "inline",
         opacity: 1,
       } )
       gsap.to(homeNavElRef3.current, {
-        display: "inline",
+        //display: "inline",
         opacity: 1,
       } )
       gsap.to(homeNavElRef4.current, {
-        display: "inline",
+        //display: "inline",
         opacity: 1,
       } )
       gsap.to(homeNavElRef5.current, {
-        display: "inline",
+        //display: "inline",
         opacity: 1,
       } )
     }
 
-    const handleNavClick1 = () => {
+    const handleNavClick = () => {
       gsap.to(homeContentRef.current, {
         height: '70vh'
       })
       gsap.to(closeRef.current, {
-        display: "inline"
+        display: "inline",
+        opacity: 1,
+        delay: 0.5,
       })
       gsap.to(homeNavElRef1.current, {
         display: "none",
         opacity: 0,
         duration: 0.5,
       } )
+      gsap.to(homeNavElRef2.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
     }
+
+    // 2
+
+    const handleNavHover2 = () => {
+      gsap.to(homeNavElRef2.current, {
+        text: {
+          value: "WHAT IS IN THE CURRICULUM & TOOLKIT?",
+          delimiter: ""
+        },
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+    }
+
+    const handleHoverOut2 = () => {
+      gsap.to(homeNavElRef2.current, {
+        text: {
+          value: "2",
+          delimiter: ""
+        }
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+    }
+
+    // 3
+
+    const handleNavHover3 = () => {
+      gsap.to(homeNavElRef3.current, {
+        text: {
+          value: "FOR FACILITATORS, TEACHERS, AND EDUCATORS",
+          delimiter: ""
+        },
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+    }
+
+    const handleHoverOut3 = () => {
+      gsap.to(homeNavElRef3.current, {
+        text: {
+          value: "3",
+          delimiter: ""
+        }
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+    }
+
+    // 4
+
+    const handleNavHover4 = () => {
+      gsap.to(homeNavElRef4.current, {
+        text: {
+          value: "CULTURAL ADAPTATIONS TO SRH EDUCATION",
+          delimiter: ""
+        },
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+    }
+
+    const handleHoverOut4 = () => {
+      gsap.to(homeNavElRef4.current, {
+        text: {
+          value: "4",
+          delimiter: ""
+        }
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+    }
+
+    // 5
+
+    const handleNavHover5 = () => {
+      gsap.to(homeNavElRef5.current, {
+        text: {
+          value: "INCLUSIVE AND ACCESSIBLE LANGUAGE GUIDE",
+          delimiter: ""
+        },
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        //display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+    }
+
+    const handleHoverOut5 = () => {
+      gsap.to(homeNavElRef5.current, {
+        text: {
+          value: "5",
+          delimiter: ""
+        }
+      } )
+      gsap.to(homeNavElRef1.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        //display: "inline",
+        opacity: 1,
+      } )
+    }
+
+    //close button
 
     const handleCloseClick = () => {
       gsap.to(homeContentRef.current, {
         height: '10vh'
       })
       gsap.to(closeRef.current, {
-        display: "none"
+        display: "none",
+        opacity: 0
       })
       gsap.to(homeNavElRef1.current, {
         display: "inline",
@@ -289,11 +538,11 @@ const Home = () => {
           <Filler>
           <HomeContent ref={homeContentRef}>
             <HomeNav>
-              <Link className="home-nav-link" ref={homeNavElRef1} onMouseEnter={handleNavHover1} onMouseLeave={handleHoverOut1} onClick={handleNavClick1}>1</Link>
-              <Link className="home-nav-link" ref={homeNavElRef2}>2</Link>
-              <Link className="home-nav-link" ref={homeNavElRef3}>3</Link>
-              <Link className="home-nav-link" ref={homeNavElRef4}>4</Link>
-              <Link className="home-nav-link" ref={homeNavElRef5}>5</Link>
+              <Link className="home-nav-link" ref={homeNavElRef1} onMouseEnter={handleNavHover1} onMouseLeave={handleHoverOut1} onClick={handleNavClick}>1</Link>
+              <Link className="home-nav-link" ref={homeNavElRef2} onMouseEnter={handleNavHover2} onMouseLeave={handleHoverOut2} onClick={handleNavClick}>2</Link>
+              <Link className="home-nav-link" ref={homeNavElRef3} onMouseEnter={handleNavHover3} onMouseLeave={handleHoverOut3} onClick={handleNavClick}>3</Link>
+              <Link className="home-nav-link" ref={homeNavElRef4} onMouseEnter={handleNavHover4} onMouseLeave={handleHoverOut4} onClick={handleNavClick}>4</Link>
+              <Link className="home-nav-link" ref={homeNavElRef5} onMouseEnter={handleNavHover5} onMouseLeave={handleHoverOut5} onClick={handleNavClick}>5</Link>
               <Link className="home-nav-link-open" ref={closeRef} onClick={handleCloseClick}>CLOSE</Link>
             </HomeNav>
           </HomeContent>
