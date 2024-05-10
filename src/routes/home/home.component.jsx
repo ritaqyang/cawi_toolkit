@@ -56,13 +56,13 @@ const HeroSubText = styled.div`
 `;
 
 const HomeContent = styled.div`
-  width: 90%;
-  margin: 5%;
+  width: 95%;
+  margin: 2.5%;
   margin-top: 10%;
-  height: 10%;
+  height: 10vh;
   opacity: 0;
   display: none;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
   overflow-y: hidden;
   background-color: white;
@@ -71,16 +71,13 @@ const HomeContent = styled.div`
 `
 
 const HomeNav = styled.div`
-  height: fit-content;
-  width: fit-content;
+  height: 10vh;
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 1rem;
-  background-color: white;
-  border: 2px solid #CEB180;
-  border-radius: 25px 25px 25px 25px;
 `
 
 const Filler = styled.div`
@@ -141,6 +138,9 @@ const Home = () => {
     const homeNavElRef3 = useRef(null);
     const homeNavElRef4 = useRef(null);
     const homeNavElRef5 = useRef(null);
+    const prevRef = useRef(null);
+    const closeRef = useRef(null);
+    const nextRef = useRef(null);
 
 
     useLayoutEffect(() => {
@@ -181,6 +181,103 @@ const Home = () => {
 
     }, []);
 
+    const handleNavHover1 = () => {
+      gsap.to(homeNavElRef1.current, {
+        text: {
+          value: "UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS",
+          delimiter: ""
+        },
+      } )
+      gsap.to(homeNavElRef2.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+    }
+
+    const handleHoverOut1 = () => {
+      gsap.to(homeNavElRef1.current, {
+        text: {
+          value: "1",
+          delimiter: ""
+        }
+      } )
+      gsap.to(homeNavElRef2.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+    }
+
+    const handleNavClick1 = () => {
+      gsap.to(homeContentRef.current, {
+        height: '70vh'
+      })
+      gsap.to(closeRef.current, {
+        display: "inline"
+      })
+      gsap.to(homeNavElRef1.current, {
+        display: "none",
+        opacity: 0,
+        duration: 0.5,
+      } )
+    }
+
+    const handleCloseClick = () => {
+      gsap.to(homeContentRef.current, {
+        height: '10vh'
+      })
+      gsap.to(closeRef.current, {
+        display: "none"
+      })
+      gsap.to(homeNavElRef1.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef2.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef3.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef4.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+      gsap.to(homeNavElRef5.current, {
+        display: "inline",
+        opacity: 1,
+      } )
+    }
+
     return (
 
         <Fragment>
@@ -191,7 +288,14 @@ const Home = () => {
           </Hero>
           <Filler>
           <HomeContent ref={homeContentRef}>
-            
+            <HomeNav>
+              <Link className="home-nav-link" ref={homeNavElRef1} onMouseEnter={handleNavHover1} onMouseLeave={handleHoverOut1} onClick={handleNavClick1}>1</Link>
+              <Link className="home-nav-link" ref={homeNavElRef2}>2</Link>
+              <Link className="home-nav-link" ref={homeNavElRef3}>3</Link>
+              <Link className="home-nav-link" ref={homeNavElRef4}>4</Link>
+              <Link className="home-nav-link" ref={homeNavElRef5}>5</Link>
+              <Link className="home-nav-link-open" ref={closeRef} onClick={handleCloseClick}>CLOSE</Link>
+            </HomeNav>
           </HomeContent>
           </Filler>
         </Fragment>

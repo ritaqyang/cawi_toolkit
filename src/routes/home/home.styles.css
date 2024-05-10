@@ -1,5 +1,14 @@
 .home-nav-link{
     text-decoration: none;
     color: black;
+    font-size: 1.5rem;
     padding: 1rem;
+}
+
+.home-nav-link-open{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: none;
 }
