@@ -10,20 +10,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const AboutHero = styled.section`
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: hidden;
-    transition: opacity 0.5s ease;
-`;
-
-export const AboutHeroText = styled.section`
-    font-size: 3rem;
-`;
-
 export const AboutPage = styled.section`
    height: 100vh;
    width: 100%;
