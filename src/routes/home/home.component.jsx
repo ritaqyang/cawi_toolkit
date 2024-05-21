@@ -66,7 +66,7 @@ const HomeContent = styled.div`
   justify-content: space-evenly;
   overflow-y: hidden;
   background-color: white;
-  /*border: 2px solid #CEB180;*/
+  /*border: 2px solid black/*#CEB180*/;*/
   border-radius: 25px 25px 25px 25px;
 `
 
@@ -184,7 +184,7 @@ const Home = () => {
     const handleNavHover1 = () => {
       gsap.to(homeNavElRef1.current, {
         text: {
-          value: "UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS",
+          value: "1: UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS",
           delimiter: ""
         },
       } )
@@ -276,7 +276,7 @@ const Home = () => {
     const handleNavHover2 = () => {
       gsap.to(homeNavElRef2.current, {
         text: {
-          value: "WHAT IS IN THE CURRICULUM & TOOLKIT?",
+          value: "2: WHAT IS IN THE CURRICULUM & TOOLKIT?",
           delimiter: ""
         },
       } )
@@ -332,7 +332,7 @@ const Home = () => {
     const handleNavHover3 = () => {
       gsap.to(homeNavElRef3.current, {
         text: {
-          value: "FOR FACILITATORS, TEACHERS, AND EDUCATORS",
+          value: "3: FOR FACILITATORS, TEACHERS, AND EDUCATORS",
           delimiter: ""
         },
       } )
@@ -388,7 +388,7 @@ const Home = () => {
     const handleNavHover4 = () => {
       gsap.to(homeNavElRef4.current, {
         text: {
-          value: "CULTURAL ADAPTATIONS TO SRH EDUCATION",
+          value: "4: CULTURAL ADAPTATIONS TO SRH EDUCATION",
           delimiter: ""
         },
       } )
@@ -444,7 +444,7 @@ const Home = () => {
     const handleNavHover5 = () => {
       gsap.to(homeNavElRef5.current, {
         text: {
-          value: "INCLUSIVE AND ACCESSIBLE LANGUAGE GUIDE",
+          value: "5: INCLUSIVE AND ACCESSIBLE LANGUAGE GUIDE",
           delimiter: ""
         },
       } )
