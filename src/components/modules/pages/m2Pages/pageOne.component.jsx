@@ -66,7 +66,73 @@ export const M2PageOne = () => {
                     sign of an abusive relationship. Abusive relationships are characterized by a lack of respect and an imbalance 
                     of power and control. (<a href="https://www.teenhealthcare.org/blog/6-ways-to-show-respect-in-your-relationship/">6 ways to show respect in your relationship</a>) </p>
                 
-                <SubSubSubTitle>Communication (<a href=""></a>Relationships and Communication)</SubSubSubTitle>
+                <SubSubSubTitle>Communication (<a href="https://www.betterhealth.vic.gov.au/health/healthyliving/relationships-and-communication#:~:text=be%20clear%20about%20what%20you,want'%20and%20'I%20feel">Relationships and Communication</a>)</SubSubSubTitle>
+                <p>When communicating with your partner, try to be clear and concise in what you are trying to communicate. This will 
+                    help your partner understand what you are trying to say and how it affects you.  Try and be expressive with your 
+                    partner by using "I" statements such as: "I need," "I want," and "I feel." This can help your partner better 
+                    understand your perspective and what you are looking for in the relationship. This may also avoid miscommunications 
+                    in your relationships. </p>
+                <p><a href="https://anchorlighttherapy.com/expectations-in-a-relationship-a-reality-check/">Unspoken expectations 
+                    can have a significant impact on relationships</a>, and can be related to various aspects such as 
+                    quality time, finances, household tasks, and sex. Some people may believe that it is better to not have any 
+                    expectations in a relationship in order to avoid disappointment.  Understanding the balance between reasonable 
+                    and unreasonable expectations can also be beneficial for creating a strong and well-rounded relationship. Each 
+                    partner brings different experiences, perspectives, and values to the relationship. It can be helpful to consider 
+                    where your expectations come from, such as past relationships, relationships with friends and family, or your own 
+                    self-awareness and ability to meet your own needs. Some expectations may be more challenging to meet or understand 
+                    than others.</p>
+                <p>Effective communication of expectations is essential for maintaining healthy relationships. It is not realistic to 
+                    assume that our partner knows all of our needs and wants. Our expectations will also not remain the same. 
+                    Expectations may change based on the history of the relationship and how they may evolve with transitions and 
+                    milestones. Clear communication about expectations is important during significant life transitions such as getting 
+                    engaged, getting married, having children, and career changes. This can help to create a sense of stability and 
+                    reliability as a couple navigates challenging times together. Improper communication can lead to further 
+                    misunderstandings.</p>
+
+                <SubSubSubTitle>Boundaries</SubSubSubTitle>
+                <p>Boundaries can be described as how emotionally close you let people get to you. They are also where you draw the 
+                    line within a relationship. They say how much you are willing to give or take before requiring that things change 
+                    or deciding to call it quits. For example, you may be okay with your partner going out one night a week without 
+                    you but feel that two or three nights per week is unacceptable. Boundaries are one of the measures of 
+                    <a href="https://www.verywellmind.com/all-about-healthy-relationship-4774802"> relationship health</a>. As such, 
+                    they can contribute to your relationships with your partner, children, family, and friends in positive or negative 
+                    ways. </p>
+
+                <SubSubSubTitle><a href="https://www.ourrelationship.com/ways-to-get-and-give-emotional-support-in-your-relationship/#:~:text=At%20its%20core%2C%20however%2C%20emotional,positive%20foundation%20for%20both%20partners">Emotional Support</a></SubSubSubTitle>
+                <p>Emotional support involves providing love, understanding, and support to your partner when they are going through 
+                    difficult times or facing challenges. You can support your partner emotionally by listening to them without judgment, 
+                    offering reassurance and encouragement, and providing a safe and supportive space for them to express their feelings. 
+                    It's important to remember that emotional support is not just about being there for your partner during times of 
+                    crisis. This can involve things like being there to listen, offering words of encouragement, and showing appreciation 
+                    and affection.</p>
+
+                <SubSubSubTitle><a href="https://www.masterclass.com/articles/emotional-labor-in-relationships">Emotional Labour</a></SubSubSubTitle>
+                <p>Emotional labor in relationships is the effort that a person puts into managing their own emotions, as well as the 
+                    emotions of others, in order to maintain a positive and harmonious relationship. This can include things like 
+                    suppressing negative feelings, putting on a happy face, or going out of one's way to make their partner feel loved 
+                    and supported.</p>
+
+                <SubSubSubTitle>How can we talk about emotional labour?</SubSubSubTitle>
+                <ol className="m-list">
+                    <li><p>It's important to choose a time and place that is calm and free from stress when discussing a difficult 
+                        topic with your partner. This will help create a comfortable and safe environment where you can both be more 
+                        rational and open to hearing each other's perspectives. Try to avoid bringing up the topic during an argument 
+                        or other stressful situation, as this may not be the best time for a constructive conversation.</p></li>
+                    <li><p>When communicating with your partner, it's helpful to use "I" statements rather than "you" statements. For 
+                        example, instead of saying "You haven't been supporting me," try saying "I feel like I'm not getting the 
+                        support I need." This helps to avoid an accusatory tone and prevents the conversation from becoming defensive 
+                        or argumentative. By using clear and direct "I" statements that describe your own emotions and needs, you can 
+                        create a more open and productive dialogue with your partner.</p></li>
+                    <li><p>It's important to give your partner time to process when you disclose that you have been feeling overwhelmed 
+                        by emotional labor. Your partner may be surprised by this revelation and may need some time to think and feel 
+                        their own emotions before continuing the conversation. Be patient and don't expect an immediate response or 
+                        solution. It's okay to give your partner time to process and come to terms with their own feelings before 
+                        discussing further.</p></li>
+                </ol>
+
+                <p>Now that we have a deeper understanding of what it means to be in a healthy and safe relationship, let’s consider 
+                    the ways in which navigating relationships and dating culture can be different and at times, challenging, for 
+                    immigrant women and girls.</p>
             </Content>
         </Fragment>
     );

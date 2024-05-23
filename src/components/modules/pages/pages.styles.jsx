@@ -49,7 +49,6 @@ export const SubSubTitle = styled.section`
     margin-left: 0;
     margin-right: 0;
     padding: 1rem;
-    width: 70%;
     background-image: url(${subsubtitleimg});
     background-repeat: no-repeat;
     background-size: cover;
