@@ -148,7 +148,7 @@ const Home = () => {
             gsap.to(heroTitleRef.current, {
                 duration: 4,
                 text: {
-                    value: "WELCOME TO THE SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT FOR IMMIGRANT COMMUNITIES",
+                    value: "A SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT FOR IMMIGRANT COMMUNITIES",
                     delimiter: ""
                 },
                 delay: 0.5,
