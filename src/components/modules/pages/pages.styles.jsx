@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import subsubtitleimg from "../../../../assets/m-title.png"
+import subsubtitleimg from "../../../assets/m-title.png"
 
 export const Content = styled.section`
     padding: 2rem;
@@ -9,11 +9,10 @@ export const Content = styled.section`
     background-color: white;
     border-radius: 25px;
     border: 2px solid #CEB180;
-    
 `;
 
 export const TitlePage = styled.section`
-    height: 30vh;
+    height: 100vh;
     margin: 2rem;
     border-radius: 25px;
 `;
@@ -26,7 +25,7 @@ export const Title = styled.section`
     margin-right: 0;
     font-size: 5rem;
     @media (max-width: 950px) {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 `;
 
@@ -67,9 +66,8 @@ export const SubSubSubTitle = styled.section`
     margin-bottom: 1.67em;
     margin-left: 0;
     margin-right: 0;
-    background-color:#ede2ce;
     padding: 1rem;
-    border: 1rem solid #ede2ce;
+    border: 2px solid #ede2ce;
     border-radius: 25px 25px 25px 25px;
     @media (max-width: 950px) {
         font-size: 1rem;
@@ -78,17 +76,10 @@ export const SubSubSubTitle = styled.section`
 
 export const BlueBox = styled.section`
     padding: 2rem;
+    padding-top: 1rem;
     background-color:#d8edf2;
     border: 2px solid #d8edf2;
     border-radius: 25px 25px 25px 25px;
-    p{
-        font-size: 1.3rem; 
-    }
-    strong {
-    font-size: 1.5rem;
-    color: #b40a0a;
-    line-height: 1;
-}
 `;
 
 export const TextBox = styled.section`

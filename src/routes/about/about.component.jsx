@@ -2,9 +2,9 @@ import React, { useEffect, useRef, Fragment, useLayoutEffect } from "react";
 import { Outlet, Link } from 'react-router-dom';
 import backgroundImage from '../../assets/about-bg.png';
 import './about.css';
-import {SubTitle} from '../../components/modules/m1/pages/pages.styles';
+import {SubTitle} from '../../components/modules/pages/pages.styles';
 import styled from "styled-components";
-import '../../components/modules/m1/pages/pages.css';
+import '../../components/modules/pages/pages.css';
 import {gsap} from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

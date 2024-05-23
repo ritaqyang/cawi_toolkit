@@ -1,16 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, Link } from 'react-router-dom';
 import {ModulePage, ModuleContent} from '../../../components/modules/modules.styles';
-import ModuleNav from '../../../components/modules/m1/moduleNav/moduleNav.component';
-import {PageOne} from '../../../components/modules/m1/pages/m1Pages/pageOne.component';
-import {PageTwo} from '../../../components/modules/m1/pages/m1Pages/pageTwo.component';
-import {PageThree} from '../../../components/modules/m1/pages/m1Pages/pageThree.component';
-import {PageFour} from '../../../components/modules/m1/pages/m1Pages/pageFour.component';
-import {PageFive} from '../../../components/modules/m1/pages/m1Pages/pageFive.component';
-import {PageSix} from '../../../components/modules/m1/pages/m1Pages/pageSix.component';
-import {PageSeven} from '../../../components/modules/m1/pages/m1Pages/pageSeven.component';
-import {PageEight} from '../../../components/modules/m1/pages/m1Pages/pageEight.component';
-import {PageNine} from '../../../components/modules/m1/pages/m1Pages/pageNine.component';
+import ModuleNav from '../../../components/modules/moduleNav/moduleNav.component';
+import {PageOne} from '../../../components/modules/pages/m1Pages/pageOne.component';
+import {PageTwo} from '../../../components/modules/pages/m1Pages/pageTwo.component';
+import {PageThree} from '../../../components/modules/pages/m1Pages/pageThree.component';
+import {PageFour} from '../../../components/modules/pages/m1Pages/pageFour.component';
+import {PageFive} from '../../../components/modules/pages/m1Pages/pageFive.component';
+import {PageSix} from '../../../components/modules/pages/m1Pages/pageSix.component';
+import {PageSeven} from '../../../components/modules/pages/m1Pages/pageSeven.component';
+import {PageEight} from '../../../components/modules/pages/m1Pages/pageEight.component';
+import {PageNine} from '../../../components/modules/pages/m1Pages/pageNine.component';
 
 const navElements = [
     { label: "1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?", option: "1" },

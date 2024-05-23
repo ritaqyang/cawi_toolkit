@@ -5,10 +5,9 @@ import {Content,
         SubTitle, 
         SubSubTitle,
         SubSubSubTitle, 
-        BlueBox} from './pages.styles';
-import './pages.css';
+        BlueBox} from '../pages.styles';
+import '../pages.css';
 import styled from "styled-components";
-import { howToGive } from "./m3p1.content";
 
 
 
@@ -17,34 +16,28 @@ export const M3PageOne = () => {
         <Fragment>
             <TitlePage>
                 <SubTitle>LESSON PLAN #3:</SubTitle>
-                <Title>WHAT IS CONSENT?</Title>
+                <Title>CONSENT AND BOUNDARIES</Title>
             </TitlePage>
             <Content>
-                    
-
-                            <SubSubTitle> Definition  </SubSubTitle>
-                    <ul className="m-list">
-                        <li><p>Consent is actively saying yes when asked for permission to do something.</p></li>
-                        <li><p> You can give consent when you have the knowledge of what the action involves, its likely consequences, and the option to say no. </p></li>
-                        <li><p>Sexual consent should be enthusiastic, mutual, voluntary, informed, and ongoing.. </p></li>
-                
-                    </ul>
+                <SubSubTitle>WHAT IS CONSENT?</SubSubTitle>
+                <p>Consent is actively saying yes when asked for permission to do something. You can give consent 
+                    when you have the knowledge of what the action involves, its likely consequences, and the option to 
+                    say no. <a href="https://www.verywellmind.com/boundaries-in-relationships-and-stress-3144984#:~:text=Boundaries%20can%20be%20described%20as,deciding%20to%20call%20it%20quits">Sexual consent</a> should be enthusiastic, mutual, voluntary, informed, and ongoing.</p>
                    
                             
-                <SubSubTitle> When should you ask for consent? </SubSubTitle>
-                <ul className="m-list">
-                                    <li><p>You should always ask for consent before you begin any sexual activity, including kissing, cuddling, and any kind of sex</p></li>
-                                    <li><p> You should always ask for consent even if your partner has consented in the past. </p></li>
-                                    <li><p>You should ask in a way that makes it clear that it would be okay to say no.  </p></li>
-
-                </ul>
+                <SubSubSubTitle> When should you ask for consent? </SubSubSubTitle>
+                <p>You should always ask for consent before you begin any sexual activity, including kissing, cuddling, 
+                    and any kind of sex - even if your partner has consented in the past. You should ask in a way that makes 
+                    it clear that it would be okay to say no. You do not want to pressure people to do something they are not 
+                    comfortable doing. </p>
 
 
-                    <BlueBox>
+                <BlueBox>
                 <SubSubSubTitle>How do I give consent? </SubSubSubTitle>
-                    <p>
-                       {howToGive}
-                    </p> 
+                    <p>One of the effective ways to give consent is directly and verbally. Some ways that you can give consent 
+                        are verbally by saying "yes" or using affirmative phrases like "I want to" or "let's try that", 
+                        and nonverbal consent by nodding or giving positive feedback. At the same time, it is always best to use 
+                        both verbal and nonverbal cues to give consent as some nonverbal cues may be misunderstood.</p> 
 
                 <SubSubSubTitle> How do I withdraw consent? </SubSubSubTitle>
 
@@ -55,7 +48,7 @@ export const M3PageOne = () => {
                 <p>It is important to have open and honest communication about what you are comfortable with and what your boundaries are. Consent can be withdrawn at any time, even if it was given initially.</p>
                 <p>It is important to check in with your partner and make sure that they are still comfortable with the activity you are engaging in.</p>
         
-                    </BlueBox>
+                </BlueBox>
 
                   
             </Content>

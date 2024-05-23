@@ -8,7 +8,7 @@ import {Content,
         BlueBox} from '../pages.styles';
 import '../pages.css';
 import styled from "styled-components";
-import landackimg from '../../../../../assets/quote-bg.png';
+import landackimg from '../../../../assets/quote-bg.png';
 
 export const LandAck = styled.section`
         padding: 13rem;

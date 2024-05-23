@@ -1,11 +1,10 @@
 @font-face {
     font-family: 'creato';
-    src: url(../../../../assets/CreatoDisplay-Bold.woff2) format('woff2');
+    src: url(../../../assets/CreatoDisplay-Bold.woff2) format('woff2');
   }
 
 * {
     font-family: 'creato';
-    font-size: 1rem;
 }
 
 a{
@@ -19,36 +18,24 @@ p a:hover{
 
 p b{
     color: #018fb2;
-    font-size: 1rem;
 }
 
 p{
     text-align: justify;
-    font-size: 1rem;
 }
 
+/*.m-p{
+    text-align: justify;
+}*/
 
 .m-list{
     padding: 2rem;
     border: 2px solid #ede2ce;
     border-radius: 25px 25px 25px 25px;
-
-}
-.m-list p {
-    font-size: 1.3rem;
-    color: #333;
-    line-height: 1.2;
 }
 
-
-.m-list strong {
-    font-size: 1.5rem;
-    color: #b40a0a;
-    font-weight: 500;
-    line-height: 1;
-}
 table{
-    padding: 1rem;
+    padding: 2rem;
     /*background-color: #d8edf2;*/
     border-collapse: collapse;
     border-radius: 25px 25px 25px 25px;
