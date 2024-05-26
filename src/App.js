@@ -7,6 +7,7 @@ import About from './routes/about/about.component';
 import Module1Page from './routes/modules/module1_page/m1page.component';
 import M2Page from './routes/modules/module2_page/m2.page.component';
 import { Module3Page } from './routes/modules/module3_page/m3.page.component';
+import SignIn from './routes/sign-in/sign-in.component';
 
 const App = () => {
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path='lessons-home' element={<LessonsHome />} />
         <Route path='about' element={<About />} />
+        <Route path='sign-in' element ={<SignIn />} />
         <Route path='modules/1' element={<Module1Page />} />
         <Route path='modules/2' element={<M2Page />} />
         <Route path='modules/3' element={<Module3Page />} />
