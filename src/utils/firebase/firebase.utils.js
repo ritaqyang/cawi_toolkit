@@ -7,6 +7,14 @@ import {
     signInWithPopup,
 
 } from "firebase/auth";
+
+import {
+    getFirestore,
+    getDoc,
+    doc,
+    setDoc,
+} from "firebase/firestore";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -32,3 +40,31 @@ const provider = new GoogleAuthProvider();
 provider.setCustomParameters({ prompt: 'select_account' }); // Google config style that they want 
 export const auth = getAuth(); // singleton, only one instance of auth in the app
 export const signInWithGoogle = () => signInWithPopup(auth, provider);
+
+export const db = getFirestore(); // singleton, only one instance of db in the app
+
+/**
+ * User authentication function 
+ * Create userDoc if user does not exist in the database
+ * @param {*} userAuth - google user authentication object that includes uid, email, displayName, etc.
+ */
+export const createUserDocFromAuth = async(userAuth) =>{
+    const userDocRef = doc(db, 'users', userAuth.uid); // Three arguments, db, collection, document ID
+
+    const userSnapShot = await getDoc(userDocRef); // Get the document snapshot
+    console.log(userSnapShot.exists());
+    if (!userSnapShot.exists()){
+        const {displayName, email} = userAuth;
+        const createdAt = new Date();
+        try {
+            await setDoc(userDocRef, {
+                displayName: displayName,
+        email: email,
+        createdAt: new Date(),
+            });
+        } catch (error) {
+            console.error("Error creating user", error.message);
+        }
+    }
+
+}
