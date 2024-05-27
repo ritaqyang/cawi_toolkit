@@ -5,6 +5,7 @@ import {
     signInWithRedirect, 
     GoogleAuthProvider,
     signInWithPopup,
+    onAuthStateChanged,
 
 } from "firebase/auth";
 
@@ -68,3 +69,6 @@ export const createUserDocFromAuth = async(userAuth) =>{
     }
 
 }
+
+export const onAuthStateChangedListener = (callback) =>
+    onAuthStateChanged(auth, callback);

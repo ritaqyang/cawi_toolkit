@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
@@ -8,8 +8,22 @@ import Module1Page from './routes/modules/module1_page/m1page.component';
 import M2Page from './routes/modules/module2_page/m2.page.component';
 import { Module3Page } from './routes/modules/module3_page/m3.page.component';
 import SignIn from './routes/sign-in/sign-in.component';
+import { setCurrentUser } from './store/user/user.action';
+import { useDispatch } from 'react-redux';
+import { createUserDocFromAuth, onAuthStateChangedListener } from './utils/firebase/firebase.utils';
 
 const App = () => {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChangedListener((user) => {
+      if (user){
+        createUserDocFromAuth(user);
+      }
+      dispatch(setCurrentUser(user));
+    })
+    return unsubscribe; 
+    },[]); 
 
   return (
     <Routes>
