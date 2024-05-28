@@ -19,6 +19,7 @@ const App = () => {
     const unsubscribe = onAuthStateChangedListener((user) => {
       if (user){
         createUserDocFromAuth(user);
+        
       }
       dispatch(setCurrentUser(user));
     })
