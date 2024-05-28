@@ -1,11 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Outlet, Link } from 'react-router-dom';
 import {ModulePage, ModuleContent} from '../../../components/modules/modules.styles';
 import ModuleNav from '../../../components/modules/moduleNav/moduleNav.component';
 import { M3PageOne } from '../../../components/modules/pages/m3Pages/pageOne.component';
 import { M3PageTwo } from '../../../components/modules/pages/m3Pages/pageTwo.component';
 import { M3PageThree } from '../../../components/modules/pages/m3Pages/pageThree.component';
-import ProgressBar from '../../../components/modules/m3/components/progress-bar/progressbar.component';
 
 
 const navElements = [
@@ -43,7 +41,6 @@ export const Module3Page = () => {
         handleDisplayOptionChange={handleDisplayOptionChange}
         contentRef={contentRef}
       />
-      <ProgressBar /> 
       <ModuleContent ref={contentRef}>
         {displayOption === "1" && <M3PageOne />}
         {displayOption === "2" && <M3PageTwo />}
