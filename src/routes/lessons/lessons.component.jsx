@@ -16,13 +16,6 @@ const modules = [
 
 ];
 
-
-//TODO: make the sidebar dissapper when the window gets small / make a hamburger menu??
-//todo: figure out how to make pdf load faster
-//todo: add a fun load css when pdf is loading 
-//todo: implement a download option for the pdf 
-//todo: change the style for the pdfview buttons
-
 const LessonsHome = ()  => {
 
     return (
