@@ -43,7 +43,7 @@ const navElements = [
                 </ul> 
                 </section>*/
 
-const Module1Page = () => {
+export const Module1Page = () => {
 
     const [displayOption, setDisplayOption] = useState("1");
     const [activeOption, setActiveOption] = useState("1");

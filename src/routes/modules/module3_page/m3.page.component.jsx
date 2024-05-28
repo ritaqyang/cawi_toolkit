@@ -50,4 +50,3 @@ export const Module3Page = () => {
     </ModulePage>
   );
 }; 
-export default Module3Page;

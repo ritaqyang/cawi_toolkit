@@ -14,7 +14,7 @@ const navElements = [
     { label: "4. STRAINS THAT IMMIGRATION HAS ON RELATIONSHIPS", option: "4" },
 ];
 
-const Module2Page = () => {
+export const Module2Page = () => {
 
     const [displayOption, setDisplayOption] = useState("1");
     const [activeOption, setActiveOption] = useState("1");
@@ -50,4 +50,3 @@ const Module2Page = () => {
     );
 
 };
-export default Module2Page;
