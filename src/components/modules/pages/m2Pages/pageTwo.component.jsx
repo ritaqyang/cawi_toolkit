@@ -13,7 +13,8 @@ export const M2PageTwo = () => {
     return (
         <Fragment>
             <Content>
-                <SubSubTitle>REPEATING CYCLES OF TRAUMA (REPETITION COMPULSION)</SubSubTitle>
+                <SubSubTitle>REPEATING CYCLES OF TRAUMA</SubSubTitle>
+                <SubSubSubTitle>Repetition Compulsion</SubSubSubTitle>
                 <p>Repetition compulsion, in relationships, can look like pursuing the same traits in different people to 
                     fix our own behaviours in relationships.</p>
                 <p>Repetition compulsion has two components. The first is the reliving of past emotions, beliefs, and 

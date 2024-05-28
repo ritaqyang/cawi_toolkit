@@ -47,7 +47,7 @@ export const M2PageThree = () => {
                 </TextBox>
 
                 <SubSubSubTitle>What can you do?</SubSubSubTitle>
-                <ul>
+                <ul className="m-list">
                     <li><p>Educate your family about issues like this: Talk to your family about how you feel (if it 
                         is safe and it will not cause any party any harm). They may be more receptive to the idea of 
                         you being with your partner if you tell them how you feel about them honestly. Your family 

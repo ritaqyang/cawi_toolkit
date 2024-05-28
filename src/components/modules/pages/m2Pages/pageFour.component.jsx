@@ -30,7 +30,7 @@ export const M2PageFour = () => {
 
                     <SubSubSubTitle>We also encourage facilitators to have discussions and conversations around these topics. 
                         Here are a few discussion prompts:</SubSubSubTitle>
-                    <ul>
+                    <ul className="m-list">
                         <li><p>Aside from the 6 aspects of relationships that we shared, what do you think are some other 
                             important aspects of relationships?</p></li>
                         <li><p>What are some ways you can manage your relationships with a busy schedule (through work, 
@@ -42,7 +42,7 @@ export const M2PageFour = () => {
                     <SubSubSubTitle>Navigating Relationships Debrief:</SubSubSubTitle>
                     <p>Following each lesson place, it is a good idea to measure baseline knowledge and what the audience 
                         learned during the lesson. Here are a few questions you can ask students:</p>
-                    <ul>
+                    <ul className="m-list">
                         <li><p>Before: On a scale of 1 to 10, how would you rate your current knowledge around navigating relationships?</p></li>
                         <li><p>After: On a scale of 1 to 10, how would you rate your knowledge of navigating relationships after this session?</p></li>
                         <li><p>What are the three main takeaways from this session?</p></li>
