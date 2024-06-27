@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import './modulesquare.css';
 import { gsap } from "gsap";
-
+import ProgressBar from "../../course-progress/ProgressBar";
 
 const ModuleContainer = styled.div`
 
@@ -37,7 +37,7 @@ const ModuleImage = styled.img`
 `;
 
 
-export const Square = ({ module }) => {
+export const Square = ({ module, progress}) => {
     const moduleRef = useRef(null);
 
     const handleHover = () => {
@@ -58,11 +58,12 @@ export const Square = ({ module }) => {
                  <Module className="module-wrapper" ref={moduleRef} onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
                     <Link className="lesson-link" to={`/modules/${module.id}`}>
                         {/* <img className="module-img" src={module.image} alt={module.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }} /> */}
-                        <ImageContainer>
+                    <ImageContainer>
                     <ModuleImage src={module.image} alt={module.name} />
-                </ImageContainer>
+                    </ImageContainer>
                         <div className="module-info" >
-                            <p style={{marginTop: 0}}>{module.name}</p>
+                            {/* <p style={{marginTop: 0}}>{module.name}</p> */}
+                            <ProgressBar progress={progress} moduleName={module.name} />
                             <p className="module-d" style={{ marginTop: 0}}>{module.description}</p>
                         </div>
                     </Link>

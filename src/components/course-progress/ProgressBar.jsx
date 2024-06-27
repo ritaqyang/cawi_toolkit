@@ -1,6 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+`;
 
+const ModuleName = styled.div`
+  margin-right: 1rem;  
+  white-space: nowrap; 
+`;
 const Container = styled.div`
   width: 100%;
   background-color: #e0e0df;
@@ -9,7 +18,7 @@ const Container = styled.div`
 `;
 
 const Bar = styled.div`
-  height: 25px;
+  height: 1.8rem;
   background-color: #76c7c0;
   text-align: center;
   line-height: 25px;
@@ -18,13 +27,18 @@ const Bar = styled.div`
   transition: width 0.5s ease-in-out;
 `;
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = ({ progress, moduleName }) => {
   return (
-    <Container>
-      <Bar style={{ width: `${progress}%` }}>
-        {progress}%
-      </Bar>
-    </Container>
+    <>
+     <Wrapper>
+      <ModuleName>{moduleName}</ModuleName>
+      <Container>
+        <Bar style={{ width: `${progress}%` }}>
+          {progress}%
+        </Bar>
+      </Container>
+    </Wrapper>
+    </>
   );
 };
 

@@ -70,5 +70,26 @@ export const createUserDocFromAuth = async(userAuth) =>{
 
 }
 
+
+/**
+ * 
+ * @param {*} userId 
+ * @param {*} moduleId 
+ * @returns 
+ */
+export const getProgress = async (userId, moduleId) => {
+    const userDocRef = doc(db, 'users',userId); // Three arguments, db, collection, document ID
+
+    const userSnapShot = await getDoc(userDocRef); // Get the document snapshot
+    console.log(userSnapShot.exists());
+    if (userSnapShot.exists()){
+        const progress = userSnapShot.data().progress;
+        return progress;
+    }
+
+};
+
+  
+
 export const onAuthStateChangedListener = (callback) =>
     onAuthStateChanged(auth, callback);

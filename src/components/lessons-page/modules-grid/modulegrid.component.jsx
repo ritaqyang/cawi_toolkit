@@ -22,7 +22,7 @@ const LessonGrid = ({ modules }) => {
         <div >
             <LessonPlanContainer>
                 {modules.map(module => (
-                    <Square key={module.id} module={module} />
+                    <Square key={module.id} module={module} progress={50}/>
 
                 ))}
             </LessonPlanContainer>

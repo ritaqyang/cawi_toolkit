@@ -9,6 +9,9 @@ import m3 from '../../assets/lessons-page/m3.png';
 import m4 from '../../assets/lessons-page/m4.png';
 import m5 from '../../assets/lessons-page/m5.png';
 import m6 from '../../assets/lessons-page/m6.png';
+import { selectCurrentUser } from "../../store/user/user.selector";
+import { useSelector } from "react-redux";
+import { saveProgress, getProgress } from "../../utils/firebase/firebase.utils";
 
 const modules = [
     { id: 1, name: 'MODULE 1', description: 'What is Sexual & Reproductive Health?', image: m1 },
@@ -23,21 +26,17 @@ const modules = [
 
 const LessonsHome = ()  => {
 
+    const currentUser = useSelector(selectCurrentUser);
+    const userId = currentUser ? currentUser.email : null;
+
+  
     return (
-        <div>
-            <LessonPageContainer>
-                
-                <MainContent>
-                    <LessonGrid modules={modules} />
-
-                </MainContent>
-               
-
-            </LessonPageContainer>
-           
-
-
-        </div>
+      <LessonPageContainer>
+        <MainContent>
+          <LessonGrid modules={modules} progress={50} />
+        </MainContent>
+      </LessonPageContainer>
     );
-}
-export default LessonsHome; 
+  };
+  
+  export default LessonsHome;
