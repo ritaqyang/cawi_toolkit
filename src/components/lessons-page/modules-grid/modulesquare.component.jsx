@@ -25,6 +25,17 @@ const Module = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-y: hidden;
 `;
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+`;
+const ModuleImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container without distorting */
+`;
+
 
 export const Square = ({ module }) => {
     const moduleRef = useRef(null);
@@ -46,7 +57,10 @@ export const Square = ({ module }) => {
             
                  <Module className="module-wrapper" ref={moduleRef} onMouseEnter={handleHover} onMouseLeave={handleHoverOut}>
                     <Link className="lesson-link" to={`/modules/${module.id}`}>
-                        <img className="module-img" src={module.image} alt={module.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }} />
+                        {/* <img className="module-img" src={module.image} alt={module.name} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'cover' }} /> */}
+                        <ImageContainer>
+                    <ModuleImage src={module.image} alt={module.name} />
+                </ImageContainer>
                         <div className="module-info" >
                             <p style={{marginTop: 0}}>{module.name}</p>
                             <p className="module-d" style={{ marginTop: 0}}>{module.description}</p>
