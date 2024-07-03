@@ -11,7 +11,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin);
 
-
 const PageContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -124,6 +123,14 @@ const HomeSubTitle = styled.section`
   padding-left: 5rem;
   padding-right: 5rem;
 `;
+
+const homeContents = [
+  { label: "1: UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS", option: "1" },
+  { label: "2: WHAT IS IN THE CURRICULUM & TOOLKIT?", option: "2" },
+  { label: "3: FOR FACILITATORS, TEACHERS, AND EDUCATORS", option: "3" },
+  { label: "4: CULTURAL ADAPTATIONS TO SRH EDUCATION", option: "4" },
+  { label: "5: INCLUSIVE AND ACCESSIBLE LANGUAGE GUIDE", option: "5" },
+];
 
 
 const Home = () => {
