@@ -60,8 +60,8 @@ const HomeContent = styled.div`
   margin: 2.5%;
   margin-top: 10%;
   height: 10vh;
-  opacity: 0;
-  display: none;
+  opacity: 1;
+  display: flex;
   align-items: flex-end;
   justify-content: space-evenly;
   overflow-y: hidden;
@@ -143,7 +143,7 @@ const Home = () => {
     const nextRef = useRef(null);
 
 
-    useLayoutEffect(() => {
+    /*useLayoutEffect(() => {
         const heroTitleAnimIn = () => {
             gsap.to(heroTitleRef.current, {
                 duration: 4,
@@ -179,7 +179,7 @@ const Home = () => {
         heroTitleAnimIn();
         heroSubTitleAnimIn();
 
-    }, []);
+    }, []);*/
 
     const handleNavHover1 = () => {
       gsap.to(homeNavElRef1.current, {
@@ -532,8 +532,8 @@ const Home = () => {
         <Fragment>
 
           <Hero ref={heroRef}>
-            <HeroText ref={heroTitleRef}></HeroText>
-            <HeroSubText ref={heroSubTitleRef}></HeroSubText>
+            <HeroText ref={heroTitleRef}>A SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT FOR IMMIGRANT COMMUNITIES</HeroText>
+            <HeroSubText ref={heroSubTitleRef}>CANADIAN ADVISORY OF WOMEN IMMIGRANTS (CAWI)</HeroSubText>
           </Hero>
           <Filler>
           <HomeContent ref={homeContentRef}>
