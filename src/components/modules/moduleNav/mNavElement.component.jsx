@@ -14,9 +14,8 @@ const ModuleNavElement = ({isActive, onClick, to, children}) => {
         <>
         <li>
             <Link className={isActive ? "topic-link active" : "topic-link"} to={to} onClick={onClick}>
-                <Checkbox label="COMPLETE" value={checked} onChange={handleChange} />
-                
                 {children}
+                <Checkbox value={checked} onChange={handleChange} />
             </Link>
             {/* /** completion box (take an argument that memorizes the state of the course completion
             (consider user, module, moduleindex ))

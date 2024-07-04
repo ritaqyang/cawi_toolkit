@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./checkbox.css"
 
-const Checkbox = ({label, value, onChange}) => {
+const Checkbox = ({value, onChange}) => {
     return (
         <>
         <label className="checkbox-container">{label}
