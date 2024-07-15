@@ -4,7 +4,7 @@ import ModuleNavElement from './mNavElement.component';
 import './moduleNav.styles.css';
 import {gsap} from "gsap";
 
-const ModuleNav = ({ navElements, activeOption, handleDisplayOptionChange, contentRef }) => {
+const ModuleNav = ({ navElements, activeOption, handleDisplayOptionChange, contentRef, progress }) => {
     const navRef = useRef(null);
     const hideRef = useRef(null);
     const showRef = useRef(null);
@@ -62,6 +62,7 @@ const ModuleNav = ({ navElements, activeOption, handleDisplayOptionChange, conte
                     key={index} 
                     isActive={activeOption === navElement.option} 
                     onClick={() => handleDisplayOptionChange(navElement.option)}
+                    progress={activeOption === navElement.option ? progress : 0}
                 >
                     {navElement.label}
                 </ModuleNavElement>
