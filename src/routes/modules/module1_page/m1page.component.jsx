@@ -24,25 +24,6 @@ const navElements = [
     { label: "9. PREGNANCY", option: "9" },
 ];
 
-/*
-<section className="m-nav" ref={navRef}>
-<div className="hide-and-show">
-                    <Link className="hide-link" ref={hideRef} onClick={handleNavHide} to="#">HIDE</Link>
-                    <Link className="show-link" ref={showRef} onClick={handleNavShow} to="#">SHOW</Link>
-                </div> 
-<ul className="nav-elements" ref={navElRef}>
-                    <ModuleNavElement isActive={activeOption === "1"} to="#" onClick={() => handleDisplayOptionChange("1")}>1. WHAT IS SEXUAL & REPRODUCTIVE HEALTH?</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "2"} to="#" onClick={() => handleDisplayOptionChange("2")}>2. HEALTH EQUITY</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "3"} to="#" onClick={() => handleDisplayOptionChange("3")}>3. SOCIAL DETERMINANTS OF HEALTHCARE</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "4"} to="#" onClick={() => handleDisplayOptionChange("4")}>4. PUBERTY</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "5"} to="#" onClick={() => handleDisplayOptionChange("5")}>5. REPRODUCTIVE HEALTH SYSTEMS</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "6"} to="#" onClick={() => handleDisplayOptionChange("6")}>6. FEMALE GENTIAL MUTILATION</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "7"} to="#" onClick={() => handleDisplayOptionChange("7")}>7. HIV, STI'S AND SAFE SEX</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "8"} to="#" onClick={() => handleDisplayOptionChange("8")}>8. PERIODS AND PERIOD PAIN (MENSTRUAL CARE)</ModuleNavElement>
-                    <ModuleNavElement isActive={activeOption === "9"} to="#" onClick={() => handleDisplayOptionChange("9")}>9. PREGNANCY</ModuleNavElement>
-                </ul> 
-                </section>*/
-
 export const Module1Page = () => {
 
     const [displayOption, setDisplayOption] = useState("1");

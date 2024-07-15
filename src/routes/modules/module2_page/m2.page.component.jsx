@@ -18,6 +18,7 @@ export const Module2Page = () => {
 
     const [displayOption, setDisplayOption] = useState("1");
     const [activeOption, setActiveOption] = useState("1");
+    const [progress, setProgress] = useState(0);
 
     const handleDisplayOptionChange = (option) => {
         setDisplayOption(option);
@@ -26,10 +27,23 @@ export const Module2Page = () => {
 
     const contentRef = useRef(null);
 
+    const handleScroll = () => {
+        const winScroll = contentRef.current.scrollTop;
+        const height = contentRef.current.scrollHeight - contentRef.current.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        setProgress(scrolled);
+    };
+
     useEffect(() => {
         if (contentRef.current) {
             contentRef.current.scrollTop = 0;
+            contentRef.current.addEventListener('scroll', handleScroll);
         }
+        return () => {
+            if (contentRef.current) {
+                contentRef.current.removeEventListener('scroll', handleScroll);
+            }
+        };
     }, [displayOption]);
 
     return (
@@ -39,6 +53,7 @@ export const Module2Page = () => {
                 activeOption={activeOption} 
                 handleDisplayOptionChange={handleDisplayOptionChange} 
                 contentRef={contentRef}
+                progress={progress}
             />
             <ModuleContent ref={contentRef}>
                 {displayOption === "1" && <M2PageOne />}
