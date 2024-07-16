@@ -63,6 +63,7 @@ export const Module3Page = () => {
         handleDisplayOptionChange={handleDisplayOptionChange}
         contentRef={contentRef}
         progress={progress}
+        completedPages={completedPages}
       />
       <ModuleContent ref={contentRef}>
         {displayOption === "1" && <M3PageOne onCompleteToggle={() => handleCompleteToggle("1")} checked={completedPages["1"]} />}
