@@ -19,6 +19,7 @@ export const Module2Page = () => {
     const [displayOption, setDisplayOption] = useState("1");
     const [activeOption, setActiveOption] = useState("1");
     const [progress, setProgress] = useState(0);
+    const [completedPages, setCompletedPages] = useState({});
 
     const handleDisplayOptionChange = (option) => {
         setDisplayOption(option);
@@ -32,6 +33,13 @@ export const Module2Page = () => {
         const height = contentRef.current.scrollHeight - contentRef.current.clientHeight;
         const scrolled = (winScroll / height) * 100;
         setProgress(scrolled);
+    };
+
+    const handleCompleteToggle = (option) => {
+        setCompletedPages(prevState => ({
+            ...prevState,
+            [option]: !prevState[option]
+        }));
     };
 
     useEffect(() => {
@@ -54,12 +62,13 @@ export const Module2Page = () => {
                 handleDisplayOptionChange={handleDisplayOptionChange} 
                 contentRef={contentRef}
                 progress={progress}
+                completedPages={completedPages}
             />
             <ModuleContent ref={contentRef}>
-                {displayOption === "1" && <M2PageOne />}
-                {displayOption === "2" && <M2PageTwo />}
-                {displayOption === "3" && <M2PageThree />}
-                {displayOption === "4" && <M2PageFour />}
+                {displayOption === "1" && <M2PageOne onCompleteToggle={() => handleCompleteToggle("1")} checked={completedPages["1"]} />}
+                {displayOption === "2" && <M2PageTwo onCompleteToggle={() => handleCompleteToggle("2")} checked={completedPages["2"]} />}
+                {displayOption === "3" && <M2PageThree onCompleteToggle={() => handleCompleteToggle("3")} checked={completedPages["3"]} />}
+                {displayOption === "4" && <M2PageFour onCompleteToggle={() => handleCompleteToggle("4")} checked={completedPages["4"]} />}
             </ModuleContent>
         </ModulePage>        
     );
