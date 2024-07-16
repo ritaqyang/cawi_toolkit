@@ -5,8 +5,9 @@ import {Content,
     BlueBox,
     TextBox} from '../pages.styles';
 import '../pages.css';
+import Checkbox from '../../checkbox.component';
 
-export const PageSeven = () => {
+export const PageSeven = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -252,6 +253,7 @@ export const PageSeven = () => {
                         for people living with HIV, run by people living with HIV.</p>
                     </BlueBox>
                     </TextBox>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

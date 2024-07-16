@@ -3,8 +3,9 @@ import {Content,
     SubSubTitle,
     SubSubSubTitle} from '../pages.styles';
 import '../pages.css';
+import Checkbox from '../../checkbox.component';
 
-export const PageTwo = () => {
+export const PageTwo = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -24,6 +25,7 @@ export const PageTwo = () => {
                         <li><p>Develop and implement equitable policy solutions</p></li>
                         <li><p>Redefine clinical practice</p></li>
                     </ul>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

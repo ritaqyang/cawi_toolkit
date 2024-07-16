@@ -9,6 +9,7 @@ import {Content,
 import '../pages.css';
 import styled from "styled-components";
 import landackimg from '../../../../assets/quote-bg.png';
+import Checkbox from '../../checkbox.component';
 
 export const LandAck = styled.section`
         padding: 13rem;
@@ -33,7 +34,7 @@ export const LandAckContent = styled.section`
         }
 `;
 
-export const PageOne = () => {
+export const PageOne = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <TitlePage>
@@ -104,6 +105,7 @@ export const PageOne = () => {
                                 considering past experiences they’ve had, or reducing anxiety with one’s own physical body 
                                 when equipped with proper SRH tools.</p></li>
                     </ul>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

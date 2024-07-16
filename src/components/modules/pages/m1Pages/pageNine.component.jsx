@@ -5,8 +5,9 @@ import {Content,
     BlueBox,
     TextBox} from '../pages.styles';
 import '../pages.css';
+import Checkbox from '../../checkbox.component';
 
-export const PageNine = () => {
+export const PageNine = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -56,6 +57,7 @@ export const PageNine = () => {
                             <li><p>What is something you wish you could learn about more that was not mentioned in the seminar?</p></li>
                         </ul>
                     </BlueBox>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

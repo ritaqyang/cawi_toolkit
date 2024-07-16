@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Outlet, Link } from 'react-router-dom';
 import './moduleNav.styles.css';
-import Checkbox from "../checkbox.component";
 
 const ModuleNavElement = ({isActive, onClick, to, children, progress}) => {
     return (

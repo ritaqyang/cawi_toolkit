@@ -29,6 +29,7 @@ export const Module1Page = () => {
     const [displayOption, setDisplayOption] = useState("1");
     const [activeOption, setActiveOption] = useState("1");
     const [progress, setProgress] = useState(0);
+    const [completedPages, setCompletedPages] = useState({});
 
     const handleDisplayOptionChange = (option) => {
         setDisplayOption(option);
@@ -42,6 +43,13 @@ export const Module1Page = () => {
         const height = contentRef.current.scrollHeight - contentRef.current.clientHeight;
         const scrolled = (winScroll / height) * 100;
         setProgress(scrolled);
+    };
+
+    const handleCompleteToggle = (option) => {
+        setCompletedPages(prevState => ({
+            ...prevState,
+            [option]: !prevState[option]
+        }));
     };
 
     useEffect(() => {
@@ -64,17 +72,18 @@ export const Module1Page = () => {
                 handleDisplayOptionChange={handleDisplayOptionChange} 
                 contentRef={contentRef}
                 progress={progress}
+                completedPages={completedPages}
             />
             <ModuleContent ref={contentRef}>
-                {displayOption === "1" && <PageOne />}
-                {displayOption === "2" && <PageTwo />}
-                {displayOption === "3" && <PageThree />}
-                {displayOption === "4" && <PageFour />}
-                {displayOption === "5" && <PageFive />}
-                {displayOption === "6" && <PageSix />}
-                {displayOption === "7" && <PageSeven />}
-                {displayOption === "8" && <PageEight />}
-                {displayOption === "9" && <PageNine />}
+                {displayOption === "1" && <PageOne onCompleteToggle={() => handleCompleteToggle("1")} checked={completedPages["1"]} />}
+                {displayOption === "2" && <PageTwo onCompleteToggle={() => handleCompleteToggle("2")} checked={completedPages["2"]}/>}
+                {displayOption === "3" && <PageThree onCompleteToggle={() => handleCompleteToggle("3")} checked={completedPages["3"]}/>}
+                {displayOption === "4" && <PageFour onCompleteToggle={() => handleCompleteToggle("4")} checked={completedPages["4"]}/>}
+                {displayOption === "5" && <PageFive onCompleteToggle={() => handleCompleteToggle("5")} checked={completedPages["5"]}/>}
+                {displayOption === "6" && <PageSix onCompleteToggle={() => handleCompleteToggle("6")} checked={completedPages["6"]}/>}
+                {displayOption === "7" && <PageSeven onCompleteToggle={() => handleCompleteToggle("7")} checked={completedPages["7"]}/>}
+                {displayOption === "8" && <PageEight onCompleteToggle={() => handleCompleteToggle("8")} checked={completedPages["8"]}/>}
+                {displayOption === "9" && <PageNine onCompleteToggle={() => handleCompleteToggle("9")} checked={completedPages["9"]}/>}
             </ModuleContent>
         </ModulePage>        
     );

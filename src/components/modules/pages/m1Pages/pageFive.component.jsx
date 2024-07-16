@@ -4,6 +4,7 @@ import {Content,
     SubSubSubTitle} from '../pages.styles';
 import '../pages.css';
 import styled from "styled-components";
+import Checkbox from '../../checkbox.component';
 
 export const Activity = styled.section`
     margin: 2rem;
@@ -15,7 +16,7 @@ export const Activity = styled.section`
     border-radius: 25px 25px 25px 25px;
 `;
 
-export const PageFive = () => {
+export const PageFive = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -206,6 +207,7 @@ export const PageFive = () => {
                         <li><p><a href="https://www.sciencequiz.net/newjcscience/jcbiology/Reproduction/mcq/female_reprod_mcq.htm">Sciencequiz.net</a> contains fun quizzes to learn about female anatomy and reproductive health. </p></li>
                         <li><p><a href="https://classroom.kidshealth.org/classroom/6to8/body/systems/female_reproductive_quiz.pdf">Kidshealth.org</a> has quizzes present for students from grade 6 to 8 to learn about female anatomy.</p></li>
                     </ul>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

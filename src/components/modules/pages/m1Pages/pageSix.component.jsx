@@ -5,6 +5,7 @@ import {Content,
     TextBox} from '../pages.styles';
 import '../pages.css';
 import styled from "styled-components";
+import Checkbox from '../../checkbox.component';
 
 export const DutyToReport = styled.section`
     padding: 2rem;
@@ -28,7 +29,7 @@ export const DutySubTitle = styled.section`
     margin-right: 0;
 `;
 
-export const PageSix = () => {
+export const PageSix = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -153,6 +154,7 @@ export const PageSix = () => {
                             <li><p>Women’s Health in Women’s Hands : FGM/C Resource Map</p></li>
                         </ul>
                     </DutyToReport>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

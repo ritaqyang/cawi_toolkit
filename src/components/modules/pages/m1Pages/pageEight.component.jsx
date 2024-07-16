@@ -4,8 +4,9 @@ import {Content,
     SubSubSubTitle,
     BlueBox} from '../pages.styles';
 import '../pages.css';
+import Checkbox from '../../checkbox.component';
 
-export const PageEight = () => {
+export const PageEight = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -84,6 +85,7 @@ export const PageEight = () => {
                         <li><p><b>Are parents or community groups supportive of people going to school during their period? </b></p></li>
                     </ul>
                     </BlueBox>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );

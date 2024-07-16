@@ -3,8 +3,9 @@ import {Content,
     SubSubTitle,
     SubSubSubTitle} from '../pages.styles';
 import '../pages.css';
+import Checkbox from '../../checkbox.component';
 
-export const PageFour = () => {
+export const PageFour = ({onCompleteToggle, checked}) => {
     return (
         <Fragment>
             <Content>
@@ -24,6 +25,7 @@ export const PageFour = () => {
                         puberty; however boys are more likely to become less talkative and may disengage by showing shy behaviours. 
                         In terms of physical changes, boys will get taller, muscles will grow, facial hair, grow hair on their 
                         underarms, develop pimples, and sweat more, and their voices will crack. </p>
+                    <Checkbox checked={checked} onChange={onCompleteToggle}  />
             </Content>
         </Fragment>
     );
