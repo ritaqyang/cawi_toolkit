@@ -1,15 +1,18 @@
 
-import React, {useRef, useLayoutEffect, useEffect, Fragment} from 'react';
+import React, {useRef, useLayoutEffect, useEffect, Fragment, useState} from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import img from '../../assets/homepage.png';
 import './home.styles.css';
+import { HomePageOne } from '../../components/home/home-pages/homePageOne.component';
+import { HomePageTwo } from '../../components/home/home-pages/homePageTwo.component';
 import {gsap} from "gsap";
-import { TextPlugin } from 'gsap/all';
+import { TextPlugin, MotionPathPlugin } from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(MotionPathPlugin)
 
 const PageContainer = styled.div`
   display: flex;
@@ -21,8 +24,10 @@ const PageContainer = styled.div`
 const Hero = styled.div`
   width: 100%;
   height: 80vh;
+  padding: 0;
+  margin: 0;
   bottom: 0;
-  //background-color: white;
+  background-color: white;
   display: flex;
   position: fixed;
   /*align-items: center;*/
@@ -31,10 +36,10 @@ const Hero = styled.div`
   z-index: -3;
 `;
 
-const HeroText =styled.div`
+const HeroTitleText =styled.div`
   font-size: 4em; 
   margin-top: 0.67em; 
-  margin-bottom: 0.67em; 
+  margin-bottom: 0.1675em; 
   margin-left: 5rem; 
   margin-right: 5rem;
   @media (max-width: 950px) {
@@ -43,9 +48,18 @@ const HeroText =styled.div`
 `;
 
 const HeroSubText = styled.div`
+  color: #CEB180;
+  font-size: 4em; 
+  margin-top: 0.1675em; 
+  margin-bottom: 0.67em; 
+  margin-left: 5rem; 
+  margin-right: 5rem;
+`;
+
+const HeroSubSubText = styled.div`
   font-size: 2em; 
-  color: grey;
-  margin-top: 0.83em; 
+  /*color: gray;*/
+  margin-top: 0; 
   margin-bottom: 0.83em; 
   margin-left: 5rem; 
   margin-right: 5rem;
@@ -54,14 +68,35 @@ const HeroSubText = styled.div`
   }
 `;
 
+const HeroSubSubSubText = styled.div`
+  font-size: 2em;
+  color: rgb(193, 193, 193);
+  margin-top: 0; 
+  margin-bottom: 0.83em; 
+  margin-left: 5rem; 
+  margin-right: 5rem;
+`
+
 const HomeContent = styled.div`
+  width: 100%;
+  height: 195vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+`
+
+const HomeNavPage = styled.div`
   width: 95%;
-  margin: 2.5%;
-  margin-top: 10%;
-  height: 10vh;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  top: 100;
   opacity: 1;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
   overflow-y: hidden;
   background-color: white;
@@ -77,51 +112,11 @@ const HomeNav = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 1rem;
-`
-
-const Filler = styled.div`
-  width: 100%;
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  overflow-y: hidden;
-`
-
-const Understanding = styled.div`
 `;
 
-const Curriculum = styled.div`
-`;
-
-const ForFacil = styled.div`
-`;
-
-const CulturalAdaptations = styled.div`
-`;
-
-const Language = styled.div`
-`;
-
-const Content = styled.div`
-  flex: 1;
-`;
-
-const Text = styled.p`
-  padding: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-`;
-
-const HomeSubTitle = styled.section`
-  font-size: 2rem;
-  margin-top: 1.67em;
-  margin-bottom: 1.67em;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+const HomeNavContent = styled.div`
+  padding: 0;
+  margin: 0;
 `;
 
 const homeContents = [
@@ -135,11 +130,8 @@ const homeContents = [
 
 const Home = () => {
 
-    const heroRef = useRef(null);
-    const heroContentRef = useRef(null);
-    const heroTitleRef = useRef(null);
-    const heroSubTitleRef = useRef(null);
-    const homeContentRef = useRef(null);
+    const heroSubSubSubTitleRef = useRef(null);
+    const homeNavPageRef = useRef(null);
     const homeNavElRef1 = useRef(null);
     const homeNavElRef2 = useRef(null);
     const homeNavElRef3 = useRef(null);
@@ -149,44 +141,33 @@ const Home = () => {
     const closeRef = useRef(null);
     const nextRef = useRef(null);
 
-
-    /*useLayoutEffect(() => {
-        const heroTitleAnimIn = () => {
-            gsap.to(heroTitleRef.current, {
-                duration: 4,
+    useLayoutEffect(() => {
+        const heroSubSubSubTitleAnimIn = () => {
+            gsap.to(heroSubSubSubTitleRef.current, {
+                duration: 2,
                 text: {
-                    value: "A SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT FOR IMMIGRANT COMMUNITIES",
+                    value: "BY THE CANADIAN ASSOCIATION OF WOMEN IMMIGRANTS (CAWI)",
                     delimiter: ""
                 },
                 delay: 0.5,
             });
         }
 
-        const heroSubTitleAnimIn = () => {
-          gsap.to(heroSubTitleRef.current, {
-              duration: 4,
-              text: {
-                  value: "CANADIAN ADVISORY OF WOMEN IMMIGRANTS (CAWI)",
-                  delimiter: ""
-              },
-              delay: 4.5,
-          });
+        const homeNavAnim = () => {
+            gsap.to(".h-hide-and-show", {
+              motionPath: [{x:0, y:-50}, {x:0, y:0}, {x:0, y:-50}, {x:0, y:0}],
+              transformOrigin: "50% 50%",
+              duration: 3,
+              delay: 2.5,
+            });
         }
 
-        const homeContentAnimIn = () => {
-          gsap.to(homeContentRef.current, {
-            duration: 1,
-            display: 'flex',
-            opacity: 1,
-            delay: 8.5
-          })
-        }
+        heroSubSubSubTitleAnimIn();
+        homeNavAnim();
 
-        homeContentAnimIn();
-        heroTitleAnimIn();
-        heroSubTitleAnimIn();
+    }, []);
 
-    }, []);*/
+    // 1
 
     const handleNavHover1 = () => {
       gsap.to(homeNavElRef1.current, {
@@ -242,10 +223,9 @@ const Home = () => {
       } )
     }
 
+    //click a nav el
+
     const handleNavClick = () => {
-      gsap.to(homeContentRef.current, {
-        height: '70vh'
-      })
       gsap.to(closeRef.current, {
         display: "inline",
         opacity: 1,
@@ -505,9 +485,6 @@ const Home = () => {
     //close button
 
     const handleCloseClick = () => {
-      gsap.to(homeContentRef.current, {
-        height: '10vh'
-      })
       gsap.to(closeRef.current, {
         display: "none",
         opacity: 0
@@ -534,26 +511,54 @@ const Home = () => {
       } )
     }
 
+    // show button
+
+     const handleShowClick = () => {
+        window.scrollTo({
+          top: homeNavPageRef.current.offsetTop,
+          behavior: "smooth",
+        })
+     }
+
+    //display options
+
+    const [displayHomeOption, setDisplayHomeOption] = useState("0");
+
+    const handleDisplayOptionChange = (option) => {
+      setDisplayHomeOption(option);
+  };
+
     return (
 
         <Fragment>
 
-          <Hero ref={heroRef}>
-            <HeroText ref={heroTitleRef}>A SEXUAL AND REPRODUCTIVE HEALTH LEARNING TOOLKIT FOR IMMIGRANT COMMUNITIES</HeroText>
-            <HeroSubText ref={heroSubTitleRef}>CANADIAN ADVISORY OF WOMEN IMMIGRANTS (CAWI)</HeroSubText>
+          <Hero>
+            <HeroTitleText>A SEXUAL AND REPRODUCTIVE HEALTH </HeroTitleText>
+            <HeroSubText>CURRICULUM & TOOLKIT</HeroSubText>
+            <HeroSubSubText>FOR IMMIGRANT COMMUNITIES</HeroSubSubText>
+            <HeroSubSubSubText ref={heroSubSubSubTitleRef}></HeroSubSubSubText>
           </Hero>
-          <Filler>
-          <HomeContent ref={homeContentRef}>
+
+          <HomeContent className="home-content">
+          <div className="h-hide-and-show">
+              <Link className="show-home-nav" onClick={handleShowClick} >SCROLL</Link>
+          </div>
+          <HomeNavPage ref={homeNavPageRef}>
             <HomeNav>
               <Link className="home-nav-link" ref={homeNavElRef1} onMouseEnter={handleNavHover1} onMouseLeave={handleHoverOut1} onClick={handleNavClick}>1</Link>
               <Link className="home-nav-link" ref={homeNavElRef2} onMouseEnter={handleNavHover2} onMouseLeave={handleHoverOut2} onClick={handleNavClick}>2</Link>
               <Link className="home-nav-link" ref={homeNavElRef3} onMouseEnter={handleNavHover3} onMouseLeave={handleHoverOut3} onClick={handleNavClick}>3</Link>
               <Link className="home-nav-link" ref={homeNavElRef4} onMouseEnter={handleNavHover4} onMouseLeave={handleHoverOut4} onClick={handleNavClick}>4</Link>
               <Link className="home-nav-link" ref={homeNavElRef5} onMouseEnter={handleNavHover5} onMouseLeave={handleHoverOut5} onClick={handleNavClick}>5</Link>
-              <Link className="home-nav-link-open" ref={closeRef} onClick={handleCloseClick}>CLOSE</Link>
             </HomeNav>
+            <Link className="home-nav-link-open" ref={closeRef} onClick={handleCloseClick}>CLOSE</Link>
+          </HomeNavPage>
+          <HomeNavContent>
+            {displayHomeOption === "1" && <HomePageOne />}
+            {displayHomeOption === "2" && <HomePageTwo />}
+          </HomeNavContent>
           </HomeContent>
-          </Filler>
+          
         </Fragment>
 
         
