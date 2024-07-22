@@ -62,9 +62,12 @@ export const Square = ({ module, progress}) => {
                     <ModuleImage src={module.image} alt={module.name} />
                     </ImageContainer>
                         <div className="module-info" >
-                            {/* <p style={{marginTop: 0}}>{module.name}</p> */}
-                            <ProgressBar progress={progress} moduleName={module.name} />
+                            <ProgressBar progress={progress} />
+                            <span className="module-info-content">
+                            <p style={{marginTop: 0}}>{module.name}</p> 
+                            {/*<ProgressBar progress={progress} moduleName={module.name} />*/}
                             <p className="module-d" style={{ marginTop: 0}}>{module.description}</p>
+                            </span>
                         </div>
                     </Link>
                 </Module>

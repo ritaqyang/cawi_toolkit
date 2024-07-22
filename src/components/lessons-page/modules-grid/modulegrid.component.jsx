@@ -12,7 +12,7 @@ export const LessonPlanContainer = styled.div`
     border-radius: 8px;
     background-color:  white;
     justify-content: space-around;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
   
 `;
 

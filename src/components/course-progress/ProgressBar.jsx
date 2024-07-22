@@ -18,26 +18,36 @@ const Container = styled.div`
 `;
 
 const Bar = styled.div`
-  height: 1.8rem;
+  /*height: 1.8rem;
   background-color: #76c7c0;
   text-align: center;
   line-height: 25px;
   color: white;
   border-radius: 25px 0 0 25px;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;*/
+
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #d8edf2;
+  z-index: 1;
+  border-radius: 25px 0 0 25px;
 `;
 
-const ProgressBar = ({ progress, moduleName }) => {
+/*const ProgressBar = ({ progress, moduleName }) => {*/
+const ProgressBar = ({ progress }) => {
   return (
     <>
-     <Wrapper>
+     {/*<Wrapper>
       <ModuleName>{moduleName}</ModuleName>
       <Container>
         <Bar style={{ width: `${progress}%` }}>
           {progress}%
         </Bar>
       </Container>
-    </Wrapper>
+  </Wrapper>*/}
+      <Bar style={{ width: `${progress}%`}} />
     </>
   );
 };
