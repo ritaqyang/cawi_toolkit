@@ -1,5 +1,5 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
-import {Text, HomeSubTitle} from "./h-pages.styles";
+import {Text, HomeSubTitle} from "./homePages.styles";
 import { Content } from "../../modules/pages/pages.styles";
 
 export const HomePageFour = () => {
