@@ -26,6 +26,8 @@ const navElements = [
 
 export const Module1Page = () => {
 
+    const contentRef = useRef(null);
+
     const [displayOption, setDisplayOption] = useState("1");
     const [activeOption, setActiveOption] = useState("1");
     const [progress, setProgress] = useState(0);
@@ -35,8 +37,6 @@ export const Module1Page = () => {
         setDisplayOption(option);
         setActiveOption(option);
     };
-
-    const contentRef = useRef(null);
 
     const handleScroll = () => {
         const winScroll = contentRef.current.scrollTop;

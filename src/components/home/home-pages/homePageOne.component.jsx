@@ -1,9 +1,11 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
 import {Text, HomeSubTitle} from "./h-pages.styles"
+import { Content } from "../../modules/pages/pages.styles";
 
 export const HomePageOne = () => {
     return (
         <>
+        <Content>
         <HomeSubTitle>UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS</HomeSubTitle>
             <Text>The current curriculum and toolkit aim to address various topics of sexual and reproductive health (SRH) 
               through the use of an anti-oppressive lens. This package will aim to recognize and dig deeper into the power 
@@ -26,6 +28,7 @@ export const HomePageOne = () => {
             <Text>This resource will use language recommendations from Khan et al., 2022 to create a sense of safety for underserved 
               communities such as immigrant women, girls, and gender-diverse folks who are often not given the privilege of attaining 
               culturally appropriate education. </Text>
+          </Content>
         </>
     );
 };

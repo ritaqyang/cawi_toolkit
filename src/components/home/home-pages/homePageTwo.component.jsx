@@ -1,9 +1,11 @@
 import React, {useRef, useLayoutEffect, Fragment} from "react";
-import {Text, HomeSubTitle} from "./h-pages.styles"
+import {Text, HomeSubTitle} from "./h-pages.styles";
+import { Content } from "../../modules/pages/pages.styles";
 
 export const HomePageTwo = () => {
     return (
         <>
+        <Content>
         <HomeSubTitle>WHAT IS IN THE CURRICULUM & TOOLKIT?</HomeSubTitle>
               <Text>The curriculum intends to bring sexual health education to immigrant women, girls, and gender-diverse folks by 
                 making SRH knowledge accessible. Additionally, we aim to increase confidence and self-efficacy in our participants in 
@@ -58,6 +60,7 @@ export const HomePageTwo = () => {
               </ol>
               </Text>
               <Text>Sources: <a href="https://www.sieccan.org/pdf/guidelines-eng.pdf">Canadian Guidelines for Sexual Health Education </a></Text>
+        </Content>
         </>
     );
 };
