@@ -1,3 +1,4 @@
 export const UserActionTypes = {
     SET_CURRENT_USER: 'SET_CURRENT_USER',
+    SET_SECTION_VALUES: 'SET_SECTION_VALUES',
 };
