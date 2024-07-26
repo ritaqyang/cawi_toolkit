@@ -35,6 +35,11 @@ const Bar = styled.div`
   border-radius: 25px 0 0 25px;
 `;
 
+const ProgressPercent = styled.div`
+  margin: 1rem;
+  color: gray;
+`;
+
 /*const ProgressBar = ({ progress, moduleName }) => {*/
 const ProgressBar = ({ progress }) => {
   return (
@@ -48,6 +53,8 @@ const ProgressBar = ({ progress }) => {
       </Container>
   </Wrapper>*/}
       <Bar style={{ width: `${progress}%`}} />
+      {/*  <ProgressPercent>{progress}%</ProgressPercent>
+      </Bar>*/}
     </>
   );
 };

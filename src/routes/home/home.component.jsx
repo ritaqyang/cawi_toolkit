@@ -15,14 +15,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin);
-gsap.registerPlugin(MotionPathPlugin)
-
-const PageContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  
-`;
+gsap.registerPlugin(MotionPathPlugin);
 
 const Hero = styled.div`
   width: 100%;
@@ -116,7 +109,7 @@ const HomeNav = styled.div`
   height: 10vh;
   width: 100%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 1rem;
@@ -166,15 +159,6 @@ const Less = styled.div`
   opacity: 0;
 `;
 
-const homeContents = [
-  { label: "1: UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS", option: "1" },
-  { label: "2: WHAT IS IN THE CURRICULUM & TOOLKIT?", option: "2" },
-  { label: "3: FOR FACILITATORS, TEACHERS, AND EDUCATORS", option: "3" },
-  { label: "4: CULTURAL ADAPTATIONS TO SRH EDUCATION", option: "4" },
-  { label: "5: INCLUSIVE AND ACCESSIBLE LANGUAGE GUIDE", option: "5" },
-];
-
-
 const Home = () => {
 
     const heroSubSubSubTitleRef = useRef(null);
@@ -189,10 +173,9 @@ const Home = () => {
     const homeNavElRef3 = useRef(null);
     const homeNavElRef4 = useRef(null);
     const homeNavElRef5 = useRef(null);
-    const prevRef = useRef(null);
     const closeRef = useRef(null);
-    const nextRef = useRef(null);
 
+    /*NOTE: look into useGSAP() for best cleanup practices*/
     useLayoutEffect(() => {
         const heroSubSubSubTitleAnimIn = () => {
             gsap.to(heroSubSubSubTitleRef.current, {
