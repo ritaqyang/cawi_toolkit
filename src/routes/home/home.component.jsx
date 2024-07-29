@@ -177,7 +177,7 @@ const Home = () => {
 
     /*NOTE: look into useGSAP() for best cleanup practices*/
     useLayoutEffect(() => {
-        const heroSubSubSubTitleAnimIn = () => {
+        /*const heroSubSubSubTitleAnimIn = () => {
             gsap.to(heroSubSubSubTitleRef.current, {
                 duration: 2,
                 text: {
@@ -186,19 +186,19 @@ const Home = () => {
                 },
                 delay: 0.5,
             });
-        }
+        }*/
 
         const homeNavAnim = () => {
             gsap.to(".h-hide-and-show", {
               motionPath: [{x:0, y:-25}, {x:0, y:0}, {x:0, y:-25}, {x:0, y:0}],
               transformOrigin: "50% 50%",
-              duration: 2,
-              delay: 2.5,
+              duration: 1.5,
+              delay: /*2.5*/0.5,
               ease: "none",
             });
         }
 
-        heroSubSubSubTitleAnimIn();
+        /*heroSubSubSubTitleAnimIn();*/
         homeNavAnim();
 
     }, []);
@@ -648,7 +648,7 @@ const Home = () => {
             <HeroTitleText>A SEXUAL AND REPRODUCTIVE HEALTH </HeroTitleText>
             <HeroSubText>CURRICULUM & TOOLKIT</HeroSubText>
             <HeroSubSubText>FOR IMMIGRANT COMMUNITIES</HeroSubSubText>
-            <HeroSubSubSubText ref={heroSubSubSubTitleRef}></HeroSubSubSubText>
+            <HeroSubSubSubText ref={heroSubSubSubTitleRef}>BY THE CANADIAN ASSOCIATION OF WOMEN IMMIGRANTS (CAWI)</HeroSubSubSubText>
           </Hero>
 
           <HomeContent ref={homeContentRef} className="home-content">
