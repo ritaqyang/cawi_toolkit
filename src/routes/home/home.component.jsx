@@ -19,7 +19,7 @@ gsap.registerPlugin(MotionPathPlugin);
 
 const Hero = styled.div`
   width: 100%;
-  height: 85vh;
+  height: 100%;
   padding: 0;
   margin: 0;
   bottom: 0;
@@ -28,7 +28,7 @@ const Hero = styled.div`
   position: fixed;
   /*align-items: center;*/
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: -3;
   /*border: 2px solid yellow;*/
 `;
