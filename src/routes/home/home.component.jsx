@@ -72,7 +72,7 @@ const HeroSubSubSubText = styled.div`
   margin-bottom: 0.83em; 
   margin-left: 5rem; 
   margin-right: 5rem;
-`
+`;
 
 const HomeContent = styled.div`
   width: 100%;
@@ -87,7 +87,7 @@ const HomeContent = styled.div`
   top: 0;
   z-index:-2;
   /*border: 2px solid green;*/
-`
+`;
 
 const HomeNavPage = styled.div`
   width: 95%;
@@ -103,7 +103,7 @@ const HomeNavPage = styled.div`
   background-color: white;
   /*border: 2px solid black;
   border-radius: 25px 25px 0px 0px;*/
-`
+`;
 
 const HomeNav = styled.div`
   height: 10vh;
