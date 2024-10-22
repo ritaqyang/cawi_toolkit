@@ -12,7 +12,9 @@ import { HomePageFive } from '../../components/home/home-pages/homePageFive.comp
 import {gsap} from "gsap";
 import { TextPlugin, MotionPathPlugin } from 'gsap/all';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from '@gsap/react';
 
+gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger)
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(MotionPathPlugin);
@@ -175,88 +177,89 @@ const Home = () => {
     const homeNavElRef5 = useRef(null);
     const closeRef = useRef(null);
 
-    /*NOTE: look into useGSAP() for best cleanup practices*/
-    useLayoutEffect(() => {
-        /*const heroSubSubSubTitleAnimIn = () => {
-            gsap.to(heroSubSubSubTitleRef.current, {
-                duration: 2,
-                text: {
-                    value: "BY THE CANADIAN ASSOCIATION OF WOMEN IMMIGRANTS (CAWI)",
-                    delimiter: ""
-                },
-                delay: 0.5,
-            });
-        }*/
+    /*NOTE: useGSAP() or gsap.context for cleanup*/
 
-        const homeNavAnim = () => {
-            gsap.to(".h-hide-and-show", {
-              motionPath: [{x:0, y:-25}, {x:0, y:0}, {x:0, y:-25}, {x:0, y:0}],
-              transformOrigin: "50% 50%",
-              duration: 1.5,
-              delay: /*2.5*/0.5,
-              ease: "none",
-            });
-        }
+      useLayoutEffect(() => {
+          /*const heroSubSubSubTitleAnimIn = () => {
+              gsap.to(heroSubSubSubTitleRef.current, {
+                  duration: 2,
+                  text: {
+                      value: "BY THE CANADIAN ASSOCIATION OF WOMEN IMMIGRANTS (CAWI)",
+                      delimiter: ""
+                  },
+                  delay: 0.5,
+              });
+          }*/
 
-        /*heroSubSubSubTitleAnimIn();*/
-        homeNavAnim();
+          const homeNavAnim = () => {
+              gsap.to(".h-hide-and-show", {
+                motionPath: [{x:0, y:-25}, {x:0, y:0}, {x:0, y:-25}, {x:0, y:0}],
+                transformOrigin: "50% 50%",
+                duration: 1.5,
+                delay: /*2.5*/0.5,
+                ease: "none",
+              });
+          }
 
-    }, []);
+          /*heroSubSubSubTitleAnimIn();*/
+          homeNavAnim();
+
+      }, []);
 
     // 1
 
     const handleNavHover1 = () => {
-      gsap.to(homeNavElRef1.current, {
-        text: {
-          value: "1: UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS",
-          delimiter: ""
-        },
-      } )
-      gsap.to(homeNavElRef2.current, {
-        //display: "none",
-        opacity: 0,
-        duration: 0.5,
-      } )
-      gsap.to(homeNavElRef3.current, {
-        //display: "none",
-        opacity: 0,
-        duration: 0.5,
-      } )
-      gsap.to(homeNavElRef4.current, {
-        //display: "none",
-        opacity: 0,
-        duration: 0.5,
-      } )
-      gsap.to(homeNavElRef5.current, {
-        //display: "none",
-        opacity: 0,
-        duration: 0.5,
-      } )
+        gsap.to(homeNavElRef1.current, {
+          text: {
+            value: "1: UNDERSTANDING SEXUAL & REPRODUCTIVE HEALTH THROUGH AN ANTI-OPPRESSIVE LENS",
+            delimiter: ""
+          },
+        } )
+        gsap.to(homeNavElRef2.current, {
+          //display: "none",
+          opacity: 0,
+          duration: 0.5,
+        } )
+        gsap.to(homeNavElRef3.current, {
+          //display: "none",
+          opacity: 0,
+          duration: 0.5,
+        } )
+        gsap.to(homeNavElRef4.current, {
+          //display: "none",
+          opacity: 0,
+          duration: 0.5,
+        } )
+        gsap.to(homeNavElRef5.current, {
+          //display: "none",
+          opacity: 0,
+          duration: 0.5,
+        } )
     }
 
     const handleHoverOut1 = () => {
-      gsap.to(homeNavElRef1.current, {
-        text: {
-          value: "1",
-          delimiter: ""
-        }
-      } )
-      gsap.to(homeNavElRef2.current, {
-        //display: "inline",
-        opacity: 1,
-      } )
-      gsap.to(homeNavElRef3.current, {
-        //display: "inline",
-        opacity: 1,
-      } )
-      gsap.to(homeNavElRef4.current, {
-        //display: "inline",
-        opacity: 1,
-      } )
-      gsap.to(homeNavElRef5.current, {
-        //display: "inline",
-        opacity: 1,
-      } )
+        gsap.to(homeNavElRef1.current, {
+          text: {
+            value: "1",
+            delimiter: ""
+          }
+        } )
+        gsap.to(homeNavElRef2.current, {
+          //display: "inline",
+          opacity: 1,
+        } )
+        gsap.to(homeNavElRef3.current, {
+          //display: "inline",
+          opacity: 1,
+        } )
+        gsap.to(homeNavElRef4.current, {
+          //display: "inline",
+          opacity: 1,
+        } )
+        gsap.to(homeNavElRef5.current, {
+          //display: "inline",
+          opacity: 1,
+        } )
     }
 
     //click a nav el
@@ -672,7 +675,7 @@ const Home = () => {
             </HomeNavContent>
             <Link className="home-nav-link-open" ref={closeRef} onClick={handleCloseClick}>CLOSE</Link>
             <Less ref={lessRef}>
-              <Link className="show-home-nav" onClick={handleLessClick} >LESS</Link>
+              <Link className="show-home-nav" onClick={handleLessClick} >CLOSE</Link>
             </Less>
           </HomeNavPage>
           </HomeContent>
